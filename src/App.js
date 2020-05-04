@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import CardGrid from './components/CardGrid';
+import Card from './components/Card';
+import Footer from './components/Footer';
+import './styles.min.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <body>
+        <div className="skewed"></div>
+        <Navbar></Navbar>
+        <Hero></Hero>
+        <CardGrid></CardGrid>
+        <Footer></Footer>
+      </body>
     </div>
   );
 }
 
 export default App;
+
+ReactDOM.render(<App />, document.getElementById('root'));
