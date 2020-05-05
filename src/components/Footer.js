@@ -7,13 +7,13 @@ function Footer() {
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Advice</a></li>
                 <li><a href="#">Species</a></li>
-                <li><a href="/about.html">About</a></li>
+                <li><a href="#">About</a></li>
             </ul>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Advice</a></li>
                 <li><a href="#">Species</a></li>
-                <li><a href="/about.html">About</a></li>
+                <li><a href="#">About</a></li>
             </ul>
         </div>
     </footer>

@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import CardGrid from './components/CardGrid';
-import Card from './components/Card';
 import Footer from './components/Footer';
+import RegisterForm from './components/RegisterForm';
 import './styles.min.css';
 
 function App() {

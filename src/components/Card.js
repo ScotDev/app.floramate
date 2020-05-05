@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function Card() {
     return <div className="card">
         <h1>White Campion</h1>
