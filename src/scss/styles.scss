@@ -1,8 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
-$primary-color: #2c3e50;
-$primary-accent: #fff;
+// $primary-color: #2c3e50;
+$primary-color: #4c8c74;
+// $primary-accent: #10182f;
+$primary-accent: #f7fffb;
+// $primary-accent: #fff;
+$secondary-accent: #a0d6be;
 $border-radius: 50px;
+
+/* Potential colour themes */
+$Wilderness-1-hex: #708c84;
+$Wilderness-2-hex: #9ba685;
+$Wilderness-3-hex: #bfa965;
+$Wilderness-4-hex: #bf9460;
+$Wilderness-5-hex: #0d0d0d;
+
+.Broken-Top,
+-Three-Sisters-Wilderness,
+-Bend,
+-Oregon-1-hex {
+  color: #bf41aa;
+}
+.Broken-Top,
+-Three-Sisters-Wilderness,
+-Bend,
+-Oregon-2-hex {
+  color: #4384d9;
+}
+.Broken-Top,
+-Three-Sisters-Wilderness,
+-Bend,
+-Oregon-3-hex {
+  color: #558ed9;
+}
+.Broken-Top,
+-Three-Sisters-Wilderness,
+-Bend,
+-Oregon-4-hex {
+  color: #5a7302;
+}
+.Broken-Top,
+-Three-Sisters-Wilderness,
+-Bend,
+-Oregon-5-hex {
+  color: #595022;
+}
+
+$West-Kill-Mountains-Wilderness-Landscape-with-Green-Trees-and-Green-Grass-Forrest-Nature-Background-1-hex: #a4b3bf;
+$West-Kill-Mountains-Wilderness-Landscape-with-Green-Trees-and-Green-Grass-Forrest-Nature-Background-2-hex: #344021;
+$West-Kill-Mountains-Wilderness-Landscape-with-Green-Trees-and-Green-Grass-Forrest-Nature-Background-3-hex: #97a624;
+$West-Kill-Mountains-Wilderness-Landscape-with-Green-Trees-and-Green-Grass-Forrest-Nature-Background-4-hex: #8a8c3e;
+$West-Kill-Mountains-Wilderness-Landscape-with-Green-Trees-and-Green-Grass-Forrest-Nature-Background-5-hex: #8c8149;
 
 html {
   scroll-behavior: smooth;

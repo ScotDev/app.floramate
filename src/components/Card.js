@@ -11,4 +11,6 @@ function Card() {
     </div>
 };
 
+// https://www.youtube.com/watch?v=At7yOlWkqRQ
+
 export default Card;
