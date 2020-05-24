@@ -18,11 +18,11 @@ const Footer = () => {
                     <li><Link to="/about">About</Link></li>
                 </ul>
             </div>
-            <div className="credits">
-                <a href="https://github.com/ScotDev" rel="noopener noreferrer" target="_blank"
-                >Created by ScotDev <i class="fab fa-github"></i></a>
-            </div>
         </footer>
+        <div className="credits">
+            <a href="https://github.com/ScotDev" rel="noopener noreferrer" target="_blank"
+            >Created by ScotDev <i class="fab fa-github"></i></a>
+        </div>
     </>
 };
 
