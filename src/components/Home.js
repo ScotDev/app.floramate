@@ -1,3 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+
+import Hero from './Hero';
+import CardGrid from './CardGrid';
+import Footer from './Footer';
+
+const Home = () => {
+    return (
+        <>
+            <Hero></Hero>
+            <CardGrid></CardGrid>
+            {/* <Footer></Footer> */}
+        </>
+    );
+}
+
+export default Home;

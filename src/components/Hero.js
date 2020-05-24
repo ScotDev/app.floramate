@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Hero() {
+const Hero = () => {
     return <div class="container">
         <div class="hero-container">
             <h1>floramate</h1>
