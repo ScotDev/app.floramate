@@ -9,7 +9,6 @@ const Home = () => {
         <>
             <Hero></Hero>
             <CardGrid></CardGrid>
-            {/* <Footer></Footer> */}
         </>
     );
 }

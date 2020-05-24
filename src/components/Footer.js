@@ -1,10 +1,5 @@
 import React from 'react'
 
-import Home from './Home';
-import About from './About';
-import Species from './Species';
-import Advice from './Advice';
-
 const Footer = () => {
     return <>
         <footer>
