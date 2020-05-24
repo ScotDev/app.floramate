@@ -1,20 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return <>
         <footer>
             <div className="basic-grid">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/advice">Advice</a></li>
-                    <li><a href="/species">Species</a></li>
-                    <li><a href="/about">About</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/advice">Advice</Link></li>
+                    <li><Link to="/species">Species</Link></li>
+                    <li><Link to="/about">About</Link></li>
                 </ul>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/advice">Advice</a></li>
-                    <li><a href="/species">Species</a></li>
-                    <li><a href="/about">About</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/advice">Advice</Link></li>
+                    <li><Link to="/species">Species</Link></li>
+                    <li><Link to="/about">About</Link></li>
                 </ul>
             </div>
         </footer>

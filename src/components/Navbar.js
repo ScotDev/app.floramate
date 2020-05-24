@@ -1,5 +1,5 @@
 import React from 'react';
-// import { BrowserRouter, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import About from './components/About';
 // import Species from './components/Species';
 // import Advice from './components/Advice';
@@ -8,10 +8,10 @@ import React from 'react';
 function Navbar() {
     return <nav className="navbar">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/advice">Advice</a></li>
-            <li><a href="/species">Species</a></li>
-            <li><a href="/about">About</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/advice">Advice</Link></li>
+            <li><Link to="/species">Species</Link></li>
+            <li><Link to="/about">About</Link></li>
         </ul>
     </nav>
 }
