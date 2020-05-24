@@ -82,6 +82,10 @@ a {
   text-decoration: none;
 }
 
+.content {
+  min-height: 100vh;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -140,6 +144,21 @@ footer ul li a {
 }
 
 footer ul li a:hover {
+  border-bottom: 1px solid $primary-accent;
+}
+
+.credits {
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.credits a {
+  color: $primary-accent;
+  text-decoration: none;
+}
+
+.credits a:hover {
   border-bottom: 1px solid $primary-accent;
 }
 
@@ -318,12 +337,6 @@ footer ul li a:hover {
     display: none;
   }
 }
-
-// @media only screen and (min-width: 1920px) {
-//   .skewed {
-//     height: 70%;
-//   }
-// }
 
 .form {
   display: flex;
