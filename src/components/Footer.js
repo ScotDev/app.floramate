@@ -21,7 +21,7 @@ const Footer = () => {
         </footer>
         <div className="credits">
             <a href="https://github.com/ScotDev" rel="noopener noreferrer" target="_blank"
-            >Created by ScotDev <i class="fab fa-github"></i></a>
+            >Created by ScotDev <i className="fab fa-github"></i></a>
         </div>
     </>
 };

@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Hero = () => {
-    return <div class="container">
-        <div class="hero-container">
+    return <div className="container">
+        <div className="hero-container">
             <h1>floramate</h1>
             <h2>Welcome to floramate</h2>
             <p>
@@ -19,9 +19,9 @@ const Hero = () => {
                 deleniti.
    </p>
         </div>
-        <div class="welcome-btns">
-            <a href="#" class="btn btn-secondary" id="btn-left">Sign Up</a>
-            <a href="#" class="btn btn-secondary">Log In</a>
+        <div className="welcome-btns">
+            <a href="#" className="btn btn-secondary" id="btn-left">Sign Up</a>
+            <a href="#" className="btn btn-secondary">Log In</a>
         </div>
     </div>
 };

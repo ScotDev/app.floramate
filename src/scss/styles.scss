@@ -121,6 +121,11 @@ a {
   border-bottom: 1px solid $primary-accent;
 }
 
+// make this more specific
+.active {
+  border-bottom: 1px solid $primary-accent;
+}
+
 footer {
   // position: absolute;
   bottom: 0;
