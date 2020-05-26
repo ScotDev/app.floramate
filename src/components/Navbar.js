@@ -1,9 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import About from './components/About';
-// import Species from './components/Species';
-// import Advice from './components/Advice';
-
 
 function Navbar() {
     return <nav className="navbar">
