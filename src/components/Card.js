@@ -25,6 +25,3 @@ function Card() {
 }
 
 export default Card;
-
-
-// https://jsonplaceholder.typicode.com/comments
