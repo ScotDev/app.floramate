@@ -16,7 +16,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        {/* <body> */}
         <div className="skewed"></div>
         <Navbar></Navbar>
         <Route exact path='/' component={Home}></Route>
@@ -24,7 +23,6 @@ function App() {
         <Route path='/advice' component={Advice}></Route>
         <Route path='/about' component={About}></Route>
         <Footer></Footer>
-        {/* </body> */}
       </div>
     </BrowserRouter>
   );

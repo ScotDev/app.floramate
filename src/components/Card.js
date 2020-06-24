@@ -1,16 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Card() {
-    return <div className="card">
-        <h1>White Campion</h1>
-        <h2>Silene latifolia</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo,
-            tempora.</p>
-        <a href="#" className="btn btn-secondary">Profile</a>
-    </div>
-};
+    const [state, setState] = useState([])
 
-// https://www.youtube.com/watch?v=At7yOlWkqRQ
+    useEffect(() => {
+        fetch("https://invegtory.info/api/v1/posts").then(response => response.json())
+            .then(response => {
+                setState(response)
+            }, [])
+    });
+
+    return (
+        <>
+            {
+                state.map(data => <div className="card" key={data.id}>
+                    <h1>{data.title}</h1>
+                    <h2>{data.species}</h2>
+                    <p>{data.notes}</p>
+                    {/* <a href="#" className="btn btn-secondary">Profile</a> */}
+                </div>)
+            }
+        </>
+    )
+}
 
 export default Card;
+
+
+// https://jsonplaceholder.typicode.com/comments
