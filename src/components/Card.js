@@ -4,7 +4,7 @@ function Card() {
     const [state, setState] = useState([])
 
     useEffect(() => {
-        fetch("https://invegtory.info/api/v1/posts").then(response => response.json())
+        fetch("https://api.floramate.cc/api/v1/posts").then(response => response.json())
             .then(response => {
                 setState(response)
             }, [])
