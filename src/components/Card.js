@@ -1,27 +1,50 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Card() {
-    const [state, setState] = useState([])
+    const [species, setSpecies] = useState([]);
+
+    const getSpeciesData = () => {
+        try {
+            axios.get('https://invegtory.info/api/v1/posts').then(res => {
+                console.log(res.data.data)
+                setSpecies(res.data.data)
+            })
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
 
     useEffect(() => {
-        fetch("https://api.floramate.cc/api/v1/posts").then(response => response.json())
-            .then(response => {
-                setState(response)
-            }, [])
+        getSpeciesData()
+    }, []);
+
+
+    const items = species.map(item => {
+        return (<div className="card" key={item._id}>
+            <h1>{item.species}</h1>
+            <h2>{item.indoorOutdoor}</h2>
+            <p>{item.notes}</p>
+            <a href="#" className="btn btn-secondary">{item.species}</a>
+        </div>)
     });
 
     return (
         <>
-            {
-                state.map(data => <div className="card" key={data.id}>
-                    <h1>{data.title}</h1>
-                    <h2>{data.species}</h2>
-                    <p>{data.notes}</p>
-                    {/* <a href="#" className="btn btn-secondary">Profile</a> */}
-                </div>)
-            }
+            {items}
         </>
     )
 }
 
 export default Card;
+
+
+/* Object.keys(species).map((item, _id) => (<div className="card" key={item._id}> */
+
+/* species.map((item, _id) => (<div className="card" key={item._id}>
+                <h1>{item.title}</h1>
+                <h2>{item.species}</h2>
+                <p>{item.notes}</p>
+                <a href="#" className="btn btn-secondary">{item._id}</a>
+            </div>)) */
