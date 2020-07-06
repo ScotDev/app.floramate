@@ -26,7 +26,7 @@ function Card() {
             <h1>{item.species}</h1>
             <h2>{item.indoorOutdoor}</h2>
             <p>{item.notes}</p>
-            <a href="#" className="btn btn-secondary">{item.species}</a>
+            <a href="https://www.google.com/" className="btn btn-secondary">{item.species}</a>
         </div>)
     });
 
