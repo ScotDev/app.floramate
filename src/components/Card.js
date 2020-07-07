@@ -23,7 +23,7 @@ function Card() {
 
     const items = species.map(item => {
         return (<div className="card" key={item._id}>
-            <img className="card-img" src={item.photo} alt="Photo of plant"></img>
+            <img className="card-img" src={item.photo} alt=""></img>
             <h1 className="card-title">{item.name_common}</h1>
             <h2 className="card-sub-title">{item.name_latin}</h2>
             <p className="card-text">{item.range}</p>

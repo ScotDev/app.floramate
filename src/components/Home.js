@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Hero from './Hero';
 import Search from './Search';
 import CardGrid from './CardGrid';
-import Spinner from './layout/Spinner'
+// import Spinner from './layout/Spinner'
 import SpeciesProfile from './Species'
 
 
