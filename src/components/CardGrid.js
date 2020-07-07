@@ -3,7 +3,7 @@ import Card from './Card';
 
 function CardGrid() {
     return <div className="grid-container">
-        <section className="basic-grid">
+        <section className="card-grid">
             <Card></Card>
         </section>
     </div>

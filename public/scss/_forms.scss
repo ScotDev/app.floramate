@@ -1,0 +1,52 @@
+.homepage-search {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  &-title {
+    color: $primary-color;
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  &-form {
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border: 2px solid $primary-color;
+    width: 40%;
+    box-shadow: 0 8px 10px 6px rgba($primary-color, 0.5);
+  }
+
+  &-box {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+    outline: 0;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border: 2px solid $primary-color;
+    padding: 0.5rem 0.75rem;
+    font-family: inherit;
+    width: 70%;
+  }
+
+  button {
+    font-weight: 700;
+  }
+
+  &-checkboxes {
+    display: flex;
+    justify-content: center;
+  }
+  .checkbox-item {
+    list-style-type: none;
+    padding-right: 3rem;
+  }
+}

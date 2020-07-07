@@ -6,7 +6,7 @@ function Card() {
 
     const getSpeciesData = () => {
         try {
-            axios.get('https://178.62.125.35/api/v1/posts').then(res => {
+            axios.get('https://178.62.125.35/api/v1/species').then(res => {
                 console.log(res.data.data)
                 setSpecies(res.data.data)
             })
@@ -23,10 +23,11 @@ function Card() {
 
     const items = species.map(item => {
         return (<div className="card" key={item._id}>
-            <h1>{item.species}</h1>
-            <h2>{item.indoorOutdoor}</h2>
-            <p>{item.notes}</p>
-            <a href="https://www.google.com/" className="btn btn-secondary">{item.species}</a>
+            <img className="card-img" src={item.photo} alt="Photo of plant"></img>
+            <h1 className="card-title">{item.name_common}</h1>
+            <h2 className="card-sub-title">{item.name_latin}</h2>
+            <p className="card-text">{item.range}</p>
+            <a href="https://www.google.com/" className="btn btn-secondary">{item.slug}</a>
         </div>)
     });
 
@@ -38,13 +39,3 @@ function Card() {
 }
 
 export default Card;
-
-
-/* Object.keys(species).map((item, _id) => (<div className="card" key={item._id}> */
-
-/* species.map((item, _id) => (<div className="card" key={item._id}>
-                <h1>{item.title}</h1>
-                <h2>{item.species}</h2>
-                <p>{item.notes}</p>
-                <a href="#" className="btn btn-secondary">{item._id}</a>
-            </div>)) */
