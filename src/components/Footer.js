@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return <>
         <footer>
-            <div className="basic-grid">
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/advice">Advice</Link></li>
-                    <li><Link to="/species">Species</Link></li>
-                    <li><Link to="/about">About</Link></li>
+            <div className="footer">
+                <ul className="footer-list">
+                    <li className="footer-list-item"><Link to="/">Home</Link></li>
+                    <li className="footer-list-item"><Link to="/advice">Advice</Link></li>
+                    <li className="footer-list-item"><Link to="/species">Species</Link></li>
+                    <li className="footer-list-item"><Link to="/about">About</Link></li>
                 </ul>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/advice">Advice</Link></li>
-                    <li><Link to="/species">Species</Link></li>
-                    <li><Link to="/about">About</Link></li>
+                <ul className="footer-list">
+                    <li className="footer-list-item"><Link to="/">Home</Link></li>
+                    <li className="footer-list-item"><Link to="/advice">Advice</Link></li>
+                    <li className="footer-list-item"><Link to="/species">Species</Link></li>
+                    <li className="footer-list-item"><Link to="/about">About</Link></li>
                 </ul>
             </div>
         </footer>

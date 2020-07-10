@@ -1,20 +1,24 @@
 $card-text-padding: 0 0.75rem;
 
 .card {
-  box-shadow: 0 8px 10px 6px rgba($primary-color, 0.5);
+  box-shadow: $theme-box-shadow;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  background: $primary-color;
-
+  background: $primary-accent;
   color: $primary-text;
   height: 100%;
   width: 100%;
   border-radius: 5px;
-
+  padding-bottom: 0.5rem;
   overflow: hidden;
+  transition: transform 0.1s ease;
+  -webkit-transition: transform 0.1s ease;
+  -moz-transition: transform 0.1s ease;
+  -ms-transition: transform 0.1s ease;
+  -o-transition: transform 0.1s ease;
 
   &-img {
     border-radius: 5px 5px 0 0;
@@ -24,7 +28,6 @@ $card-text-padding: 0 0.75rem;
     height: 225px;
   }
 
-  // Needs better sizing vars
   &-title {
     font-size: 1.5rem;
     padding: $card-text-padding;
@@ -37,10 +40,12 @@ $card-text-padding: 0 0.75rem;
     font-size: 1rem;
     padding: $card-text-padding;
   }
-}
 
-// .card:hover {
-//   box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
-//     rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-//   transform: translateY(-3px) scale(1.1);
-// }
+  &:hover {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+  }
+}

@@ -6,7 +6,7 @@
   align-items: center;
 
   &-title {
-    color: $primary-color;
+    color: $primary-text;
     font-size: 1.75rem;
     text-align: center;
   }
@@ -17,9 +17,12 @@
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
-    border: 2px solid $primary-color;
+    border: 2px solid $primary-accent;
     width: 40%;
-    box-shadow: 0 8px 10px 6px rgba($primary-color, 0.5);
+    box-shadow: $theme-box-shadow;
+    background-color: $primary-accent;
+
+    padding: 1rem 1rem 2rem 1rem;
   }
 
   &-box {
@@ -31,7 +34,7 @@
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
-    border: 2px solid $primary-color;
+    border: 2px solid $primary-accent;
     padding: 0.5rem 0.75rem;
     font-family: inherit;
     width: 70%;

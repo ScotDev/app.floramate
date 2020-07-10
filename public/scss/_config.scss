@@ -1,12 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
-$primary-color: #52796f;
-$primary-accent: #cad2c5;
+// $primary-color: #52796f;
+// $primary-accent: #94d1be;
+// $primary-text: #f7fffb;
+
+// $secondary-color: #2f3e46;
+// $secondary-accent: #84a98c;
+// $secondary-text: #f0efeb;
+
+$primary-color: #2f3e46;
+$primary-accent: #6e6448;
 $primary-text: #f7fffb;
 
-$secondary-color: #2f3e46;
-$secondary-accent: #84a98c;
-$secondary-text: #f0efeb;
+$black: #000;
+
+$secondary-color: #487161;
+// $secondary-accent: #6eb1d4;
+$secondary-accent: #f7fffb;
+
+$theme-box-shadow: 6px 6px 25px 6px rgba($black, 0.7);
 
 $title: 3rem;
 $sub-title: 2rem;
+
+// #1C4033
