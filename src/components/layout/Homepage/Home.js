@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import Hero from './Hero';
+import Hero from '../../Hero';
 import Search from './Search';
-import CardGrid from './CardGrid';
-// import Spinner from './layout/Spinner'
-import SpeciesProfile from './Species'
+import CardGrid from '../../CardGrid';
+import SpeciesProfile from '../../Species'
+import Info from './Info'
 
 
 class Home extends Component {
@@ -19,7 +19,7 @@ class Home extends Component {
                         <CardGrid>
                         </CardGrid>
                     </section>
-                    {/* <Spinner></Spinner> */}
+                    <Info></Info>
                 </div>
                 <Route path="/:post_id" component={SpeciesProfile}></Route>
             </BrowserRouter>

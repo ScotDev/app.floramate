@@ -1,9 +1,9 @@
 .hero-container {
   display: flex;
   flex-direction: column;
-  //   justify-content: flex-start;
   text-align: center;
   align-items: center;
+  margin-bottom: 2rem;
 
   &-title {
     font-size: $title;
@@ -11,6 +11,10 @@
   }
   &-sub-title {
     font-size: $sub-title;
+    color: $primary-text;
+  }
+  &-text {
+    font-size: $large-text;
     color: $primary-text;
   }
 }
