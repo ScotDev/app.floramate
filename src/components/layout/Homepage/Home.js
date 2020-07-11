@@ -19,7 +19,10 @@ class Home extends Component {
                         <CardGrid>
                         </CardGrid>
                     </section>
-                    <Info></Info>
+                    <div className="section">
+                        <h2 className="section-title">What do we do?</h2>
+                        <Info></Info>
+                    </div>
                 </div>
                 <Route path="/:post_id" component={SpeciesProfile}></Route>
             </BrowserRouter>

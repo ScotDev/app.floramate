@@ -8,6 +8,7 @@
 @import '_cards';
 @import '_grids';
 @import '_loading';
+@import '_info_section';
 
 html {
   scroll-behavior: smooth;
@@ -41,9 +42,8 @@ a {
 
 .content {
   min-height: 100vh;
-  padding: 0 1rem;
+  padding: 0 5rem;
   z-index: 1;
-
   display: flex;
   flex-direction: column;
 }
