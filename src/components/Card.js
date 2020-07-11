@@ -6,7 +6,7 @@ function Card() {
 
     const getSpeciesData = () => {
         try {
-            axios.get('https://178.62.125.35/api/v1/species').then(res => {
+            axios.get('https://invegtory.info/api/v1/species').then(res => {
                 console.log(res.data.data)
                 setSpecies(res.data.data)
             })
