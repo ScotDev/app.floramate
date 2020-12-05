@@ -1,36 +1,38 @@
-.navbar {
-  overflow: hidden;
-  background-color: transparent;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+// .navbar {
+//   overflow: hidden;
+//   background-color: transparent;
+//   text-align: center;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
 
-  ul {
-    list-style-type: none;
-    display: flex;
-  }
+//   ul {
+//     list-style-type: none;
+//     display: flex;
+//   }
 
-  ul:nth-last-child() {
-    align-self: flex-end;
-  }
+//   ul:nth-last-child() {
+//     align-self: flex-end;
+//   }
 
-  &-list-item {
-    margin-right: 1.5rem;
-    text-align: center;
-  }
+//   &-list-item {
+//     margin-right: 1.5rem;
+//     text-align: center;
+//   }
 
-  &-link {
-    color: $primary-text;
-    line-height: 1.7;
-    padding-bottom: 4px;
+//   &-link {
+//     color: $primary-text;
+//     line-height: 1.7;
+//     padding-bottom: 4px;
 
-    &:hover {
-      border-bottom: 2px solid $primary-text;
-    }
-  }
+//     &:hover {
+//       border-bottom: 2px solid $primary-text;
+//     }
+//   }
 
-  .active {
-    border-bottom: 2px solid $primary-text;
-  }
-}
+//   .active {
+//     border-bottom: 2px solid $primary-text;
+//   }
+// }
+
+// Replaced with styled components

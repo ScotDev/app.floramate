@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
+import { Content } from '../../ui-styled-components/Utils';
+
 import Hero from '../../Hero';
 import Search from './Search';
 import CardGrid from '../../CardGrid';
@@ -12,7 +14,7 @@ class Home extends Component {
     render() {
         return (
             <BrowserRouter>
-                <div className="content">
+                <Content>
                     <Hero></Hero>
                     <Search></Search>
                     <section className="section"><h2 className="section-title">Latest</h2>
@@ -23,7 +25,7 @@ class Home extends Component {
                         <h2 className="section-title">What do we do?</h2>
                         <Info></Info>
                     </div>
-                </div>
+                </Content>
                 <Route path="/:post_id" component={SpeciesProfile}></Route>
             </BrowserRouter>
         );

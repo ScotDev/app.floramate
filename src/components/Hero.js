@@ -1,11 +1,12 @@
 import React from 'react';
+import { HeroContainer, HeroTitle, HeroSubTitle, HeroText } from './ui-styled-components/Hero';
 
 const Hero = () => {
-    return <section className="hero-container">
-        <h1 className="hero-container-title">floramate</h1>
-        <h2 className="hero-container-sub-title">Welcome to floramate</h2>
-        <p className="hero-container-text">Helping you find wildlife-friendly plants for your area</p>
-    </section>
+    return <HeroContainer>
+        <HeroTitle>floramate</HeroTitle>
+        <HeroSubTitle>Welcome to floramate</HeroSubTitle>
+        <HeroText>Helping you find wildlife-friendly plants for your area</HeroText>
+    </HeroContainer>
 };
 
 export default Hero;
