@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import { ThemeProvider } from 'styled-components';
+import { SkewedBg } from './components/ui-styled-components/Utils';
 
 import Home from './components//layout/Homepage/Home';
 import About from './components/About';
@@ -36,7 +37,7 @@ function App() {
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <div className="App">
-          <div className="skewed"></div>
+          <SkewedBg></SkewedBg>
           <Navbar></Navbar>
           <Route exact path='/' component={Home}></Route>
           <Route path='/species' component={Species}></Route>

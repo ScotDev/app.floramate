@@ -29,7 +29,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.75rem;
 }
 body::-webkit-scrollbar-track {
   background: $primary-accent;
@@ -42,30 +42,30 @@ a {
   text-decoration: none;
 }
 
-.content {
-  min-height: 100vh;
-  padding: 0 5rem;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-}
+// .content {
+//   min-height: 100vh;
+//   padding: 0 5rem;
+//   z-index: 1;
+//   display: flex;
+//   flex-direction: column;
+// }
 
-.section {
-  padding: 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+// .section {
+//   padding: 1rem 2rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: center;
 
-  &-title {
-    font-size: $sub-title;
-    color: $secondary-color;
-    border-bottom: 4px $secondary-color solid;
-    margin-bottom: 2rem;
-    padding-bottom: 0.3rem;
-    align-self: flex-start;
-  }
-}
+//   &-title {
+//     font-size: $sub-title;
+//     color: $secondary-color;
+//     border-bottom: 4px $secondary-color solid;
+//     margin-bottom: 2rem;
+//     padding-bottom: 0.3rem;
+//     align-self: flex-start;
+//   }
+// }
 
 .credits {
   display: flex;

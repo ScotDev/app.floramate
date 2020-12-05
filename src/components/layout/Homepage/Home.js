@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import { Content } from '../../ui-styled-components/Utils';
+import { Content, PageSection, PageSectionTitle } from '../../ui-styled-components/Utils';
 
 import Hero from '../../Hero';
 import Search from './Search';
-import CardGrid from '../../CardGrid';
+import SpeciesGrid from '../../SpeciesGrid';
 import SpeciesProfile from '../../Species'
 import Info from './Info'
 
@@ -17,14 +17,14 @@ class Home extends Component {
                 <Content>
                     <Hero></Hero>
                     <Search></Search>
-                    <section className="section"><h2 className="section-title">Latest</h2>
-                        <CardGrid>
-                        </CardGrid>
-                    </section>
-                    <div className="section">
-                        <h2 className="section-title">What do we do?</h2>
+                    <PageSection>
+                        <PageSectionTitle>Latest</PageSectionTitle>
+                        <SpeciesGrid>
+                        </SpeciesGrid>
+                    </PageSection>
+                    <PageSection><PageSectionTitle>What do we do?</PageSectionTitle>
                         <Info></Info>
-                    </div>
+                    </PageSection>
                 </Content>
                 <Route path="/:post_id" component={SpeciesProfile}></Route>
             </BrowserRouter>

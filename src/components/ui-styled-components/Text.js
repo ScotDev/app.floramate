@@ -12,12 +12,15 @@ const Subtitle = styled.h2`
 
 const LargeText = styled.h4`
 font-size:${props => props.theme.size.largeText};
+color: ${props => props.colour || props.theme.primaryColour};
 `
 const RegularText = styled.p`
 font-size:${props => props.theme.size.regularText};
+color: ${props => props.colour || props.theme.primaryColour};
 `
 const SmallText = styled.p`
 font-size:${props => props.theme.size.smallText};
+color: ${props => props.colour || props.theme.primaryColour};
 `
 
 export { Title, Subtitle, LargeText, RegularText, SmallText };
