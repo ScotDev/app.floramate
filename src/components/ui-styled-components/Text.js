@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+// import { device } from '../../config/Breakpoints';
 
 const Title = styled.h1`
     font-size: ${props => props.theme.size.title};
     color: ${props => props.theme.primaryText};
+
 `
 
 const Subtitle = styled.h2`

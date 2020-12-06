@@ -1,6 +1,6 @@
 import React from 'react';
 import { PrimaryBtn, SecondaryBtn } from './ui-styled-components/Button';
-import { StyledNavbar, NavbarList, NavbarListItem } from './ui-styled-components/Navbar';
+import { StyledNavbar, NavbarList, NavbarListItem } from './ui-styled-components/Navigation';
 
 import { NavLink } from 'react-router-dom';
 

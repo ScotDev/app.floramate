@@ -9,6 +9,7 @@ function SpeciesGrid() {
     return <CardGrid>
         {/* <Card></Card> */}
         <RegularText>Text</RegularText>
+        <RegularText>Text</RegularText>
     </CardGrid>
 }
 

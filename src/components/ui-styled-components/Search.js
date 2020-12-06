@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
+import { device } from '../../config/Breakpoints';
+
 const HomepageSearchSection = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
+width:100%;
 `
 
 const HomepageSearchForm = styled.form`
@@ -19,6 +22,12 @@ const HomepageSearchForm = styled.form`
     box-shadow: ${props => props.theme.boxShadow};
     background-color: ${props => props.theme.secondaryColour};
     padding: 1rem 1rem 2rem 1rem;
+
+    @media ${device.tablet}{
+    width:100%;
+    padding: 0.5rem 1rem 1rem 1rem;
+
+}
 `
 
 const SearchBox = styled.input`
@@ -31,17 +40,22 @@ const SearchBox = styled.input`
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
-
     border: none;
     padding: 0.5rem 0.75rem;
     font-family: inherit;
     width: 70%;
+
     ::placeholder{
     font-weight:500;
     }
 
     :focus{
 box-shadow:0 0 0 2px ${props => props.theme.black}
+    }
+
+    @media ${device.tablet}{
+    width:100%;
+    margin-bottom: 0.75rem;
     }
 `
 

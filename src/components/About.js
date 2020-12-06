@@ -1,13 +1,15 @@
 import React from 'react';
+import { Content } from './ui-styled-components/Utils';
+import { HeroContainer, HeroTitle, HeroText } from './ui-styled-components/Hero';
 
 const About = () => {
     return (
-        <div className="content">
-            <div className="hero-container">
-                <h1 className="hero-container-title">About</h1>
-                <p className="hero-container-text">All about the floramate project</p>
-            </div>
-        </div>
+        <Content>
+            <HeroContainer>
+                <HeroTitle>About</HeroTitle>
+                <HeroText>All about the floramate project</HeroText>
+            </HeroContainer>
+        </Content>
     )
 }
 

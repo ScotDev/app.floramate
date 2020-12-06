@@ -1,5 +1,15 @@
 import styled from 'styled-components';
+import { device } from '../../config/Breakpoints';
 
+// Maybe change this
+// const GridContainer = styled.div`
+// display:flex;
+// flex-direction:row;
+
+// @media ${device.tablet}{
+//   flex-direction:column;
+// }
+// `
 const InfoGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -18,4 +28,27 @@ const GridItem = styled.div`
     flex-direction: column;
 `
 
-export { InfoGrid, GridItem, CardGrid };
+
+const FlexBox = styled.div`
+display:flex;
+flex-direction:row;
+
+@media ${device.tablet}{
+  flex-direction:column;
+}
+`
+
+const FlexBoxItem = styled.div`
+    display: flex;
+    flex-direction: column;
+text-align:justify;
+padding-right:2rem;
+
+@media ${device.tablet}{
+  padding-right:0;
+}
+`
+
+
+
+export { InfoGrid, GridItem, CardGrid, FlexBox, FlexBoxItem };
