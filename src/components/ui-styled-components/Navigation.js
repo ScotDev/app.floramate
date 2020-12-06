@@ -85,19 +85,80 @@ const FooterContentListItem = styled.li`
 
 `
 
+const MobileNavbar = styled.div`
+  padding: 0;
+  margin: 0;
+  border: 1px solid green;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  height:50px;
+  width:50px;
+      /* Just for development */
+      display:none;
 
-// const NavbarLink = styled.a`
-//     color: #f7fffb;
-//     line-height: 1.7;
-//     padding-bottom: 4px;
+input{
+  z-index:1;
+  border: 1px solid red;
+}
 
-//     &:hover {
-//       border-bottom: 2px solid #f7fffb;
-//     }
+div {
+    display: block;
+    width: 33px;
+    height: 4px;
+    position: relative;
+    border-radius: 6px;
+    background: #fff;
+    margin: 4px 0;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      opacity 0.55s ease;
+  }
 
-//     /* .active{
-//         border-bottom: 2px solid #f7fffb;
-//     } */
-// `
+  div:first-of-type {
+    transform-origin: 0% 0%;
+  }
+  div:last-of-type {
+    transform-origin: 0% 100%;
+  }
+`
 
-export { StyledNavbar, NavbarList, NavbarListItem, StyledFooter, FooterContent, FooterContentList, FooterContentListItem };
+const MobileNavMenu = styled.ul`
+    height: 400px;
+    width: 50%;
+    top:0;
+    right:0;
+    z-index:1;
+    margin:0;
+    padding:0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border: 1px solid yellow;
+
+    /* Just for development */
+    display:none;
+`
+const MobileNavMenuItem = styled.li`
+      text-align: center;
+      list-style-type:none;
+      padding:0.25rem;
+      
+  a {
+color: ${props => props.theme.primaryText};
+  text-decoration:none;
+
+  :hover {
+  border-bottom: ${props => props.theme.primaryText};
+  }
+  }
+
+
+
+`
+
+
+
+export { StyledNavbar, NavbarList, NavbarListItem, StyledFooter, FooterContent, FooterContentList, FooterContentListItem, MobileNavbar, MobileNavMenu, MobileNavMenuItem };
