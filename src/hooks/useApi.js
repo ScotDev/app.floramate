@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useAPI = (endpointURL, options) => {
+const useAPI = (endpointURL) => {
     const [data, setdata] = useState(null);
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
@@ -9,7 +9,7 @@ const useAPI = (endpointURL, options) => {
         const makeCall = async () => {
             setIsLoading(true)
             try {
-                const res = await fetch(endpointURL, options);
+                const res = await fetch(endpointURL);
                 const formattedRes = await res.json();
                 setdata(formattedRes);
                 setIsLoading(false);
@@ -20,6 +20,7 @@ const useAPI = (endpointURL, options) => {
             }
         };
         makeCall();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return { data, error, isLoading };

@@ -1,26 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import { Content, PageSection, PageSectionTitle } from '../../ui-styled-components/Utils';
+
 
 import Hero from '../../Hero';
 import Search from './Search';
 import SpeciesGrid from '../../SpeciesGrid';
 import SpeciesProfile from '../../Species'
 import Info from './Info'
+import Latest from './Latest';
 
+import useApi from '../../../hooks/useApi';
 
-class Home extends Component {
-    render() {
-        return (
+export default function Home() {
+
+    const latestItems = useApi("https://5fd4a0dde9cda40016f5c41d.mockapi.io/api/dev1/species?page=1&limit=5")
+    console.log(latestItems)
+
+    return (
+        <>
             <BrowserRouter>
                 <Content>
                     <Hero></Hero>
                     <Search></Search>
                     <PageSection>
                         <PageSectionTitle>Latest</PageSectionTitle>
-                        <SpeciesGrid>
-                        </SpeciesGrid>
+                        {/* <SpeciesGrid> */}
+                        <Latest data={latestItems}></Latest>
+                        {/* </SpeciesGrid> */}
                     </PageSection>
                     <PageSection><PageSectionTitle>What do we do?</PageSectionTitle>
                         <Info></Info>
@@ -28,9 +36,7 @@ class Home extends Component {
                 </Content>
                 <Route path="/:post_id" component={SpeciesProfile}></Route>
             </BrowserRouter>
-        );
-    }
 
+        </>
+    )
 }
-
-export default Home;
