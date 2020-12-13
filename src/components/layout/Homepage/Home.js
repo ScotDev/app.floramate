@@ -5,11 +5,10 @@ import { Content, PageSection, PageSectionTitle } from '../../ui-styled-componen
 
 
 import Hero from '../../Hero';
-import Search from './Search';
-import SpeciesGrid from '../../SpeciesGrid';
+import Search from '../../functional/Search'
 import SpeciesProfile from '../../Species'
 import Info from './Info'
-import Latest from './Latest';
+// import Latest from './Latest';
 
 import useApi from '../../../hooks/useApi';
 
@@ -27,7 +26,7 @@ export default function Home() {
                     <PageSection>
                         <PageSectionTitle>Latest</PageSectionTitle>
                         {/* <SpeciesGrid> */}
-                        <Latest data={latestItems}></Latest>
+                        {/* <Latest data={latestItems}></Latest> */}
                         {/* </SpeciesGrid> */}
                     </PageSection>
                     <PageSection><PageSectionTitle>What do we do?</PageSectionTitle>

@@ -5,8 +5,6 @@ import { RegularText } from './ui-styled-components/Text';
 
 import { NavLink } from 'react-router-dom';
 
-// Set up router here
-
 function Navbar() {
     return (<>
         <StyledNavbar>
@@ -15,10 +13,11 @@ function Navbar() {
                     <NavLink exact to="/">Home</NavLink>
                 </NavbarListItem>
                 <NavbarListItem>
-                    <NavLink to="/advice">Advice</NavLink>
+                    <NavLink to="/species">Species</NavLink>
+
                 </NavbarListItem>
                 <NavbarListItem>
-                    <NavLink to="/species">Species</NavLink>
+                    <NavLink to="/advice">Advice</NavLink>
                 </NavbarListItem>
                 <NavbarListItem>
                     <NavLink to="/about">About</NavLink>

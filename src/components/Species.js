@@ -1,13 +1,24 @@
 import React from 'react';
 
+// Functional components
+import Search from './functional/Search';
+
+// UI components
+import { Content } from './ui-styled-components/Utils';
+import { HeroContainer, HeroTitle, HeroText } from './ui-styled-components/Hero';
+
+
 const Species = () => {
     return (
-        <div className="content">
-            <div className="hero-container">
-                <h1 className="hero-container-title">Species</h1>
-                <p className="hero-container-text">All the species in the floramate project</p>
-            </div>
-        </div>
+        <Content>
+            <HeroContainer>
+                <HeroTitle>Species</HeroTitle>
+                <HeroText>All the species in the floramate project</HeroText>
+            </HeroContainer>
+
+            <Search>
+            </Search>
+        </Content>
     )
 }
 

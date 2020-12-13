@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { device } from '../../config/Breakpoints';
 
-const HomepageSearchSection = styled.div`
+const SearchSection = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -11,7 +11,7 @@ const HomepageSearchSection = styled.div`
 width:100%;
 `
 
-const HomepageSearchForm = styled.form`
+const SearchForm = styled.form`
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -59,4 +59,4 @@ box-shadow:0 0 0 2px ${props => props.theme.black}
     }
 `
 
-export { HomepageSearchSection, HomepageSearchForm, SearchBox };
+export { SearchSection, SearchForm, SearchBox };
