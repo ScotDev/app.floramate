@@ -3,19 +3,36 @@ import styled from 'styled-components';
 import { device } from '../../config/Breakpoints';
 
 const StyledNavbar = styled.nav`
- overflow: hidden;
-  background-color: transparent;
-  text-align: center;
+  overflow: hidden;
+  background-color: ${props => props.theme.primaryColour || "#f7fffb"};;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
+  align-items:center;
+  padding: 0.25rem 1.5rem;
+  height: 4.5rem;
 
 /* Temporary, change to mobile QMT */
   @media ${device.tablet}{
     display:none;
   }
 `
+
+const NavbarBrand = styled.div`
+
+  display: flex;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+
+
+img {
+  margin-right: 1rem;
+  height: 50px;
+  width: 50px;
+}
+`;
 
 const NavbarList = styled.ul`
  list-style-type: none;
@@ -36,6 +53,7 @@ const NavbarListItem = styled.li`
     color: #f7fffb;
     line-height: 1.7;
     padding-bottom: 0.25rem;
+    font-size:${props => props.theme.size.smallText};
     }
 
     &:hover {
@@ -161,4 +179,4 @@ color: ${props => props.theme.primaryText};
 
 
 
-export { StyledNavbar, NavbarList, NavbarListItem, StyledFooter, FooterContent, FooterContentList, FooterContentListItem, MobileNavbar, MobileNavMenu, MobileNavMenuItem };
+export { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, StyledFooter, FooterContent, FooterContentList, FooterContentListItem, MobileNavbar, MobileNavMenu, MobileNavMenuItem };

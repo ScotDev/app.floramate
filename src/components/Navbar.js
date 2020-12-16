@@ -1,13 +1,16 @@
 import React from 'react';
-import { PrimaryBtn, SecondaryBtn } from './ui-styled-components/Button';
-import { StyledNavbar, NavbarList, NavbarListItem, MobileNavbar, MobileNavMenu, MobileNavMenuItem } from './ui-styled-components/Navigation';
-import { RegularText } from './ui-styled-components/Text';
+// import { PrimaryBtn, SecondaryBtn } from './ui-styled-components/Button';
+import { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, MobileNavbar, MobileNavMenu, MobileNavMenuItem } from './ui-styled-components/Navigation';
+import { RegularText, Subtitle } from './ui-styled-components/Text';
+
+import BrandImage from "../assets/img/brand.svg";
 
 import { NavLink } from 'react-router-dom';
 
 function Navbar() {
     return (<>
         <StyledNavbar>
+            <NavbarBrand><img alt="brand name" src={BrandImage} /><Subtitle>floramate</Subtitle></NavbarBrand>
             <NavbarList>
                 <NavbarListItem>
                     <NavLink exact to="/">Home</NavLink>
@@ -24,14 +27,14 @@ function Navbar() {
                 </NavbarListItem>
 
             </NavbarList>
-            <NavbarList>
+            {/* <NavbarList>
                 <NavbarListItem>
                     <PrimaryBtn>Log in</PrimaryBtn>
                 </NavbarListItem>
                 <NavbarListItem>
                     <SecondaryBtn>Sign up</SecondaryBtn>
                 </NavbarListItem>
-            </NavbarList>
+            </NavbarList> */}
         </StyledNavbar>
         <MobileNavbar>
             <input type="checkbox"></input>
