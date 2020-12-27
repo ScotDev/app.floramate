@@ -5,7 +5,7 @@ import { Content, PageSection, PageSectionTitle } from '../../ui-styled-componen
 
 
 import Hero from '../../Hero';
-import Search from '../../functional/Search'
+// import Search from '../../functional/Search'
 import SpeciesProfile from '../../Species'
 import Info from './Info'
 // import Latest from './Latest';
@@ -22,7 +22,7 @@ export default function Home() {
             <BrowserRouter>
                 <Content>
                     <Hero></Hero>
-                    <Search></Search>
+                    {/* <Search></Search> */}
                     <PageSection>
                         <PageSectionTitle>Latest</PageSectionTitle>
                         {/* <SpeciesGrid> */}
