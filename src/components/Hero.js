@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroContainer, HeroTitle, HeroSubTitle, HeroText, HeroKnockout } from './ui-styled-components/Hero';
+import { HeroContainer, HeroTitle, HeroText, HeroKnockout } from './ui-styled-components/Hero';
 
 const Hero = () => {
     return <HeroContainer>
