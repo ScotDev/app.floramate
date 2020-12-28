@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { device } from '../../config/Breakpoints';
+
 const StyledBtn = styled.button`
   border-radius: 5px;
   padding: 0.5rem 0.75rem;
@@ -7,10 +9,15 @@ const StyledBtn = styled.button`
   font-family: inherit;
   text-align: center;
   border: 2px solid transparent;
+  font-size: ${props => props.theme.size.regularText};
 
 &:hover {
     cursor: pointer;
   }
+
+  @media ${device.mobileL}{
+        font-size:5.5vw;
+    }
 `
 
 const PrimaryBtn = styled(StyledBtn)`
@@ -18,7 +25,7 @@ color: ${props => props.theme.primaryColour || "#f7fffb"};
   background-color:  ${props => props.theme.primaryText || "#487161"};
   border: 2px solid ${props => props.theme.primaryColour || "#f7fffb"};
   font-weight: bold;
-  font-size: 1.2rem;
+
 
   &:hover {
     color:  ${props => props.theme.primaryText || "#487161"};
@@ -33,7 +40,7 @@ color: ${props => props.theme.primaryText || "#f7fffb"};
 background-color: ${props => props.theme.secondaryColour || "#6e6448"};
 border: 2px solid ${props => props.theme.secondaryColour || "#f7fffb"};
 font-weight: bold;
-font-size: 1.2rem;
+
 
 &:hover {
   color: ${props => props.theme.secondaryColour || "#2f3e46"};
@@ -47,7 +54,6 @@ const InfoBtn = styled(StyledBtn)`
   background-color:  ${props => props.theme.primaryText || "#487161"};
   border: 2px solid ${props => props.theme.primaryColour || "#f7fffb"};
   font-weight: bold;
-  font-size: 1.2rem;
 
   &:hover {
     color:  ${props => props.theme.primaryText || "#487161"};

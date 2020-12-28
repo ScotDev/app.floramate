@@ -4,14 +4,14 @@ import { device } from '../../config/Breakpoints';
 
 const Content = styled.div`
   min-height: 100vh;
-  padding: 0 5rem;
+  padding: 0 2vw;
   z-index: 1;
   display: flex;
   flex-direction: column;
   width:100vw;
   
   @media ${device.tablet}{
-    padding: 0 2rem;
+    padding: 0.5vw;
   }
 `
 const PageSection = styled.div`
@@ -23,11 +23,15 @@ const PageSection = styled.div`
 `
 const PageSectionTitle = styled.h3`
     font-size: ${props => props.theme.size.subtitle};
-    color: ${props => props.theme.secondaryColour};
-    border-bottom: 4px solid ${props => props.theme.secondaryColour};
+    color: ${props => props.theme.primaryColour};
+    border-bottom: 4px solid ${props => props.theme.primaryColour};
     margin-bottom: 2rem;
     padding-bottom: 0.3rem;
     align-self: flex-start;
+
+    @media ${device.desktop}{
+        font-size:1.7vw;
+    }
 `
 
 const SkewedBg = styled.div`

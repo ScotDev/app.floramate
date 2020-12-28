@@ -24,9 +24,9 @@ const theme = {
   black: "#000",
   size: {
     title: "3rem",
-    subtitle: "2rem",
-    largeText: "1.4rem",
-    regularText: "1.25rem",
+    subtitle: "1.9vw",
+    largeText: "1.7vw",
+    regularText: "1.1vw",
     smallText: "1.1rem",
   },
   boxShadow: "6px 6px 25px 6px rgba(0,0,0, 0.7)"

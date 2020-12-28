@@ -8,7 +8,7 @@ export default function Info() {
 
         <FlexBox>
             <FlexBoxItem>
-                <LargeText colour={"#487161"} >
+                <LargeText>
                     Native trees
     </LargeText>
                 <RegularText>
@@ -16,7 +16,7 @@ export default function Info() {
     </RegularText>
             </FlexBoxItem>
             <FlexBoxItem>
-                <LargeText colour={"#487161"} >
+                <LargeText>
                     Wildflowers
     </LargeText>
                 <RegularText>
@@ -24,7 +24,7 @@ export default function Info() {
     </RegularText>
             </FlexBoxItem>
             <FlexBoxItem>
-                <LargeText colour={"#487161"} >
+                <LargeText>
                     Introduced plants
     </LargeText>
                 <RegularText>

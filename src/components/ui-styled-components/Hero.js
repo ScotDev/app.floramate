@@ -52,6 +52,7 @@ text-align:center;
         font-size:19vw;
     }
   }
+
   h1::selection{
     background: rgba(47, 62, 70, 0.9);
   color: white;
@@ -72,6 +73,10 @@ h2, h3{
 
   @media ${device.mobileL}{
         font-size:8vw;
+    }
+
+    @media ${device.desktop}{
+        font-size:2vw;
     }
   }
 `;
