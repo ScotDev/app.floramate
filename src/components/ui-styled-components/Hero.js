@@ -43,7 +43,7 @@ text-align:center;
     color: black;
   mix-blend-mode: lighten;
   background-color: #fff;
-  font-size: 15vw;
+  font-size: 14vw;
   font-weight: bold;
   margin:0;
   padding:0;
