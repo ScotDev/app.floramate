@@ -3,16 +3,17 @@ import styled from 'styled-components';
 import { device } from '../../config/Breakpoints';
 
 const Content = styled.div`
-  min-height: 100vh;
-  padding: 0 2vw;
-  z-index: 1;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  width:100vw;
+  /* padding: 2rem 4rem; */
+  /* height: 100vh; */
+  /* max-width: 90vw; */
+  /* margin: 0 auto; */
   
-  @media ${device.tablet}{
+  /* @media ${device.tablet}{
     padding: 0.5vw;
-  }
+  } */
 `
 const PageSection = styled.div`
   padding: 1rem 2rem;

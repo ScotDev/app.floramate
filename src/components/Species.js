@@ -11,10 +11,10 @@ import { HeroContainer, HeroTitle, HeroText } from './ui-styled-components/Hero'
 const Species = () => {
     return (
         <Content>
-            <HeroContainer>
+            {/* <HeroContainer>
                 <HeroTitle>Species</HeroTitle>
                 <HeroText>All the species in the floramate project</HeroText>
-            </HeroContainer>
+            </HeroContainer> */}
 
             <Search>
             </Search>

@@ -10,17 +10,13 @@ import { device } from '../../config/Breakpoints';
 //   flex-direction:column;
 // }
 // `
-const InfoGrid = styled.div`
+const ResultsGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 4rem;
-  margin-bottom: 2rem;
-`
-
-const CardGrid = styled.div`
-  display: grid;
-  gap: 1.5rem;
   grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  margin: 1.5rem 0;
+  padding: 1rem 3rem;
+
 `
 
 const GridItem = styled.div`
@@ -51,4 +47,4 @@ padding-right:2rem;
 
 
 
-export { InfoGrid, GridItem, CardGrid, FlexBox, FlexBoxItem };
+export { ResultsGrid, GridItem, FlexBox, FlexBoxItem };

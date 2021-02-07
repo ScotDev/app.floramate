@@ -53,15 +53,17 @@ const NavbarListItem = styled.li`
     color: #f7fffb;
     line-height: 1.7;
     padding-bottom: 0.25rem;
-    font-size:${props => props.theme.size.smallText};
-    }
+    font-size:${props => props.theme.size.regularText};
+    text-decoration: none;
 
+    &.active{
+        border-bottom: 2px solid #f7fffb;
+    }
     &:hover {
       border-bottom: 2px solid #f7fffb;
     }
-        .active{
-        border-bottom: 2px solid #f7fffb;
-    }
+    } 
+
 `
 
 const StyledFooter = styled.footer`

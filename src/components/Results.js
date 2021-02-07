@@ -1,16 +1,26 @@
 import React from 'react';
+// import { ResultsCard } from './ui-styled-components/Card';
+import Card from './Card';
+import { ResultsGrid } from './ui-styled-components/Grid';
 
-import Navbar from './Navbar';
-import Footer from './Footer';
+// import Navbar from './Navbar';
+// import Footer from './Footer';
 
-export default function Results() {
+
+
+export default function Results(props) {
+    const speciesData = props.speciesData.speciesData;
+
+
+
     return (
-        <div className="skewed">
-            <Navbar></Navbar>
-            <div className="content">
+        <>
 
-            </div>
-            <Footer></Footer>
-        </div>
+            <ResultsGrid>
+                <Card speciesData={speciesData} />
+
+            </ResultsGrid>
+
+        </>
     )
 }

@@ -39,11 +39,13 @@ text-align:center;
   background-color: #fff;
   background-repeat: no-repeat;
   background-size:cover;
+  background-attachment: fixed;
+  
   h1{
     color: black;
   mix-blend-mode: lighten;
   background-color: #fff;
-  font-size: 14vw;
+  font-size: 10rem;
   font-weight: bold;
   margin:0;
   padding:0;
@@ -62,7 +64,7 @@ h2, h3{
     color: black;
   mix-blend-mode: lighten;
   background-color: #fff;
-  font-size: 3vw;
+  font-size: 4rem;
   font-weight: bold;
   margin:0;
   padding:0 0 2rem 0;

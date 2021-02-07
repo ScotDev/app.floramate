@@ -19,15 +19,17 @@ const theme = {
   primaryColour: "#2f3e46",
   primaryAccent: "#6e6448",
   primaryText: "#f7fffb",
-  secondaryColour: "#487161",
+  secondaryColour: "#84a98c",
   secondaryAccent: "#f7fffb",
+  secondaryBlue: "#5a6368",
+  primaryBg: "#f6f9fc",
   black: "#000",
   size: {
     title: "3rem",
-    subtitle: "1.9vw",
-    largeText: "1.7vw",
-    regularText: "1.1vw",
-    smallText: "1.1rem",
+    subtitle: "2rem",
+    largeText: "1.7rem",
+    regularText: "1.1rem",
+    smallText: "0.9rem",
   },
   boxShadow: "6px 6px 25px 6px rgba(0,0,0, 0.7)"
 };

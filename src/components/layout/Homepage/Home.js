@@ -20,19 +20,17 @@ export default function Home() {
     return (
         <>
             <BrowserRouter>
-                <Content>
-                    <Hero></Hero>
-                    {/* <Search></Search> */}
-                    <PageSection>
-                        <PageSectionTitle>Latest</PageSectionTitle>
-                        {/* <SpeciesGrid> */}
-                        {/* <Latest data={latestItems}></Latest> */}
-                        {/* </SpeciesGrid> */}
-                    </PageSection>
-                    <PageSection><PageSectionTitle>What do we do?</PageSectionTitle>
-                        <Info></Info>
-                    </PageSection>
-                </Content>
+                <Hero></Hero>
+                {/* <Search></Search> */}
+                <PageSection>
+                    <PageSectionTitle>Latest</PageSectionTitle>
+                    {/* <SpeciesGrid> */}
+                    {/* <Latest data={latestItems}></Latest> */}
+                    {/* </SpeciesGrid> */}
+                </PageSection>
+                <PageSection><PageSectionTitle>What do we do?</PageSectionTitle>
+                    <Info></Info>
+                </PageSection>
                 <Route path="/:post_id" component={SpeciesProfile}></Route>
             </BrowserRouter>
 
