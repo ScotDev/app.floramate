@@ -2,7 +2,7 @@ import React from 'react';
 import Results from '../Results';
 
 import { SearchSection, SearchBox, SearchBtn, ResultsHeading } from '../ui-styled-components/Search';
-import { Content } from '../ui-styled-components/Utils';
+// import { Content } from '../ui-styled-components/Utils';
 // import { PrimaryBtn } from '../ui-styled-components/Button';
 // import { Subtitle } from '../ui-styled-components/Text';
 
@@ -27,10 +27,10 @@ export default function Search() {
 
             </SearchSection>
             <ResultsHeading>Results</ResultsHeading>
-            <Content>
-                <Results speciesData={speciesData} />
+            {/* <Content> */}
+            <Results speciesData={speciesData} />
 
-            </Content>
+            {/* </Content> */}
         </>
     )
 }

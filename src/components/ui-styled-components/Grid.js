@@ -12,10 +12,29 @@ import { device } from '../../config/Breakpoints';
 // `
 const ResultsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  /* margin: 1.5rem 0; */
+  padding: 2rem 6rem;
+overflow: hidden;
+
+
+ @media ${device.tablet}{
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+ }
+ /* @media ${device.laptopL}{
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  margin: 1.5rem 0;
-  padding: 1rem 3rem;
+  padding: 2rem 4rem;
+ } */
+
+ @media ${device.desktopL}{
+  grid-template-columns: repeat(6, 1fr);
+  padding: 2rem 5rem;
+  gap: 1.5rem;
+ }
 
 `
 

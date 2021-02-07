@@ -36,7 +36,7 @@ const HeroKnockout = styled.div`
 border:0;
 text-align:center;
   background: url("https://images.unsplash.com/photo-1503785640985-f62e3aeee448?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80");
-  background-color: #fff;
+  background-color: ${props => props.theme.primaryBg};
   background-repeat: no-repeat;
   background-size:cover;
   background-attachment: fixed;
@@ -44,7 +44,7 @@ text-align:center;
   h1{
     color: black;
   mix-blend-mode: lighten;
-  background-color: #fff;
+  background-color: ${props => props.theme.primaryBg};
   font-size: 10rem;
   font-weight: bold;
   margin:0;
@@ -57,13 +57,13 @@ text-align:center;
 
   h1::selection{
     background: rgba(47, 62, 70, 0.9);
-  color: white;
+  color: ${props => props.theme.primaryBg};
   }
 
 h2, h3{
     color: black;
   mix-blend-mode: lighten;
-  background-color: #fff;
+  background-color: ${props => props.theme.primaryBg};
   font-size: 4rem;
   font-weight: bold;
   margin:0;

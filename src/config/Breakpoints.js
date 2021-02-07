@@ -16,7 +16,7 @@ const device = {
     laptop: `(max-width: ${breakpoint.laptop})`,
     laptopL: `(max-width: ${breakpoint.laptopL})`,
     desktop: `(max-width: ${breakpoint.desktop})`,
-    desktopL: `(max-width: ${breakpoint.desktop})`
+    desktopL: `(min-width: ${breakpoint.desktop})`
 };
 
 export { device };

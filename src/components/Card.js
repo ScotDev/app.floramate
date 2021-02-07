@@ -19,53 +19,46 @@ export default function Card(props) {
             <ResultsCard key={item.id}>
                 <img src={item.img_url} alt="" />
                 <h4>{item.common_name}</h4>
-                <hr />
+                <div id="divider"></div>
                 <h5>{item.latin_name}</h5>
                 <InnerCardGrid>
                     <div>
-                        <i>
-                            <GiPlantRoots />
-                        </i>
+
+                        <GiPlantRoots />
                         <p>{item.type}</p>
                     </div>
                     <div>
-                        <i>
-                            <AiOutlineVerticalAlignTop />
-                        </i>
+
+                        <AiOutlineVerticalAlignTop />
                         <p>{item.ult_height}m</p>
                     </div>
                     <div>
-                        <i>
-                            {item.sun.map((i) => {
-                                if (i === 1) {
-                                    return <>{<IoSunnySharp />}</>;
-                                } else {
-                                    return <>{<IoSunnyOutline />}</>;
-                                }
-                            })}
-                        </i>
+
+                        {item.sun.map((i) => {
+                            if (i === 1) {
+                                return <>{<IoSunnySharp />}</>;
+                            } else {
+                                return <>{<IoSunnyOutline />}</>;
+                            }
+                        })}
                     </div>
                     <div>
-                        <i>
-                            <IoIosSnow />
-                        </i>
+                        <IoIosSnow />
                         <p>{item.hardiness}</p>
                     </div>
                     <div>
-                        <i>
-                            {item.water.map((i) => {
-                                if (i === 1) {
-                                    return <>{<IoWaterSharp />}</>;
-                                } else {
-                                    return <>{<IoWaterOutline />}</>;
-                                }
-                            })}
-                        </i>
+
+                        {item.water.map((i) => {
+                            if (i === 1) {
+                                return <>{<IoWaterSharp />}</>;
+                            } else {
+                                return <>{<IoWaterOutline />}</>;
+                            }
+                        })}
                     </div>
                     <div>
-                        <i>
-                            <RiPlantLine />
-                        </i>
+
+                        <RiPlantLine />
                         <p>{item.ease}</p>
                     </div>
                 </InnerCardGrid>

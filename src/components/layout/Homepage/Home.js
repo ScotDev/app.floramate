@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import { Content, PageSection, PageSectionTitle } from '../../ui-styled-components/Utils';
+import { PageSection, PageSectionTitle } from '../../ui-styled-components/Utils';
 
 
 import Hero from '../../Hero';

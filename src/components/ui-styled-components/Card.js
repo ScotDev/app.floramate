@@ -3,6 +3,12 @@ import styled from 'styled-components';
 
 
 const ResultsCard = styled.div`
+
+display: flex;
+flex-direction:column;
+justify-content: center;
+align-items: center;
+
   background-color: #fff;
   color: ${props => props.theme.primaryColour};
   min-height: 400px;
@@ -50,11 +56,14 @@ const ResultsCard = styled.div`
   padding-bottom: 0.3rem;
 }
 
-hr{
-  width: 20px;
-  height: 3px;
-  background-color: ${props => props.theme.primaryColour}
+#divider {
+  max-width: 20px;
+  width: 5%;
+  height: 2px;
+  border-radius: 5px;
+  background-color: ${props => props.theme.secondaryColour}
 }
+
 h5 {
   /* color: #fff; */
   border-bottom: 2px solid ${props => props.theme.secondaryColour};
@@ -63,6 +72,7 @@ h5 {
   margin: 0.5rem 1.5rem 1rem 1.5rem;
   padding-bottom: 0.3rem;
   font-style: italic;
+  width: 85%;
 }
 
 `
@@ -75,6 +85,7 @@ const InnerCardGrid = styled.div`
   /* margin: 0.8rem 1rem;*/
   padding: 0 0 0 1.8rem;
   overflow: hidden;
+  width: 100%;
 
   div{
     display: flex;
@@ -84,12 +95,12 @@ const InnerCardGrid = styled.div`
   font-weight: 500;
   /* align-items: center; */
 
-  /* Maybe don't use I tags, perhaps span */
-  i{
+  svg{
     color: ${props => props.theme.secondaryColour};
   font-size: 1.75rem;
   align-self: center;
   }
+  
 p{
   color: ${props => props.theme.primaryColour};
   font-size: 1rem;
