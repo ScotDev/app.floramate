@@ -53,15 +53,24 @@ const NavbarListItem = styled.li`
     a{
     color: #f7fffb;
     line-height: 1.7;
-    padding-bottom: 0.25rem;
+    padding: 0.15rem 0.4rem;
+    /* padding-bottom: 0.25rem; */
     font-size:${props => props.theme.size.regularText};
     text-decoration: none;
+    font-weight: bold;
 
     &.active{
-        border-bottom: 2px solid #f7fffb;
+      background-color: #fff;
+      border-radius: 7px;
+      color: ${props => props.theme.primaryColour};
+      font-weight: bold;
     }
     &:hover {
-      border-bottom: 2px solid #f7fffb;
+      /* border-bottom: 2px solid #f7fffb; */
+      background-color: #fff;
+      border-radius: 7px;
+      color: ${props => props.theme.primaryColour};
+      font-weight: bold;
     }
     } 
 

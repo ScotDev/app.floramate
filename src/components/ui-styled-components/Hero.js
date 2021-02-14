@@ -7,9 +7,16 @@ const HeroContainer = styled.div`
   flex-direction: column;
   text-align: center;
   align-items: center;
+  padding-top: 2rem;
   padding-bottom: 2rem;
+  padding-left: ${props => props.theme.mainContentPadding};
+  padding-right: ${props => props.theme.mainContentPadding};
   box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
     0 3px 7px -3px rgb(0 0 0 / 30%);
+
+    /* @media ${device.mobileL}{
+        padding: 1.5rem;
+    } */
 `
 // Already defined in Text.js - apart from colour
 const HeroTitle = styled.h1`
@@ -54,9 +61,9 @@ const HeroKnockout = styled.div`
   text-shadow: 0 6px 12px rgb(50 50 93 / 25%),
     0 3px 7px rgb(0 0 0 / 30%);
 
-  @media ${device.mobileL}{
-        font-size:19vw;
-    }
+  /* @media ${device.mobileL}{
+        font-size:5rem;
+    } */
   }
 
   h1::selection{
@@ -68,10 +75,10 @@ h2, h3{
     color: black;
   mix-blend-mode: lighten;
   background-color: ${props => props.theme.primaryBg};
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin:0;
-  padding:0 0 2rem 0;
+  padding:0 0 4rem 0;
   text-shadow: 0 6px 12px rgb(50 50 93 / 10%),
     0 3px 7px rgb(0 0 0 / 30%);
 
@@ -80,13 +87,10 @@ h2, h3{
     color: white;
   }
 
-  @media ${device.mobileL}{
-        font-size:8vw;
-    }
+  /* @media ${device.mobileL}{
+        font-size:2.25rem;
+    } */
 
-    @media ${device.desktop}{
-        font-size:2vw;
-    }
   }
 `;
 export { HeroContainer, HeroTitle, HeroSubTitle, HeroText, HeroKnockout };
