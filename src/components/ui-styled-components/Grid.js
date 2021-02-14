@@ -13,17 +13,17 @@ import { device } from '../../config/Breakpoints';
 const ResultsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 2rem;
   /* margin: 1.5rem 0; */
   padding: 2rem 6rem;
 overflow: hidden;
 
 
- @media ${device.tablet}{
+ /* @media ${device.tablet}{
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
   padding: 1rem;
- }
+ } */
  /* @media ${device.laptopL}{
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;

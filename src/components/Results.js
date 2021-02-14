@@ -3,22 +3,16 @@ import React from 'react';
 import Card from './Card';
 import { ResultsGrid } from './ui-styled-components/Grid';
 
-// import Navbar from './Navbar';
-// import Footer from './Footer';
-
-
-
 export default function Results(props) {
     const speciesData = props.speciesData.speciesData;
 
-
+    const { limit } = props;
 
     return (
         <>
 
             <ResultsGrid>
-                <Card speciesData={speciesData} />
-
+                <Card speciesData={speciesData} limit={limit} />
             </ResultsGrid>
 
         </>

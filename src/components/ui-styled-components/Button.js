@@ -4,7 +4,7 @@ import { device } from '../../config/Breakpoints';
 
 const StyledBtn = styled.button`
   border-radius: 5px;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.8rem;
   margin-bottom: 0.5rem;
   font-family: inherit;
   text-align: center;

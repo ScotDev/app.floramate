@@ -12,9 +12,9 @@ import { RiPlantLine } from "react-icons/ri";
 
 export default function Card(props) {
     const data = props.speciesData
-    // console.log("Card: ", data)
+    const limit = props.limit
 
-    const items = data.map((item) => {
+    const items = data.slice(0, limit).map((item) => {
         return (
             <ResultsCard key={item.id}>
                 <img src={item.img_url} alt="" />
