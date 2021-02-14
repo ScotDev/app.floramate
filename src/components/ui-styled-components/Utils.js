@@ -25,6 +25,8 @@ const PageSection = styled.div`
   align-items: center;
   width: 100vw;
   background-color: ${props => props.bgColor};
+  box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+    0 3px 7px -3px rgb(0 0 0 / 30%);
 `
 const PageSectionTitle = styled.h3`
     font-size: ${props => props.theme.size.subtitle};
