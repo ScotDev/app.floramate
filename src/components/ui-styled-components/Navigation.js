@@ -7,7 +7,10 @@ const StyledNavbar = styled.nav`
   background-color: ${props => props.theme.primaryColour || "#f7fffb"};;
   display: flex;
   align-items:center;
-  padding: 0.25rem 1.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: ${props => props.theme.mainContentPadding};
+  padding-right: ${props => props.theme.mainContentPadding};
   height: 4.5rem;
 
 /* Temporary, change to mobile QMT */
@@ -17,7 +20,6 @@ const StyledNavbar = styled.nav`
 `
 
 const NavbarBrand = styled.div`
-
   display: flex;
   font-size: 1.2rem;
   padding: 0;
@@ -25,7 +27,6 @@ const NavbarBrand = styled.div`
   justify-content: center;
   align-items: center;
   color:#fff;
-
 
 img {
   margin-right: 1rem;
@@ -70,11 +71,11 @@ const StyledFooter = styled.footer`
   /* position:relative;
   bottom: 0;
   left: 0; */
-  /* padding: 1rem 5rem 10rem 5rem; */
-  padding:1rem;
+  padding-left: ${props => props.theme.mainContentPadding};
+  padding-right: ${props => props.theme.mainContentPadding};
   margin:0;
   overflow: hidden;
-  height: 20vh;
+  height: 15vh;
   width: 100%;
   background-color: ${props => props.theme.primaryColour || "#f7fffb"};
   color: ${props => props.theme.primaryAccent || "#6e6448"};
@@ -85,21 +86,24 @@ const StyledFooter = styled.footer`
 const FooterContent = styled.ul`
 display:flex;
 flex-direction:row;
+padding: 0;
 `
 
 const FooterContentList = styled.ul`
 display:flex;
 flex-direction:column;
+padding: 0;
+padding-right:5rem;
+`
 
-      `
 const FooterContentListItem = styled.li`
       list-style-type: none;
       line-height: 1.7;
       /* margin-right: 4rem; */
       a{
-        color: ${props => props.theme.primaryText};
-  &:hover {
-  border-bottom: ${props => props.theme.primaryText};
+        color: #f7fffb;
+        &:hover {
+    border-bottom: 2px solid #f7fffb;
   }
       }
 
@@ -167,18 +171,13 @@ const MobileNavMenuItem = styled.li`
       padding:0.25rem;
       
   a {
-color: ${props => props.theme.primaryText};
+color: #f7fffb;
   text-decoration:none;
 
-  :hover {
-  border-bottom: ${props => props.theme.primaryText};
+  &:hover {
+    border-bottom: 2px solid #f7fffb;
   }
   }
-
-
-
 `
-
-
 
 export { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, StyledFooter, FooterContent, FooterContentList, FooterContentListItem, MobileNavbar, MobileNavMenu, MobileNavMenuItem };

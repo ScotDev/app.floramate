@@ -16,17 +16,21 @@ const Content = styled.div`
   } */
 `
 const PageSection = styled.div`
-  padding: 1rem 2rem;
+  padding-left: ${props => props.theme.mainContentPadding};
+  padding-right: ${props => props.theme.mainContentPadding};
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  width: 100vw;
+  background-color: ${props => props.bgColor};
 `
 const PageSectionTitle = styled.h3`
     font-size: ${props => props.theme.size.subtitle};
-    color: ${props => props.theme.primaryColour};
-    border-bottom: 4px solid ${props => props.theme.primaryColour};
-    margin-bottom: 2rem;
+    color: ${props => props.color || props.theme.primaryColour};
+    border-bottom: 2px solid ${props => props.color || props.theme.primaryColour};
+    margin-bottom: 1rem;
     padding-bottom: 0.3rem;
     align-self: flex-start;
 
@@ -85,7 +89,7 @@ background-color:${props => props.theme.primaryColour || "#f7fffb"};
   a{
     color: ${props => props.theme.primaryText};
     text-decoration: none;
-    :hover{
+    &:hover{
       border-bottom: 2px solid ${props => props.theme.primaryText};
     }
   }

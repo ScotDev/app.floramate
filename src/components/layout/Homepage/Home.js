@@ -1,12 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
 
 import { PageSection, PageSectionTitle } from '../../ui-styled-components/Utils';
 
-
 import Hero from '../../Hero';
-// import Search from '../../functional/Search'
-import SpeciesProfile from '../../Species'
+// import SpeciesProfile from '../../Species'
 import Info from './Info'
 // import Latest from './Latest';
 
@@ -19,20 +16,16 @@ export default function Home() {
 
     return (
         <>
-            <BrowserRouter>
-                <Hero></Hero>
-                {/* <Search></Search> */}
-                <PageSection>
-                    <PageSectionTitle>Latest</PageSectionTitle>
-                    {/* <SpeciesGrid> */}
-                    {/* <Latest data={latestItems}></Latest> */}
-                    {/* </SpeciesGrid> */}
-                </PageSection>
-                <PageSection><PageSectionTitle>What do we do?</PageSectionTitle>
-                    <Info></Info>
-                </PageSection>
-                <Route path="/:post_id" component={SpeciesProfile}></Route>
-            </BrowserRouter>
+            <Hero></Hero>
+            <PageSection bgColor={"#2f3e46"}>
+                <PageSectionTitle color={"#fff"}>What is floramate?</PageSectionTitle>
+                <Info color={"#fff"}></Info>
+            </PageSection>
+            <PageSection>
+                <PageSectionTitle color={"#2f3e46"}>What is floramate?</PageSectionTitle>
+                <Info color={"#2f3e46"}></Info>
+            </PageSection>
+            {/* <Route path="/:post_id" component={SpeciesProfile}></Route> */}
 
         </>
     )

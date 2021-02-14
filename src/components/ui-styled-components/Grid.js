@@ -43,10 +43,12 @@ const GridItem = styled.div`
     flex-direction: column;
 `
 
-
 const FlexBox = styled.div`
 display:flex;
 flex-direction:row;
+
+/* padding-left: ${props => props.theme.mainContentPadding};
+ padding-right: ${props => props.theme.mainContentPadding}; */
 
 @media ${device.tablet}{
   flex-direction:column;
@@ -58,6 +60,7 @@ const FlexBoxItem = styled.div`
     flex-direction: column;
 text-align:justify;
 padding-right:2rem;
+
 
 @media ${device.tablet}{
   padding-right:0;

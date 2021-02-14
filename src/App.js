@@ -29,7 +29,8 @@ const theme = {
     regularText: "1.1rem",
     smallText: "0.9rem",
   },
-  boxShadow: "6px 6px 25px 6px rgba(0,0,0, 0.7)"
+  boxShadow: "6px 6px 25px 6px rgba(0,0,0, 0.7)",
+  mainContentPadding: "10vw"
 };
 
 function App() {

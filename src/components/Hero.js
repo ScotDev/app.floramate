@@ -1,6 +1,8 @@
 import React from 'react';
 import { HeroContainer, HeroTitle, HeroText, HeroKnockout } from './ui-styled-components/Hero';
 import { SecondaryBtn, InfoBtn, BtnGroup } from './ui-styled-components/Button';
+import { Link } from 'react-router-dom';
+
 
 const Hero = () => {
     return <HeroContainer>
@@ -10,10 +12,14 @@ const Hero = () => {
             <HeroText>Helping you find wildlife-friendly plants for your area</HeroText>
         </HeroKnockout>
         <BtnGroup>
-            <SecondaryBtn>
-                Browse
+            <Link to="/species">
+                <SecondaryBtn>
+                    Browse
         </SecondaryBtn>
-            <InfoBtn>About</InfoBtn>
+            </Link>
+            <Link to="/about">
+                <InfoBtn>About</InfoBtn>
+            </Link>
         </BtnGroup>
 
     </HeroContainer>
