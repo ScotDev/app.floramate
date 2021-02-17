@@ -11,7 +11,7 @@ const StyledNavbar = styled.nav`
   padding-bottom: 0.25rem;
   padding-left: ${props => props.theme.mainContentPadding};
   padding-right: ${props => props.theme.mainContentPadding};
-  height: 4.5rem;
+  height: 80px;
 
 /* Temporary, change to mobile QMT */
   @media ${device.tablet}{
@@ -27,6 +27,12 @@ const NavbarBrand = styled.div`
   justify-content: center;
   align-items: center;
   color:#fff;
+
+  h2{
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+  }
 
 img {
   margin-right: 1rem;
@@ -52,25 +58,26 @@ const NavbarListItem = styled.li`
 
     a{
     color: #f7fffb;
-    line-height: 1.7;
-    padding: 0.15rem 0.4rem;
+    line-height: 1.6;
+    padding: 0.15rem 0.5rem;
     /* padding-bottom: 0.25rem; */
     font-size:${props => props.theme.size.regularText};
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing:1px;
 
     &.active{
       background-color: #fff;
       border-radius: 7px;
       color: ${props => props.theme.primaryColour};
-      font-weight: bold;
+      /* font-weight: bold; */
     }
     &:hover {
       /* border-bottom: 2px solid #f7fffb; */
       background-color: #fff;
       border-radius: 7px;
       color: ${props => props.theme.primaryColour};
-      font-weight: bold;
+      /* font-weight: bold; */
     }
     } 
 

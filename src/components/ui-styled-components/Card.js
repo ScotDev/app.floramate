@@ -11,10 +11,10 @@ align-items: center;
 
   background-color: #fff;
   color: ${props => props.theme.primaryColour};
-  min-height: 400px;
+  min-height: 375px;
   height: fit-content;
   width: 100%;
-  min-width: 350px;
+  min-width: 325px;
   overflow: hidden;
   max-width: 400px;
   border-radius: 8px;
@@ -40,7 +40,7 @@ align-items: center;
   }
 
   img{
-  height: 250px;
+  height: 225px;
   object-fit: cover;
   width: 100%;
   border-bottom: 3px solid ${props => props.theme.secondaryColour};

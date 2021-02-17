@@ -21,20 +21,21 @@ export default function Home() {
     return (
         <>
             <Hero></Hero>
-            <PageSection bgColor={"#2f3e46"}>
-                <PageSectionTitle color={"#fff"}>What is floramate?</PageSectionTitle>
-                <Info color={"#fff"}></Info>
-            </PageSection>
 
-            <PageSection>
-                <PageSectionTitle color={"#2f3e46"}>Featured</PageSectionTitle>
+            <PageSection bgColor={"#2f3e46"}>
+                <PageSectionTitle color={"#fff"} >Featured</PageSectionTitle>
                 <Results speciesData={speciesData} limit={3} />
             </PageSection>
 
-            <PageSection>
-                <PageSectionTitle color={"#2f3e46"}>What is floramate?</PageSectionTitle>
-                <Info color={"#2f3e46"}></Info>
+            <PageSection  >
+                <Info></Info>
             </PageSection>
+
+            {/* 
+
+            <PageSection>
+                <Info color={"#2f3e46"}></Info>
+            </PageSection> */}
 
             {/* <Route path="/:post_id" component={SpeciesProfile}></Route> */}
 

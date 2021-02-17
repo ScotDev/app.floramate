@@ -8,26 +8,26 @@ export default function Info({ color }) {
 
         <FlexBox >
             <FlexBoxItem >
-                <LargeText color={color}>
+                <LargeText color={color} textAlign={"center"}>
                     Native trees
     </LargeText>
-                <RegularText color={color}>
+                <RegularText color={color} padding={"0"}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
     </RegularText>
             </FlexBoxItem>
             <FlexBoxItem>
-                <LargeText color={color}>
+                <LargeText color={color} textAlign={"center"}>
                     Wildflowers
     </LargeText>
-                <RegularText color={color}>
+                <RegularText color={color} padding={"0"}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
     </RegularText>
             </FlexBoxItem>
             <FlexBoxItem>
-                <LargeText color={color}>
+                <LargeText color={color} textAlign={"center"}>
                     Introduced plants
     </LargeText>
-                <RegularText color={color}>
+                <RegularText color={color} padding={"0"}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
     </RegularText>
             </FlexBoxItem>

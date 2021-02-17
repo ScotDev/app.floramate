@@ -13,12 +13,12 @@ const Hero = () => {
         </HeroKnockout>
         <BtnGroup>
             <Link to="/species">
-                <SecondaryBtn>
+                <SecondaryBtn fontSize={"1.4rem"}>
                     Browse
         </SecondaryBtn>
             </Link>
             <Link to="/about">
-                <InfoBtn>About</InfoBtn>
+                <InfoBtn bgColor={"transparent"} fontSize={"1.4rem"}>About</InfoBtn>
             </Link>
         </BtnGroup>
 

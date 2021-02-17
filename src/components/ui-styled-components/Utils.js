@@ -6,6 +6,7 @@ const Content = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   /* padding: 2rem 4rem; */
   /* height: 100vh; */
   /* max-width: 90vw; */
@@ -18,7 +19,8 @@ const Content = styled.div`
 const PageSection = styled.div`
   padding-left: ${props => props.theme.mainContentPadding};
   padding-right: ${props => props.theme.mainContentPadding};
-  padding-bottom: 1rem;
+  /* padding-top: 1rem; */
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -29,17 +31,54 @@ const PageSection = styled.div`
     0 3px 7px -3px rgb(0 0 0 / 30%);
 `
 const PageSectionTitle = styled.h3`
-    font-size: ${props => props.theme.size.subtitle};
+    font-size: ${props => props.theme.size.largeText};
     color: ${props => props.color || props.theme.primaryColour};
     border-bottom: 2px solid ${props => props.color || props.theme.primaryColour};
     margin-bottom: 1rem;
     padding-bottom: 0.3rem;
     align-self: flex-start;
-
-    @media ${device.desktop}{
-        font-size:1.7vw;
-    }
 `
+
+const ArticleContainer = styled.div`
+  /* background-color: ${props => props.theme.primaryText}; */
+  background: linear-gradient(180deg,#ebf4fd,hsla(0,0%,100%,0) 10%,hsla(0,0%,100%,0) 80%,#ebf4fd);
+  margin: 3rem 0;
+  padding: 2rem 4rem;
+  border-radius: ${props => props.theme.borderRadius};
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media ${device.tablet}{
+    /* width:100%; */
+    padding: 1.1rem;
+    margin: 0;
+  }
+`;
+
+
+const ArticleBody = styled.article`
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+    0 3px 7px -3px rgb(0 0 0 / 30%);
+  border-radius: ${props => props.theme.borderRadius};
+  margin: 2rem 0;
+  width: 70%;
+  padding: 1rem 3rem;
+
+  @media ${device.laptop}{
+    width:90%;
+  }
+
+    @media ${device.tablet}{
+    width:100%;
+    padding: 1rem;
+  }
+`;
 
 const SkewedBg = styled.div`
   position: absolute;
@@ -101,4 +140,4 @@ background-color:${props => props.theme.primaryColour || "#f7fffb"};
 
 
 
-export { Content, PageSection, PageSectionTitle, SkewedBg, CreditSection };
+export { Content, PageSection, PageSectionTitle, ArticleContainer, ArticleBody, SkewedBg, CreditSection };

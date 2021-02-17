@@ -17,7 +17,7 @@ export default function Card(props) {
     const items = data.slice(0, limit).map((item) => {
         return (
             <ResultsCard key={item.id}>
-                <img src={item.img_url} alt="" />
+                <img loading="lazy" src={item.img_url} alt="" />
                 <h4>{item.common_name}</h4>
                 <div id="divider"></div>
                 <h5>{item.latin_name}</h5>

@@ -23,14 +23,17 @@ const theme = {
   primaryBg: "#f6f9fc",
   black: "#000",
   size: {
-    title: "2.8rem",
-    subtitle: "2.1rem",
-    largeText: "1.7rem",
+    title: "4rem",
+    subtitle: "2.5rem",
+    largeText: "2rem",
     regularText: "1.1rem",
     smallText: "0.9rem",
   },
-  boxShadow: "6px 6px 25px 6px rgba(0,0,0, 0.7)",
-  mainContentPadding: "20vw"
+  // boxShadow: "6px 6px 25px 6px rgba(0,0,0, 0.7)",
+  // boxShadow: "0 6px 12px -2px rgb(50 50 93 / 25%),
+  // 0 3px 7px - 3px rgb(0 0 0 / 30 %)",
+  mainContentPadding: "25vw",
+  borderRadius: "8px"
 };
 
 function App() {

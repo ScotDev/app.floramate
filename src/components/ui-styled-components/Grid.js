@@ -43,6 +43,7 @@ const GridItem = styled.div`
     flex-direction: column;
 `
 
+// Should be moved to utils
 const FlexBox = styled.div`
 display:flex;
 flex-direction:row;
@@ -58,8 +59,8 @@ flex-direction:row;
 const FlexBoxItem = styled.div`
     display: flex;
     flex-direction: column;
-text-align:justify;
-padding-right:2rem;
+    text-align:justify;
+    margin-right:3rem;
 
 
 @media ${device.tablet}{

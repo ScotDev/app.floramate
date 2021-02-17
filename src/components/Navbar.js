@@ -1,7 +1,7 @@
 import React from 'react';
 // import { PrimaryBtn, SecondaryBtn } from './ui-styled-components/Button';
 import { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, MobileNavbar, MobileNavMenu, MobileNavMenuItem } from './ui-styled-components/Navigation';
-import { RegularText, Subtitle } from './ui-styled-components/Text';
+import { RegularText } from './ui-styled-components/Text';
 
 import BrandImage from "../assets/img/brand.svg";
 
@@ -10,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 function Navbar() {
     return (<>
         <StyledNavbar>
-            <NavbarBrand><img alt="brand name" src={BrandImage} /><Subtitle>floramate</Subtitle></NavbarBrand>
+            <NavbarBrand><img alt="brand name" src={BrandImage} /><h2>floramate</h2></NavbarBrand>
             <NavbarList>
                 <NavbarListItem>
                     <NavLink exact to="/">Home</NavLink>
@@ -19,9 +19,9 @@ function Navbar() {
                     <NavLink to="/species">Species</NavLink>
 
                 </NavbarListItem>
-                <NavbarListItem>
+                {/* <NavbarListItem>
                     <NavLink to="/advice">Advice</NavLink>
-                </NavbarListItem>
+                </NavbarListItem> */}
                 <NavbarListItem>
                     <NavLink to="/about">About</NavLink>
                 </NavbarListItem>
