@@ -24,7 +24,7 @@ const theme = {
   black: "#000",
   size: {
     title: "4rem",
-    subtitle: "2.5rem",
+    subtitle: "2.6rem",
     largeText: "2rem",
     regularText: "1.1rem",
     smallText: "0.9rem",

@@ -29,9 +29,10 @@ const NavbarBrand = styled.div`
   color:#fff;
 
   h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 0;
     margin: 0;
+    font-weight: 400;
   }
 
 img {
@@ -51,7 +52,7 @@ const NavbarList = styled.ul`
 `
 
 const NavbarListItem = styled.li`
-    margin-right: 1.5rem;
+    margin-right: 1.25rem;
     text-align: center;
     color: #f7fffb;
   height:1.8rem;
@@ -63,19 +64,19 @@ const NavbarListItem = styled.li`
     /* padding-bottom: 0.25rem; */
     font-size:${props => props.theme.size.regularText};
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing:1px;
 
     &.active{
-      background-color: #fff;
-      border-radius: 7px;
+      background-color: ${props => props.theme.primaryText};
+      border-radius: ${props => props.theme.borderRadius};
       color: ${props => props.theme.primaryColour};
       /* font-weight: bold; */
     }
     &:hover {
       /* border-bottom: 2px solid #f7fffb; */
-      background-color: #fff;
-      border-radius: 7px;
+      background-color: ${props => props.theme.primaryText};
+      border-radius: ${props => props.theme.borderRadius};;
       color: ${props => props.theme.primaryColour};
       /* font-weight: bold; */
     }

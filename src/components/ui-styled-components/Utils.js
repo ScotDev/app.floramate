@@ -12,9 +12,7 @@ const Content = styled.div`
   /* max-width: 90vw; */
   /* margin: 0 auto; */
   
-  /* @media ${device.tablet}{
-    padding: 0.5vw;
-  } */
+
 `
 const PageSection = styled.div`
   padding-left: ${props => props.theme.mainContentPadding};
@@ -29,6 +27,10 @@ const PageSection = styled.div`
   background-color: ${props => props.bgColor};
   box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
     0 3px 7px -3px rgb(0 0 0 / 30%);
+
+    @media ${device.laptop}{
+padding: 1.5rem;
+}
 `
 const PageSectionTitle = styled.h3`
     font-size: ${props => props.theme.size.largeText};

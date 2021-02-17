@@ -51,8 +51,10 @@ flex-direction:row;
 /* padding-left: ${props => props.theme.mainContentPadding};
  padding-right: ${props => props.theme.mainContentPadding}; */
 
-@media ${device.tablet}{
+@media ${device.laptop}{
   flex-direction:column;
+  margin: 0;
+  padding: 0;
 }
 `
 
@@ -63,8 +65,10 @@ const FlexBoxItem = styled.div`
     margin-right:3rem;
 
 
-@media ${device.tablet}{
-  padding-right:0;
+@media ${device.laptop}{
+  /* padding-right:0;
+   */
+   margin: 0;
 }
 `
 

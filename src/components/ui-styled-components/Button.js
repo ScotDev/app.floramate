@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-// import { device } from '../../config/Breakpoints';
+import { device } from '../../config/Breakpoints';
 
 const StyledBtn = styled.button`
   border-radius: ${props => props.theme.borderRadius};
@@ -12,7 +12,7 @@ const StyledBtn = styled.button`
   font-size: ${props => props.fontSize || props.theme.size.regularText};
   box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
     0 3px 7px -3px rgb(0 0 0 / 30%);
-  transition: border 0.2s, color 0.2s, background-image 0.2s, background-color 0.2s;
+  transition: border 0.2s, color 0.2s, background-color 0.2s;
   cursor: pointer;
 
 `
@@ -49,17 +49,10 @@ const InfoBtn = styled(StyledBtn)`
   border: 2px solid ${props => props.theme.primaryColour || "#f7fffb"};
   font-weight: bold;
 
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-attachment: fixed;
-
   &:hover {
     color:  ${props => props.theme.primaryText || "#487161"};
     border: 2px solid ${props => props.theme.secondaryBlue || "#f7fffb"};
-    /* background-color: ${props => props.theme.primaryColour || "#f7fffb"}; */
-
-/* Needs to be made way smaller */
-    background-image: url("https://images.unsplash.com/photo-1477696957384-3b1d731c4cff?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+    background-color: ${props => props.theme.primaryColour || "#f7fffb"};
   }
 `
 
@@ -71,6 +64,18 @@ margin-bottom: 5rem;
 
 button:nth-of-type(1) {
   margin-right:1rem;
+}
+
+@media ${device.tablet}{
+        flex-direction: column;
+        margin-bottom: 2rem;
+        button{
+          width: 95%;
+        }
+
+        button:nth-of-type(1) {
+          margin: 0.4rem 0;
+}
 }
 
 `;

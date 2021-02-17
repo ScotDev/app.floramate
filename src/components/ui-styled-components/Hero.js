@@ -14,10 +14,11 @@ const HeroContainer = styled.div`
   box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
     0 3px 7px -3px rgb(0 0 0 / 30%);
 
-    /* @media ${device.mobileL}{
-        padding: 1.5rem;
-    } */
+    @media ${device.laptop}{
+  padding: 1rem;
+}
 `
+// Remove
 // Already defined in Text.js - apart from colour
 const HeroTitle = styled.h1`
     font-size: ${props => props.theme.size.title};
@@ -26,6 +27,7 @@ const HeroTitle = styled.h1`
         font-size:2.75rem;
     }
 `
+// Remove
 // Already defined in Text.js - apart from colour
 const HeroSubTitle = styled.h2`
     font-size: ${props => props.theme.size.subtitle};
@@ -34,7 +36,7 @@ const HeroSubTitle = styled.h2`
         font-size:1.75rem;
     }
 `
-
+// Remove
 const HeroText = styled.h3`
     font-size: ${props => props.theme.size.largeText};
     font-weight: 400;
@@ -49,7 +51,11 @@ const HeroKnockout = styled.div`
   background-repeat: no-repeat;
   background-size:cover;
   background-attachment: fixed;
-  max-width:95%;
+  max-width:100%;
+
+  @media ${device.laptop}{
+  text-align: center;
+  }
   
   h1{
   color: black;
@@ -61,6 +67,11 @@ const HeroKnockout = styled.div`
   padding:0;
   text-shadow: 0 6px 12px rgb(50 50 93 / 25%),
   0 3px 7px rgb(0 0 0 / 30%);
+
+   @media ${device.laptop}{
+     font-size: 5rem;
+     padding-bottom: 1rem;
+    }
   }
 
   h1::selection{
@@ -79,6 +90,11 @@ h2, h3{
   text-shadow: 0 6px 12px rgb(50 50 93 / 10%),
     0 3px 7px rgb(0 0 0 / 30%);
     max-width: 40ch;
+
+    @media ${device.laptop}{
+        font-size: ${props => props.theme.size.largeText};
+        padding-bottom: 1rem;
+}
 
   &::selection{
     background: rgba(47, 62, 70, 0.9);

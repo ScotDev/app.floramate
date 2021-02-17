@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from '../../config/Breakpoints';
+// import { device } from '../../config/Breakpoints';
 
 const Title = styled.h1`
     font-size: ${props => props.theme.size.title};
@@ -19,10 +19,7 @@ const LargeText = styled.h4`
     color: ${props => props.color || props.theme.primaryColour};
     max-width: ${props => props.maxWidth};
     text-align: ${props => props.textAlign};
-
-/* @media ${device.desktop}{
-        font-size:1.4vw;
-    } */
+    margin-bottom: 0.5em;
 `
 const RegularText = styled.p`
     font-size:${props => props.theme.size.regularText};
@@ -32,9 +29,6 @@ const RegularText = styled.p`
     text-align: ${props => props.textAlign};
     padding: ${props => props.padding || "1em"};
 
-/* @media ${device.desktop}{
-        font-size:1vw;
-    } */
 `
 const SmallText = styled.p`
     font-size:${props => props.theme.size.smallText};
