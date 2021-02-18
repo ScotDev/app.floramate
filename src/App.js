@@ -9,7 +9,7 @@ import About from './components/About';
 import Species from './components/Species';
 import Advice from './components/Advice';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 import './styles.min.css';
 
@@ -46,7 +46,7 @@ function App() {
           <Route path='/species' component={Species}></Route>
           <Route path='/advice' component={Advice}></Route>
           <Route path='/about' component={About}></Route>
-          <Footer></Footer>
+          {/* <Footer></Footer> */}
         </div>
       </ThemeProvider>
     </BrowserRouter>

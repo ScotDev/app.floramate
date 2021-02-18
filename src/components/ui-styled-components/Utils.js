@@ -15,11 +15,11 @@ const Content = styled.div`
 
 `
 const PageSection = styled.div`
-  padding-left: ${props => props.theme.mainContentPadding};
-  padding-right: ${props => props.theme.mainContentPadding};
+  padding-left: ${props => props.padding || props.theme.mainContentPadding};
+  padding-right: ${props => props.padding || props.theme.mainContentPadding};
   /* padding-top: 1rem; */
   padding-bottom: 4rem;
-  display: flex;
+  display: ${props => props.display || "flex"};
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -29,16 +29,17 @@ const PageSection = styled.div`
     0 3px 7px -3px rgb(0 0 0 / 30%);
 
     @media ${device.laptop}{
-padding: 1.5rem;
+  padding: 1.5rem;
 }
 `
 const PageSectionTitle = styled.h3`
-    font-size: ${props => props.theme.size.largeText};
+    font-size: ${props => props.theme.size.subtitle};
     color: ${props => props.color || props.theme.primaryColour};
-    border-bottom: 2px solid ${props => props.color || props.theme.primaryColour};
+    /* border-bottom: 2px solid ${props => props.color || props.theme.primaryColour}; */
     margin-bottom: 1rem;
     padding-bottom: 0.3rem;
-    align-self: flex-start;
+    text-align: center;
+    /* align-self: center; */
 `
 
 const ArticleContainer = styled.div`

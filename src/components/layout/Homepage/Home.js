@@ -22,7 +22,7 @@ export default function Home() {
         <>
             <Hero></Hero>
 
-            <PageSection bgColor={"#2f3e46"}>
+            <PageSection bgColor={"#2f3e46"} display={"inline-block"}>
                 <PageSectionTitle color={"#fff"} >Featured</PageSectionTitle>
                 <Results speciesData={speciesData} limit={3} />
             </PageSection>
