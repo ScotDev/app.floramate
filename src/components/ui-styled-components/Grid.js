@@ -4,17 +4,22 @@ import { device } from '../../config/Breakpoints';
 
 const ResultsGrid = styled.div`
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
-  grid-template-columns: repeat( auto-fill, minmax(300px, 1fr));
-  /* grid-template-rows: repeat(3, 1fr); */
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  /* margin: 1.5rem 0; */
-  padding: 3rem 5rem;
-  /* overflow: hidden; */
-
+  padding: 3rem;
 
  @media ${device.laptop}{
   padding: 2rem;
+ }
+
+ /* @media ${device.laptopL}{
+    padding: 3rem;
+    } */
+
+ @media ${device.desktopL}{
+  /* grid-template-columns: repeat( auto-fill, minmax(300px, 1fr)); */
+  /* padding: 2rem 14rem; */
+  padding: 2rem 14rem;
  }
 
 `

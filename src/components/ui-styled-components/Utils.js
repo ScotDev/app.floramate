@@ -29,15 +29,23 @@ const PageSection = styled.div`
     0 3px 7px -3px rgb(0 0 0 / 30%);
 
     @media ${device.laptop}{
-  padding: 1.5rem;
-}
+    padding: 1rem;
+    }
+
+    /* @media ${device.laptopL}{
+    padding: 2rem 5rem;
+    } */
+
+    @media ${device.desktopL}{
+    padding: 2rem ${props => props.theme.mainContentPadding};
+    }
 `
 const PageSectionTitle = styled.h3`
     font-size: ${props => props.theme.size.subtitle};
     color: ${props => props.color || props.theme.primaryColour};
     /* border-bottom: 2px solid ${props => props.color || props.theme.primaryColour}; */
-    margin-bottom: 1rem;
-    padding-bottom: 0.3rem;
+    margin-bottom: 1.3rem;
+    padding: 0;
     text-align: center;
     /* align-self: center; */
 `

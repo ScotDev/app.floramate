@@ -15,8 +15,8 @@ const HeroContainer = styled.div`
     0 3px 7px -3px rgb(0 0 0 / 30%);
 
     @media ${device.laptop}{
-  padding: 1rem;
-}
+    padding: 1rem;
+    }
 `
 // Remove
 // Already defined in Text.js - apart from colour
@@ -51,7 +51,7 @@ const HeroKnockout = styled.div`
   background-repeat: no-repeat;
   background-size:cover;
   background-attachment: fixed;
-  max-width:100%;
+  width:100%;
 
   @media ${device.laptop}{
   text-align: center;
@@ -67,6 +67,7 @@ const HeroKnockout = styled.div`
   padding:0;
   text-shadow: 0 6px 12px rgb(50 50 93 / 25%),
   0 3px 7px rgb(0 0 0 / 30%);
+  width: 100%;
 
    @media ${device.laptop}{
      font-size: 6rem;
@@ -97,7 +98,11 @@ h2, h3{
     @media ${device.laptop}{
         font-size: ${props => props.theme.size.largeText};
         padding-bottom: 1rem;
-}
+      }
+          @media ${device.desktopL}{
+        max-width: 100%;
+        padding: 0 10em 1em 0;
+      }
 
   &::selection{
     background: rgba(47, 62, 70, 0.9);

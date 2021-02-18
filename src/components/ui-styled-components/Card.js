@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// import { device } from '../../config/Breakpoints';
+import { device } from '../../config/Breakpoints';
 
 
 const ResultsCard = styled.div`
@@ -79,13 +79,16 @@ h5 {
 
 const InnerCardGrid = styled.div`
   display: grid;
-  gap: 0.8rem;
+  gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
   /* margin: 0.8rem 1rem;*/
   padding: 0.8rem 1.5rem;
   overflow: hidden;
   width: 100%;
+  @media ${device.tablet}{
+    gap: 0.6rem;
+  }
 
   div{
     display: flex;
@@ -108,6 +111,10 @@ const InnerCardGrid = styled.div`
     /* margin: 0.5rem 0 0.95rem 0.5rem; */
     font-weight: 500;
     margin: 0;
+
+    @media ${device.tablet}{
+    font-size: 1rem;
+    }
   }
 
   }
