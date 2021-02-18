@@ -62,15 +62,18 @@ const HeroKnockout = styled.div`
   mix-blend-mode: lighten;
   background-color: ${props => props.theme.primaryBg};
   font-size: 9rem;
-  font-weight: bold;
+  font-weight: 700;
   margin:0;
   padding:0;
   text-shadow: 0 6px 12px rgb(50 50 93 / 25%),
   0 3px 7px rgb(0 0 0 / 30%);
 
    @media ${device.laptop}{
-     font-size: 5rem;
+     font-size: 6rem;
      padding-bottom: 1rem;
+    }
+   @media ${device.tablet}{
+font-size:5rem;
     }
   }
 

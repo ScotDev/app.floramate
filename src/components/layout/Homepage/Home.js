@@ -5,12 +5,12 @@ import { PageSection, PageSectionTitle } from '../../ui-styled-components/Utils'
 import Hero from '../../Hero';
 // import SpeciesProfile from '../../Species'
 import Info from './Info'
-// import Results from '../../Results';
+import Results from '../../Results';
 // import Latest from './Latest';
 
 // import useApi from '../../../hooks/useApi';
 
-// const speciesData = require("../../../data/speciesData");
+const speciesData = require("../../../data/speciesData");
 
 
 export default function Home() {
@@ -24,7 +24,7 @@ export default function Home() {
 
             <PageSection bgColor={"#2f3e46"}>
                 <PageSectionTitle color={"#fff"} >Featured</PageSectionTitle>
-                {/* <Results speciesData={speciesData} limit={3} /> */}
+                <Results speciesData={speciesData} limit={3} />
             </PageSection>
 
             <PageSection  >

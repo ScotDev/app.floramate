@@ -8,7 +8,7 @@ const SearchSection = styled.div`
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 35vh;
+  height:300px;
   /* margin: 0 0 2rem 0; */
   padding: 3.5rem 0 0 0;
   text-align: center;
@@ -93,10 +93,10 @@ const ResultsHeading = styled.h3`
   text-align: center;
   font-size: 2.5rem;
   color: ${props => props.theme.secondaryBlue};
-  border-bottom: 2px solid rgba(47, 62, 70, 0.5);
-  width: 15%;
+  border-bottom: 2px solid ${props => props.theme.secondaryBlue};
+  width: 10%;
   min-width: 175px;
-  margin: 1.5rem auto 0 auto;
+  margin: 1.5rem auto;
 `
 
 export { SearchSection, SearchBox, SearchBtn, ResultsHeading };

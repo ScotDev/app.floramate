@@ -4,7 +4,7 @@ import { device } from '../../config/Breakpoints';
 
 const StyledBtn = styled.button`
   border-radius: ${props => props.theme.borderRadius};
-  padding: 0.3em 1em;
+  padding: 0.25em 1.5em;
   margin-bottom: 0.5em;
   font-family: inherit;
   text-align: center;
@@ -14,7 +14,6 @@ const StyledBtn = styled.button`
     0 3px 7px -3px rgb(0 0 0 / 30%);
   transition: border 0.2s, color 0.2s, background-color 0.2s;
   cursor: pointer;
-
 `
 
 const PrimaryBtn = styled(StyledBtn)`
