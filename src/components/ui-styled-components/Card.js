@@ -25,10 +25,6 @@ const ResultsCard = styled.div`
   -webkit-font-smoothing: antialiased;
   transition: transform ease 0.2s, opacity ease 0.2s;
 
-  @media ${device.tablet}{
-    margin: 0.75rem 3rem;
-    } 
-
   &::before {
   content: "";
   display: block;
@@ -90,8 +86,10 @@ const InnerCardGrid = styled.div`
   padding: 0.8rem 1.5rem;
   overflow: hidden;
   width: 100%;
+
   @media ${device.tablet}{
     gap: 0.6rem;
+    padding: 0.7rem 1rem;
   }
 
   div{
