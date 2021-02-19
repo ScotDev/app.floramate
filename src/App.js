@@ -32,7 +32,7 @@ const theme = {
   // boxShadow: "6px 6px 25px 6px rgba(0,0,0, 0.7)",
   // boxShadow: "0 6px 12px -2px rgb(50 50 93 / 25%),
   // 0 3px 7px - 3px rgb(0 0 0 / 30 %)",
-  mainContentPadding: "22vw",
+  mainContentPadding: "25vw",
   borderRadius: "8px"
 };
 

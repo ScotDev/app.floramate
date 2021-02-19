@@ -17,12 +17,12 @@ const StyledBtn = styled.button`
 `
 
 const PrimaryBtn = styled(StyledBtn)`
-color: ${props => props.theme.primaryColour || "#f7fffb"};
+  color: ${props => props.theme.primaryColour || "#f7fffb"};
   background-color:  ${props => props.theme.primaryText || "#487161"};
   border: 2px solid ${props => props.theme.primaryColour || "#f7fffb"};
   font-weight: bold;
 
-  &:hover {
+  &:hover, &:focus {
     color:  ${props => props.theme.primaryText || "#487161"};
     background-color: ${props => props.theme.primaryColour || "#f7fffb"};
     border: 2px solid  ${props => props.theme.primaryColour || "#487161"};
@@ -36,7 +36,7 @@ border: 2px solid ${props => props.theme.secondaryColour || "#f7fffb"};
 font-weight: bold;
 
 
-&:hover {
+&:hover, &:focus {
   color: ${props => props.theme.secondaryColour || "#2f3e46"};
   background-color: ${props => props.theme.primaryText || "#f7fffb"};
 }
@@ -48,7 +48,7 @@ const InfoBtn = styled(StyledBtn)`
   border: 2px solid ${props => props.theme.primaryColour || "#f7fffb"};
   font-weight: bold;
 
-  &:hover {
+  &:hover, &:focus {
     color:  ${props => props.theme.primaryText || "#487161"};
     border: 2px solid ${props => props.theme.secondaryBlue || "#f7fffb"};
     background-color: ${props => props.theme.primaryColour || "#f7fffb"};
@@ -69,7 +69,7 @@ button:nth-of-type(1) {
         flex-direction: column;
         margin-bottom: 2rem;
         button{
-          width: 95%;
+          width: 50%;
         }
 
         button:nth-of-type(1) {

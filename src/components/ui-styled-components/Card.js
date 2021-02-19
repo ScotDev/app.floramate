@@ -3,7 +3,6 @@ import { device } from '../../config/Breakpoints';
 
 
 const ResultsCard = styled.div`
-
   display: flex;
   flex-direction:column;
   justify-content: center;
@@ -12,10 +11,11 @@ const ResultsCard = styled.div`
   color: ${props => props.theme.primaryColour};
   min-height: 375px;
   height: fit-content;
-  width: 100%;
-  min-width: 300px;
+  /* min-width: 270px; */
+  /* width: 300px; */
   overflow: hidden;
-  max-width: 350px;
+  /* max-width: 300px; */
+  margin: 0.9rem;
   border-radius: 8px;
   /*  Taken from Stripe */
   box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
@@ -24,6 +24,10 @@ const ResultsCard = styled.div`
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   transition: transform ease 0.2s, opacity ease 0.2s;
+
+  @media ${device.tablet}{
+    margin: 0.75rem 3rem;
+    } 
 
   &::before {
   content: "";
@@ -35,7 +39,7 @@ const ResultsCard = styled.div`
 
   &:hover, &:focus {
     opacity: 0.7;
-  transform: scale(0.97);
+    transform: scale(0.97);
   }
 
   img{

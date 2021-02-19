@@ -24,8 +24,8 @@ const NavbarBrand = styled.div`
   font-size: 1.2rem;
   padding: 0;
   margin: 0;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: flex-end; */
+  /* align-items: flex-end; */
   color:#fff;
 
   h2{
@@ -35,50 +35,52 @@ const NavbarBrand = styled.div`
     font-weight: 400;
   }
 
-img {
-  margin-right: 1rem;
-  height: 50px;
-  width: 50px;
-}
+  img {
+    margin-right: 1rem;
+    height: 50px;
+    width: 50px;
+  }
 `;
 
 const NavbarList = styled.ul`
- list-style-type: none;
+    list-style-type: none;
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
 
     &:nth-last-child() {
     align-self: flex-end;
-  }
+    }
 `
 
 const NavbarListItem = styled.li`
-    margin-right: 1.25rem;
+    padding-right: 1.2rem;
     text-align: center;
     color: #f7fffb;
-  height:1.8rem;
+    /* height:1.8rem; */
+    
 
-    a{
+    a {
     color: #f7fffb;
     line-height: 1.6;
-    padding: 0.15rem 0.5rem;
-    /* padding-bottom: 0.25rem; */
+    padding: 0.1em 1em;
     font-size:${props => props.theme.size.regularText};
     text-decoration: none;
     font-weight: 500;
-    letter-spacing:1px;
+    letter-spacing: 1px;
+    border-radius: ${props => props.theme.borderRadius};
+    transition: color 0.2s, background-color 0.2s;
 
     &.active{
       background-color: ${props => props.theme.primaryText};
-      border-radius: ${props => props.theme.borderRadius};
       color: ${props => props.theme.primaryColour};
-      /* font-weight: bold; */
     }
-    &:hover {
-      /* border-bottom: 2px solid #f7fffb; */
-      background-color: ${props => props.theme.primaryText};
-      border-radius: ${props => props.theme.borderRadius};;
+    &:hover, &:focus {
+      background-color: ${props => props.theme.primaryText};;
       color: ${props => props.theme.primaryColour};
-      /* font-weight: bold; */
     }
     } 
 

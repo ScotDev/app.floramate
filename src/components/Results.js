@@ -10,11 +10,9 @@ export default function Results(props) {
 
     return (
         <>
-
             <ResultsGrid>
                 <Card speciesData={speciesData} limit={limit} />
             </ResultsGrid>
-
         </>
     )
 }

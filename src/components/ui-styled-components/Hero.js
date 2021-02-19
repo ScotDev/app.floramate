@@ -53,8 +53,9 @@ const HeroKnockout = styled.div`
   background-attachment: fixed;
   width:100%;
 
-  @media ${device.laptop}{
-  text-align: center;
+    @media ${device.tablet}{
+    text-align: center;
+
   }
   
   h1{
@@ -74,7 +75,7 @@ const HeroKnockout = styled.div`
      padding-bottom: 1rem;
     }
    @media ${device.tablet}{
-font-size:5rem;
+    font-size:5rem;
     }
   }
 
@@ -93,7 +94,7 @@ h2, h3{
   padding:0 0 1em 0;
   text-shadow: 0 6px 12px rgb(50 50 93 / 10%),
     0 3px 7px rgb(0 0 0 / 30%);
-    max-width: 40ch;
+  max-width: 40ch;
 
     @media ${device.laptop}{
         font-size: ${props => props.theme.size.largeText};

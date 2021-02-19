@@ -5,12 +5,14 @@ import { RegularText } from './ui-styled-components/Text';
 
 import BrandImage from "../assets/img/brand.svg";
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 function Navbar() {
     return (<>
         <StyledNavbar>
-            <NavbarBrand><img alt="brand name" src={BrandImage} /><h2>floramate</h2></NavbarBrand>
+            <Link exact to="/">
+                <NavbarBrand><img alt="brand name" src={BrandImage} /><h2>floramate</h2></NavbarBrand>
+            </Link>
             <NavbarList>
                 <NavbarListItem>
                     <NavLink exact to="/">Home</NavLink>

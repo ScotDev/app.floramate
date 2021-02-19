@@ -93,10 +93,18 @@ const ResultsHeading = styled.h3`
   text-align: center;
   font-size: 2.5rem;
   color: ${props => props.theme.secondaryBlue};
-  border-bottom: 2px solid ${props => props.theme.secondaryBlue};
   width: 10%;
   min-width: 175px;
   margin: 1.5rem auto;
+
+  &::after {
+    height: 3px;
+    width: 100%;
+    content: "";
+    display: block;
+    background-color: ${props => props.theme.secondaryColour};
+    border-radius: ${props => props.theme.borderRadius}
+  }
 `
 
 export { SearchSection, SearchBox, SearchBtn, ResultsHeading };

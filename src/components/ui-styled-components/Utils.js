@@ -11,43 +11,44 @@ const Content = styled.div`
   /* height: 100vh; */
   /* max-width: 90vw; */
   /* margin: 0 auto; */
-  
-
 `
 const PageSection = styled.div`
   padding-left: ${props => props.padding || props.theme.mainContentPadding};
   padding-right: ${props => props.padding || props.theme.mainContentPadding};
-  /* padding-top: 1rem; */
   padding-bottom: 4rem;
   display: ${props => props.display || "flex"};
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 100vw;
   background-color: ${props => props.bgColor};
   box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
     0 3px 7px -3px rgb(0 0 0 / 30%);
 
-    @media ${device.laptop}{
-    padding: 1rem;
-    }
-
-    /* @media ${device.laptopL}{
-    padding: 2rem 5rem;
-    } */
-
     @media ${device.desktopL}{
     padding: 2rem ${props => props.theme.mainContentPadding};
+    }
+
+    @media ${device.laptop}{
+    padding: 1rem;
     }
 `
 const PageSectionTitle = styled.h3`
     font-size: ${props => props.theme.size.subtitle};
     color: ${props => props.color || props.theme.primaryColour};
-    /* border-bottom: 2px solid ${props => props.color || props.theme.primaryColour}; */
-    margin-bottom: 1.3rem;
-    padding: 0;
+    margin: 0;
+    padding: 1.5rem;
     text-align: center;
-    /* align-self: center; */
+    line-height: 1.5;
+
+    &::after {
+      height: 3px;
+      width: 100%;
+      content: "";
+      display: block;
+      background-color: ${props => props.theme.secondaryColour};
+      border-radius: ${props => props.theme.borderRadius}
+    }
 `
 
 const ArticleContainer = styled.div`
