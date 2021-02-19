@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 import { device } from '../../config/Breakpoints';
 
+
+// Rename this - grid isn't a grid anymore
 const ResultsGrid = styled.div`
   display: flex;
-  padding: 0;
+  padding: 0 2rem;
   margin: 0;
   flex-wrap: wrap;
+  justify-content: space-between;
   
   & > * {
     flex: 1 1 10%;
