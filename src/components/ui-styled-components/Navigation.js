@@ -7,11 +7,8 @@ const StyledNavbar = styled.nav`
   background-color: ${props => props.theme.primaryColour || "#f7fffb"};;
   display: flex;
   align-items:center;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: ${props => props.theme.mainContentPadding};
-  padding-right: ${props => props.theme.mainContentPadding};
-  height: 80px;
+  padding: 0.25rem ${props => props.theme.mainContentPadding};
+  height: 75px;
 
 /* Temporary, change to mobile QMT */
   @media ${device.tablet}{
