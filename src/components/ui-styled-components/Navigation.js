@@ -4,7 +4,7 @@ import { device } from '../../config/Breakpoints';
 
 const StyledNavbar = styled.nav`
   overflow: hidden;
-  background-color: ${props => props.theme.primaryColour || "#f7fffb"};;
+  background-color: ${props => props.bgColor || props.theme.primaryColour};;
   display: flex;
   align-items:center;
   padding: 0.25rem ${props => props.theme.mainContentPadding};
@@ -25,7 +25,7 @@ const NavbarBrand = styled.div`
   /* align-items: flex-end; */
   color:#fff;
 
-  h2{
+  h4{
     font-size: 2.5rem;
     padding: 0;
     margin: 0;

@@ -43,9 +43,9 @@ font-weight: bold;
 `
 
 const InfoBtn = styled(StyledBtn)`
-  color: ${props => props.theme.primaryColour || "#f7fffb"};
+  color: ${props => props.theme.primaryText || "#f7fffb"};
   background-color:  ${props => props.bgColor || "#fff"};
-  border: 2px solid ${props => props.theme.primaryColour || "#f7fffb"};
+  border: 2px solid ${props => props.theme.primaryText || "#f7fffb"};
   font-weight: bold;
 
   &:hover, &:focus {

@@ -11,7 +11,7 @@ function Navbar() {
     return (<>
         <StyledNavbar>
             <Link exact to="/">
-                <NavbarBrand><img alt="brand name" src={BrandImage} /><h2>floramate</h2></NavbarBrand>
+                <NavbarBrand><img alt="brand name" src={BrandImage} /><h4>floramate</h4></NavbarBrand>
             </Link>
             <NavbarList>
                 <NavbarListItem>

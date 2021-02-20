@@ -8,7 +8,7 @@ import Home from './components//layout/Homepage/Home';
 import About from './components/About';
 import Species from './components/Species';
 import Advice from './components/Advice';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 // import Footer from './components/Footer';
 
 import './styles.min.css';
@@ -41,7 +41,6 @@ function App() {
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <div className="App">
-          <Navbar></Navbar>
           <Route exact path='/' component={Home}></Route>
           <Route path='/species' component={Species}></Route>
           <Route path='/advice' component={Advice}></Route>
