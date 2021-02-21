@@ -1,18 +1,18 @@
 import styled from 'styled-components';
-
+import { motion } from "framer-motion";
 import { device } from '../../config/Breakpoints';
 
-const Content = styled.div`
+const Content = styled(motion.div)`
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 2rem 4rem; */
+  padding: 2rem 0;
   /* height: 100vh; */
   /* max-width: 90vw; */
   /* margin: 0 auto; */
 `
-const PageSection = styled.div`
+const PageSection = styled(motion.div)`
   padding-left: ${props => props.padding || props.theme.mainContentPadding};
   padding-right: ${props => props.padding || props.theme.mainContentPadding};
   padding-bottom: 4rem;

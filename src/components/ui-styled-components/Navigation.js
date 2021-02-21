@@ -1,20 +1,32 @@
 import styled from 'styled-components';
-
 import { device } from '../../config/Breakpoints';
+import { motion } from "framer-motion";
 
-const StyledNavbar = styled.nav`
-  overflow: hidden;
+const StyledNavbar = styled(motion.nav)`
+  /* overflow: hidden;
   background-color: ${props => props.bgColor || props.theme.primaryColour};;
   display: flex;
   align-items:center;
   padding: 0.25rem ${props => props.theme.mainContentPadding};
-  height: 75px;
+  height: 75px; */
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 100vw;
+    display: ${props => (props.hideNav ? "none" : "flex")};
+    align-items: center;
+    padding: 1rem 3.5rem;
+    background-color: ${props => props.bgColor || "transparent"};
+    height: 75px;
 
-/* Temporary, change to mobile QMT */
-  @media ${device.tablet}{
-    display:none;
-  }
-`
+    /* Idk if this even works */
+    opacity: ${props => props.hideNav ? 0 : 1};
+
+  /* Temporary while mobile nav developed */
+    @media ${device.tablet}{
+      display:none;
+    }
+  `
 
 const NavbarBrand = styled.div`
   display: flex;

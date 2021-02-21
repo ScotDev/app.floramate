@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { motion } from "framer-motion";
 
 import { device } from '../../config/Breakpoints';
 
-const SearchSection = styled.div`
+const SearchSection = styled(motion.div)`
   background: url("https://images.pexels.com/photos/4275885/pexels-photo-4275885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920");
   background-repeat: no-repeat;
   background-position: center;
@@ -10,7 +11,7 @@ const SearchSection = styled.div`
   width: 100%;
   height:300px;
   /* margin: 0 0 2rem 0; */
-  padding: 3.5rem 0 0 0;
+  padding: 4.5rem 0 0 0;
   text-align: center;
   box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
     0 3px 7px -3px rgb(0 0 0 / 30%);
@@ -89,7 +90,7 @@ const SearchBtn = styled(StyledSearchInput)`
   }
 `
 
-const ResultsHeading = styled.h3`
+const ResultsHeading = styled(motion.h3)`
   text-align: center;
   font-size: 2.5rem;
   color: ${props => props.theme.secondaryBlue};

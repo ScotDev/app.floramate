@@ -1,18 +1,6 @@
-// import styled, { css, keyframes } from 'styled-components';
 import styled from 'styled-components';
 import { device } from '../../config/Breakpoints';
-
-
-// const fadeNav = keyframes`
-
-// from {
-//   opacity: 1;
-// }
-
-// to {
-//   opacity: 0;
-// }
-// `
+import { motion } from "framer-motion";
 
 // https://medium.com/@matt.readout/adding-css-animations-with-styled-components-6c191c23b6ba
 // Check above article, define animation elsewhere and pass down to StyledNavbar, rework below nav class
@@ -22,7 +10,7 @@ import { device } from '../../config/Breakpoints';
 // ${fadeNav} ${props.animationLength} ease-out;
 // `;
 
-const HeroContainer = styled.div`
+const HeroContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -43,25 +31,13 @@ const HeroContainer = styled.div`
     0 3px 7px -3px rgb(0 0 0 / 30%);
 
     @media ${device.laptop}{
-    padding: 1rem;
+      padding-left: 15vw;
+      padding-right: 15vw;
     }
 
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0%;
-    width: 100vw;
-    display: ${props => (props.hideNav ? "none" : "flex")};
-    align-items:center;
-    padding: 1.5rem 3.5rem;
-    background-color: transparent;
-
-
-@media ${device.tablet} {
-  display: none;
-}
-    
-  }
+    @media ${device.tablet}{
+    text-align: center;
+    }
 
 h1{
   color: ${props => props.theme.primaryText};
@@ -130,72 +106,75 @@ const HeroText = styled.h3`
     color: ${props => props.theme.primaryText || "#f7fffb"};
 `
 
-const HeroKnockout = styled.div`
-  border:0;
-  text-align:left;
-  background-image: url("https://images.unsplash.com/photo-1477696957384-3b1d731c4cff?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
-  background-color: ${props => props.theme.primaryBg};
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-attachment: fixed;
-  width:100%;
+// !!!!!!! Save below as snippet/gist !!!! 
 
-    @media ${device.tablet}{
-    text-align: center;
-  }
-  
-  h1{
-  color: black;
-  mix-blend-mode: lighten;
-  background-color: ${props => props.theme.primaryBg};
-  font-size: 9rem;
-  font-weight: 700;
-  margin:0;
-  padding:0;
-  text-shadow: 0 6px 12px rgb(50 50 93 / 25%),
-  0 3px 7px rgb(0 0 0 / 30%);
-  width: 100%;
 
-   @media ${device.laptop}{
-     font-size: 6rem;
-     padding-bottom: 1rem;
-    }
-   @media ${device.tablet}{
-    font-size:5rem;
-    }
-  }
+// const HeroKnockout = styled.div`
+//   border:0;
+//   text-align:left;
+//   background-image: url("https://images.unsplash.com/photo-1477696957384-3b1d731c4cff?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+//   background-color: ${props => props.theme.primaryBg};
+//   background-repeat: no-repeat;
+//   background-size:cover;
+//   background-attachment: fixed;
+//   width:100%;
 
-  h1::selection{
-  background: rgba(47, 62, 70, 0.9);
-  color: ${props => props.theme.primaryBg};
-  }
+//     @media ${device.tablet}{
+//     text-align: center;
+//   }
 
-  h2, h3{
-    color: black;
-    mix-blend-mode: lighten;
-    background-color: ${props => props.theme.primaryBg};
-    font-size: 3.4rem;
-    font-weight: bold;
-    margin:0;
-    padding:0 0 1em 0;
-    text-shadow: 0 6px 12px rgb(50 50 93 / 10%),
-      0 3px 7px rgb(0 0 0 / 30%);
-    max-width: 40ch;
+//   h1{
+//   color: black;
+//   mix-blend-mode: lighten;
+//   background-color: ${props => props.theme.primaryBg};
+//   font-size: 9rem;
+//   font-weight: 700;
+//   margin:0;
+//   padding:0;
+//   text-shadow: 0 6px 12px rgb(50 50 93 / 25%),
+//   0 3px 7px rgb(0 0 0 / 30%);
+//   width: 100%;
 
-    @media ${device.laptop}{
-        font-size: ${props => props.theme.size.largeText};
-        padding-bottom: 1rem;
-      }
-          @media ${device.desktopL}{
-        max-width: 100%;
-        padding: 0 10em 1em 0;
-      }
+//    @media ${device.laptop}{
+//      font-size: 6rem;
+//      padding-bottom: 1rem;
+//     }
+//    @media ${device.tablet}{
+//     font-size:5rem;
+//     }
+//   }
 
-  &::selection{
-    background: rgba(47, 62, 70, 0.9);
-    color: white;
-  }
+//   h1::selection{
+//   background: rgba(47, 62, 70, 0.9);
+//   color: ${props => props.theme.primaryBg};
+//   }
 
-  }
-`;
-export { HeroContainer, HeroText, HeroKnockout };
+//   h2, h3{
+//     color: black;
+//     mix-blend-mode: lighten;
+//     background-color: ${props => props.theme.primaryBg};
+//     font-size: 3.4rem;
+//     font-weight: bold;
+//     margin:0;
+//     padding:0 0 1em 0;
+//     text-shadow: 0 6px 12px rgb(50 50 93 / 10%),
+//       0 3px 7px rgb(0 0 0 / 30%);
+//     max-width: 40ch;
+
+//     @media ${device.laptop}{
+//         font-size: ${props => props.theme.size.largeText};
+//         padding-bottom: 1rem;
+//       }
+//           @media ${device.desktopL}{
+//         max-width: 100%;
+//         padding: 0 10em 1em 0;
+//       }
+
+//   &::selection{
+//     background: rgba(47, 62, 70, 0.9);
+//     color: white;
+//   }
+
+//   }
+// `;
+export { HeroContainer, HeroText };

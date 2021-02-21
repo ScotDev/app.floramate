@@ -7,9 +7,9 @@ import BrandImage from "../assets/img/brand.svg";
 
 import { NavLink, Link } from 'react-router-dom';
 
-function Navbar({ NavBgColor }) {
+function Navbar({ bgColor, hideNav }) {
     return (<>
-        <StyledNavbar NavBgColor={NavBgColor}>
+        <StyledNavbar bgColor={bgColor} hideNav={hideNav} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <Link exact to="/">
                 <NavbarBrand><img alt="brand name" src={BrandImage} /><h4>floramate</h4></NavbarBrand>
             </Link>

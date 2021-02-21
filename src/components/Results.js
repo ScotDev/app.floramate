@@ -10,7 +10,7 @@ export default function Results(props) {
 
     return (
         <>
-            <ResultsGrid>
+            <ResultsGrid initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 <Card speciesData={speciesData} limit={limit} />
             </ResultsGrid>
         </>

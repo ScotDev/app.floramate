@@ -1,6 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer'
 
+
 import { PageSection, PageSectionTitle } from '../../ui-styled-components/Utils';
 
 import Hero from '../../Hero';
@@ -25,14 +26,15 @@ export default function Home() {
 
     return (
         <>
+            {/* Bring Navbar component in to here and decouple from Hero section */}
             <Hero hideNav={inView}></Hero>
 
-            <PageSection bgColor={"#2f3e46"} padding={"10vw"} >
+            <PageSection bgColor={"#2f3e46"} padding={"10vw"} initial={{ opacity: 0 }} animate={{ opacity: 1 }} >
                 <PageSectionTitle color={"#fff"}>Featured</PageSectionTitle>
                 <Results speciesData={speciesData} limit={3} />
             </PageSection>
 
-            <PageSection ref={ref}>
+            <PageSection ref={ref} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 <Info></Info>
             </PageSection>
 
