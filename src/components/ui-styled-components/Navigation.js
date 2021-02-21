@@ -18,15 +18,12 @@ const StyledNavbar = styled.nav`
 
 const NavbarBrand = styled.div`
   display: flex;
-  font-size: 1.2rem;
   padding: 0;
   margin: 0;
-  /* justify-content: flex-end; */
-  /* align-items: flex-end; */
   color:#fff;
 
   h4{
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     padding: 0;
     margin: 0;
     font-weight: 400;
@@ -63,7 +60,7 @@ const NavbarListItem = styled.li`
     a {
     color: #f7fffb;
     line-height: 1.6;
-    padding: 0.1em 1em;
+    padding: 0.15em 1em;
     font-size:${props => props.theme.size.regularText};
     text-decoration: none;
     font-weight: 500;

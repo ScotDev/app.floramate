@@ -44,14 +44,16 @@ font-weight: bold;
 
 const InfoBtn = styled(StyledBtn)`
   color: ${props => props.theme.primaryText || "#f7fffb"};
-  background-color:  ${props => props.bgColor || "#fff"};
+  /* background-color:  ${props => props.bgColor || "#fff"}; */
+  background: rgba(255, 255, 255, 0.17);
+
   border: 2px solid ${props => props.theme.primaryText || "#f7fffb"};
   font-weight: bold;
 
   &:hover, &:focus {
     color:  ${props => props.theme.primaryText || "#487161"};
     border: 2px solid ${props => props.theme.secondaryBlue || "#f7fffb"};
-    background-color: ${props => props.theme.primaryColour || "#f7fffb"};
+    background-color: ${props => props.theme.secondaryBlue || "#f7fffb"};
   }
 `
 

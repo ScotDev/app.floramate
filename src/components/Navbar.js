@@ -7,9 +7,9 @@ import BrandImage from "../assets/img/brand.svg";
 
 import { NavLink, Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ NavBgColor }) {
     return (<>
-        <StyledNavbar>
+        <StyledNavbar NavBgColor={NavBgColor}>
             <Link exact to="/">
                 <NavbarBrand><img alt="brand name" src={BrandImage} /><h4>floramate</h4></NavbarBrand>
             </Link>

@@ -1,6 +1,26 @@
+// import styled, { css, keyframes } from 'styled-components';
 import styled from 'styled-components';
 import { device } from '../../config/Breakpoints';
 
+
+// const fadeNav = keyframes`
+
+// from {
+//   opacity: 1;
+// }
+
+// to {
+//   opacity: 0;
+// }
+// `
+
+// https://medium.com/@matt.readout/adding-css-animations-with-styled-components-6c191c23b6ba
+// Check above article, define animation elsewhere and pass down to StyledNavbar, rework below nav class
+
+// const navAnimation = props =>
+//   css`
+// ${fadeNav} ${props.animationLength} ease-out;
+// `;
 
 const HeroContainer = styled.div`
   display: flex;
@@ -15,7 +35,7 @@ const HeroContainer = styled.div`
 
   background-image: url("https://images.unsplash.com/photo-1453053131046-5aea58348d50?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1678&q=80");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   background-size:cover;
   background-attachment: fixed;
 
@@ -26,69 +46,65 @@ const HeroContainer = styled.div`
     padding: 1rem;
     }
 
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 100vw;
+    display: ${props => (props.hideNav ? "none" : "flex")};
+    align-items:center;
+    padding: 1.5rem 3.5rem;
+    background-color: transparent;
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0%;
-  width: 100vw;
 
-  display: flex;
-  align-items:center;
-
-  padding: 1rem 4rem;
-
-  background-color: transparent;
-
-  @media ${device.tablet}{
-    display: none;
-    }
-  
+@media ${device.tablet} {
+  display: none;
 }
-
-
-    h1{
-    color: ${props => props.theme.primaryText};
-    font-size: 9rem;
-    font-weight: 700;
-    margin:0;
-    padding:0;
-    text-shadow: 0 6px 12px rgb(50 50 93 / 25%),
-    0 3px 7px rgb(0 0 0 / 30%);
-    width: 100%;
-
-   @media ${device.laptop}{
-     font-size: 6rem;
-     padding-bottom: 1rem;
-    }
-   @media ${device.tablet}{
-    font-size:5rem;
-    }
+    
   }
 
-  h2, h3{
+h1{
   color: ${props => props.theme.primaryText};
-  font-size: 3.4rem;
+  font-size: 9rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  text-shadow: 0 6px 12px rgb(50 50 93 / 25%),
+    0 3px 7px rgb(0 0 0 / 30%);
+  width: 100%;
+
+  @media ${device.laptop} {
+    font-size: 6rem;
+    padding-bottom: 1rem;
+  }
+  @media ${device.tablet} {
+    font-size: 5rem;
+  }
+}
+
+h2, h3{
+  color: ${props => props.theme.primaryText};
+  font-size: 3.2rem;
   font-weight: bold;
-  margin:0;
-  padding:0 0 1em 0;
+  margin: 0;
+  padding: 0 0 1em 0;
   text-shadow: 0 6px 12px rgb(50 50 93 / 10%),
     0 3px 7px rgb(0 0 0 / 30%);
   max-width: 40ch;
 
-    @media ${device.laptop}{
-        font-size: ${props => props.theme.size.largeText};
-        padding-bottom: 1rem;
-      }
-          @media ${device.desktopL}{
-        max-width: 100%;
-        padding: 0 10em 1em 0;
-      }
-
+  @media ${device.laptop} {
+    font-size: ${props => props.theme.size.largeText};
+    padding-bottom: 1rem;
   }
+  @media ${device.desktopL} {
+    max-width: 100%;
+    padding: 0 10em 1em 0;
+  }
+
+}
 `
 // Remove
-// Already defined in Text.js - apart from colour
+// Already defined in Text.js-apart from colour
 // const HeroTitle = styled.h1`
 //     font-size: ${props => props.theme.size.title};
 //     color: ${props => props.theme.primaryText || "#f7fffb"};
@@ -99,7 +115,7 @@ nav {
 //     }
 // `
 // Remove
-// Already defined in Text.js - apart from colour
+// Already defined in Text.js-apart from colour
 // const HeroSubTitle = styled.h2`
 //     font-size: ${props => props.theme.size.subtitle};
 //     color: ${props => props.theme.primaryText || "#f7fffb"};
@@ -154,17 +170,17 @@ const HeroKnockout = styled.div`
   color: ${props => props.theme.primaryBg};
   }
 
-h2, h3{
-  color: black;
-  mix-blend-mode: lighten;
-  background-color: ${props => props.theme.primaryBg};
-  font-size: 3.4rem;
-  font-weight: bold;
-  margin:0;
-  padding:0 0 1em 0;
-  text-shadow: 0 6px 12px rgb(50 50 93 / 10%),
-    0 3px 7px rgb(0 0 0 / 30%);
-  max-width: 40ch;
+  h2, h3{
+    color: black;
+    mix-blend-mode: lighten;
+    background-color: ${props => props.theme.primaryBg};
+    font-size: 3.4rem;
+    font-weight: bold;
+    margin:0;
+    padding:0 0 1em 0;
+    text-shadow: 0 6px 12px rgb(50 50 93 / 10%),
+      0 3px 7px rgb(0 0 0 / 30%);
+    max-width: 40ch;
 
     @media ${device.laptop}{
         font-size: ${props => props.theme.size.largeText};

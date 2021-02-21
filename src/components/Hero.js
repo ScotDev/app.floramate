@@ -5,10 +5,12 @@ import { SecondaryBtn, InfoBtn, BtnGroup } from './ui-styled-components/Button';
 import { Link } from 'react-router-dom';
 
 
-const Hero = () => {
-    return (<>
+const Hero = ({ hideNav }) => {
 
-        <HeroContainer>
+    console.log(hideNav)
+
+    return (<>
+        <HeroContainer hideNav={hideNav} >
             <Navbar></Navbar>
             {/* <HeroKnockout> */}
             <h1>floramate</h1>
@@ -16,12 +18,12 @@ const Hero = () => {
             {/* </HeroKnockout> */}
             <BtnGroup>
                 <Link to="/species">
-                    <SecondaryBtn fontSize={"1.4rem"}>
+                    <SecondaryBtn fontSize={"1.5rem"}>
                         Browse
-        </SecondaryBtn>
+            </SecondaryBtn>
                 </Link>
                 <Link to="/about">
-                    <InfoBtn bgColor={"transparent"} fontSize={"1.4rem"}>About</InfoBtn>
+                    <InfoBtn fontSize={"1.5rem"}>About</InfoBtn>
                 </Link>
             </BtnGroup>
 
