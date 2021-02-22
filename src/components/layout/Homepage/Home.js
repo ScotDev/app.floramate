@@ -1,19 +1,38 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer'
-
+// import { motion } from "framer-motion";
 
 import { PageSection, PageSectionTitle } from '../../ui-styled-components/Utils';
 
 import Hero from '../../Hero';
+import Navbar from '../../Navbar';
 // import SpeciesProfile from '../../Species'
 import Info from './Info'
 import Results from '../../Results';
-// import Latest from './Latest';
-
-// import useApi from '../../../hooks/useApi';
 
 const speciesData = require("../../../data/speciesData");
 
+const parentVariants = {
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            when: "beforeChildren",
+            staggerChildren: 0.22,
+        }
+    },
+    hidden: {
+        opacity: 0
+    }
+}
+
+const childrenVariants = {
+    visible: {
+        opacity: 1
+    },
+    hidden: { opacity: 0 },
+    hover: { scale: 0.97, opacity: 0.7, transition: { duration: 0.2 } }
+}
 
 export default function Home() {
     const [ref, inView] = useInView({
@@ -21,20 +40,16 @@ export default function Home() {
         threshold: 0,
     })
 
-    // const latestItems = useApi("https://5fd4a0dde9cda40016f5c41d.mockapi.io/api/dev1/species?page=1&limit=5")
-    // console.log(latestItems)
-
     return (
         <>
-            {/* Bring Navbar component in to here and decouple from Hero section */}
-            <Hero hideNav={inView}></Hero>
-
-            <PageSection bgColor={"#2f3e46"} padding={"10vw"} initial={{ opacity: 0.2 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} >
-                <PageSectionTitle color={"#fff"}>Featured</PageSectionTitle>
-                <Results speciesData={speciesData} limit={3} />
+            <Navbar hideNav={inView}></Navbar>
+            <Hero></Hero>
+            <PageSection bgColor={"#2f3e46"} padding={"10vw"} initial="hidden" animate="visible" variants={parentVariants} >
+                <PageSectionTitle color={"#fff"} variants={childrenVariants}>Featured</PageSectionTitle>
+                <Results speciesData={speciesData} limit={3} parentVariants={parentVariants} childrenVariants={childrenVariants} />
             </PageSection>
 
-            <PageSection ref={ref} initial={{ opacity: 0.2 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+            <PageSection ref={ref}>
                 <Info></Info>
             </PageSection>
 

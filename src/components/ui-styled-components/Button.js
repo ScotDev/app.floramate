@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { motion } from "framer-motion";
 
 import { device } from '../../config/Breakpoints';
 
-const StyledBtn = styled.button`
+const StyledBtn = styled(motion.button)`
   border-radius: ${props => props.theme.borderRadius};
   padding: 0.25em 1.5em;
   margin-bottom: 0.5em;
@@ -30,10 +31,10 @@ const PrimaryBtn = styled(StyledBtn)`
   `;
 
 const SecondaryBtn = styled(StyledBtn)`
-color: ${props => props.theme.primaryText || "#f7fffb"};
-background-color: ${props => props.theme.secondaryColour || "#6e6448"};
-border: 2px solid ${props => props.theme.secondaryColour || "#f7fffb"};
-font-weight: bold;
+  color: ${props => props.theme.primaryText || "#f7fffb"};
+  background-color: ${props => props.theme.secondaryColour || "#6e6448"};
+  border: 2px solid ${props => props.theme.secondaryColour || "#f7fffb"};
+  font-weight: bold;
 
 
 &:hover, &:focus {
@@ -58,7 +59,7 @@ const InfoBtn = styled(StyledBtn)`
 `
 
 
-const BtnGroup = styled.div`
+const BtnGroup = styled(motion.div)`
 display: flex;
 margin-bottom: 5rem;
 

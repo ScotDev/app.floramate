@@ -81,32 +81,6 @@ h2, h3{
 
 }
 `
-// Remove
-// Already defined in Text.js-apart from colour
-// const HeroTitle = styled.h1`
-//     font-size: ${props => props.theme.size.title};
-//     color: ${props => props.theme.primaryText || "#f7fffb"};
-
-
-//     @media ${device.mobileM}{
-//         font-size:2.75rem;
-//     }
-// `
-// Remove
-// Already defined in Text.js-apart from colour
-// const HeroSubTitle = styled.h2`
-//     font-size: ${props => props.theme.size.subtitle};
-//     color: ${props => props.theme.primaryText || "#f7fffb"};
-//     @media ${device.mobileM}{
-//         font-size:1.75rem;
-//     }
-// `
-// Remove
-const HeroText = styled.h3`
-    font-size: ${props => props.theme.size.largeText};
-    font-weight: 400;
-    color: ${props => props.theme.primaryText || "#f7fffb"};
-`
 
 // !!!!!!! Save below as snippet/gist !!!! 
 
@@ -179,4 +153,4 @@ const HeroText = styled.h3`
 
 //   }
 // `;
-export { HeroContainer, HeroText };
+export { HeroContainer };

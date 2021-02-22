@@ -33,7 +33,7 @@ const PageSection = styled(motion.div)`
     padding: 1rem;
     }
 `
-const PageSectionTitle = styled.h3`
+const PageSectionTitle = styled(motion.h3)`
     font-size: ${props => props.theme.size.subtitle};
     color: ${props => props.color || props.theme.primaryColour};
     margin: 0;

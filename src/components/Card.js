@@ -10,19 +10,19 @@ import { IoWaterOutline } from "react-icons/io5";
 import { IoWaterSharp } from "react-icons/io5";
 import { RiPlantLine } from "react-icons/ri";
 
-const variants = {
-    hover: { scale: 0.97, opacity: 0.7, transition: { duration: 0.2 } }
-    // whileHover={{ scale: 0.97, opacity: 0.7, transition: { duration: 0.2 } }},
-    // whileHover={{ scale: 0.97, opacity: 0.7, transition: { duration: 0.2 } }}
-}
+// const variants = {
+//     hover: { scale: 0.97, opacity: 0.7, transition: { duration: 0.2 } }
+// }
 
 export default function Card(props) {
-    const data = props.speciesData
-    const limit = props.limit
+    console.log(props)
+    const data = props.speciesData;
+    const limit = props.limit;
+    const childrenVariants = props.childrenVariants;
 
     const items = data.slice(0, limit).map((item) => {
         return (
-            <ResultsCard key={item.id} whileHover="hover" whileTap="hover" whileFocus="hover" variants={variants} >
+            <ResultsCard key={item.id} whileHover="hover" whileTap="hover" whileFocus="hover" variants={childrenVariants} >
                 <img loading="lazy" src={item.img_url} alt="" />
                 <h4>{item.common_name}</h4>
                 <div id="divider"></div>

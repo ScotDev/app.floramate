@@ -1,7 +1,8 @@
 import React from 'react';
-// import { PrimaryBtn, SecondaryBtn } from './ui-styled-components/Button';
+
 import { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, MobileNavbar, MobileNavMenu, MobileNavMenuItem } from './ui-styled-components/Navigation';
 import { RegularText } from './ui-styled-components/Text';
+
 
 import BrandImage from "../assets/img/brand.svg";
 
