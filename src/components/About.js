@@ -5,18 +5,38 @@ import Navbar from './Navbar';
 
 // Will query backend for content, static for development
 
+const parentVariants = {
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            when: "beforeChildren",
+            staggerChildren: 0.22,
+        }
+    },
+    hidden: {
+        opacity: 0
+    }
+}
 
+const childrenVariants = {
+    visible: {
+        opacity: 1
+    },
+    hidden: { opacity: 0 },
+    hover: { scale: 0.97, opacity: 0.7, transition: { duration: 0.2 } }
+}
 
 const About = () => {
     return (
         <>
             <Navbar bgColor={"#2f3e46"} ></Navbar>
-            <Content initial={{ opacity: 0.2 }} animate={{ opacity: 1 }}>
-                <ArticleContainer>
-                    <Title color={"#2f3e46"} maxWidth={"50ch"}>About floramate</Title>
-                    <Subtitle color={"#2f3e46"} maxWidth={"40ch"}>Helping you find wildlife-friendly plants for your area</Subtitle>
+            <Content>
+                <ArticleContainer initial="hidden" animate="visible" variants={parentVariants}>
+                    <Title color={"#2f3e46"} maxWidth={"50ch"} variants={childrenVariants}>About floramate</Title>
+                    <Subtitle color={"#2f3e46"} maxWidth={"40ch"} variants={childrenVariants}>Helping you find wildlife-friendly plants for your area</Subtitle>
 
-                    <ArticleBody>
+                    <ArticleBody variants={childrenVariants}>
                         <RegularText color={"#2f3e46"} maxWidth={"65ch"} textAlign={"justify"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet volutpat consequat mauris. Dignissim sodales ut eu sem integer vitae justo eget. Pulvinar pellentesque habitant morbi tristique senectus et netus. Feugiat sed lectus vestibulum mattis ullamcorper velit. Suspendisse interdum consectetur libero id. Ipsum dolor sit amet consectetur adipiscing. Eget nunc lobortis mattis aliquam faucibus. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Pharetra et ultrices neque ornare aenean euismod elementum nisi.
 
                         Non blandit massa enim nec. Praesent elementum facilisis leo vel fringilla. Ornare arcu odio ut sem nulla. Ut consequat semper viverra nam libero justo. Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis. Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Non quam lacus suspendisse faucibus interdum. Adipiscing tristique risus nec feugiat in fermentum posuere. Lorem ipsum dolor sit amet consectetur adipiscing elit. Consequat mauris nunc congue nisi vitae suscipit tellus mauris. Mi sit amet mauris commodo quis imperdiet massa tincidunt. Ut aliquam purus sit amet luctus venenatis lectus.

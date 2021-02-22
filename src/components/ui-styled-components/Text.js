@@ -1,27 +1,28 @@
 import styled from 'styled-components';
+import { motion } from "framer-motion";
 // import { device } from '../../config/Breakpoints';
 
-const Title = styled.h1`
+const Title = styled(motion.h1)`
     font-size: ${props => props.theme.size.title};
     color: ${props => props.color || props.theme.primaryText};
     margin-bottom: 0.5em;
     max-width: ${props => props.maxWidth};
 `
-const Subtitle = styled.h2`
+const Subtitle = styled(motion.h2)`
     font-size: ${props => props.theme.size.subtitle};
     color: ${props => props.color || props.theme.primaryText};
     margin-bottom: 0.5em;
     max-width: ${props => props.maxWidth};
     text-align: ${props => props.textAlign};
 `
-const LargeText = styled.h4`
+const LargeText = styled(motion.h4)`
     font-size:${props => props.theme.size.largeText};
     color: ${props => props.color || props.theme.primaryColour};
     max-width: ${props => props.maxWidth};
     text-align: ${props => props.textAlign};
     margin-bottom: 0.5em;
 `
-const RegularText = styled.p`
+const RegularText = styled(motion.p)`
     font-size:${props => props.theme.size.regularText};
     color: ${props => props.color || props.theme.primaryColour};
     max-width: ${props => props.maxWidth};
@@ -30,7 +31,7 @@ const RegularText = styled.p`
     padding: ${props => props.padding || "1em"};
 
 `
-const SmallText = styled.p`
+const SmallText = styled(motion.p)`
     font-size:${props => props.theme.size.smallText};
     color: ${props => props.color || props.theme.primaryColour};
 `

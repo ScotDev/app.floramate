@@ -45,13 +45,14 @@ const ResultsGrid = styled(motion.div)`
 
 `
 
+// Dead, remove after check
 const GridItem = styled.div`
     display: flex;
     flex-direction: column;
 `
 
 // Should be moved to utils
-const FlexBox = styled.div`
+const FlexBox = styled(motion.div)`
   display:flex;
   flex-direction:row;
   flex-wrap: wrap;
@@ -65,7 +66,7 @@ const FlexBox = styled.div`
 
 `
 
-const FlexBoxItem = styled.div`
+const FlexBoxItem = styled(motion.div)`
     display: flex;
     flex-direction: column;
     text-align:justify;

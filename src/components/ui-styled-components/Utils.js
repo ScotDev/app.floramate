@@ -51,7 +51,7 @@ const PageSectionTitle = styled(motion.h3)`
     }
 `
 
-const ArticleContainer = styled.div`
+const ArticleContainer = styled(motion.div)`
   /* background-color: ${props => props.theme.primaryText}; */
   background: linear-gradient(180deg,#ebf4fd,hsla(0,0%,100%,0) 10%,hsla(0,0%,100%,0) 80%,#ebf4fd);
   margin: 3rem 0;
@@ -70,7 +70,7 @@ const ArticleContainer = styled.div`
 `;
 
 
-const ArticleBody = styled.article`
+const ArticleBody = styled(motion.article)`
   text-align: justify;
   display: flex;
   flex-direction: column;
