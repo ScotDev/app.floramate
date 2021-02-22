@@ -17,7 +17,7 @@ const speciesData = require("../../../data/speciesData");
 
 export default function Home() {
     const [ref, inView] = useInView({
-        rootMargin: "-300px",
+        rootMargin: "-275px",
         threshold: 0,
     })
 
@@ -29,12 +29,12 @@ export default function Home() {
             {/* Bring Navbar component in to here and decouple from Hero section */}
             <Hero hideNav={inView}></Hero>
 
-            <PageSection bgColor={"#2f3e46"} padding={"10vw"} initial={{ opacity: 0 }} animate={{ opacity: 1 }} >
+            <PageSection bgColor={"#2f3e46"} padding={"10vw"} initial={{ opacity: 0.2 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} >
                 <PageSectionTitle color={"#fff"}>Featured</PageSectionTitle>
                 <Results speciesData={speciesData} limit={3} />
             </PageSection>
 
-            <PageSection ref={ref} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <PageSection ref={ref} initial={{ opacity: 0.2 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
                 <Info></Info>
             </PageSection>
 

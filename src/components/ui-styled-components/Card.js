@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { device } from '../../config/Breakpoints';
+import { motion } from "framer-motion";
 
-
-const ResultsCard = styled.div`
+const ResultsCard = styled(motion.div)`
   display: flex;
   flex-direction:column;
   justify-content: center;
@@ -23,7 +23,7 @@ const ResultsCard = styled.div`
   overflow: hidden;
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
-  transition: transform ease 0.2s, opacity ease 0.2s;
+  /* transition: transform ease 0.2s, opacity ease 0.2s; */
 
   &::before {
   content: "";
@@ -33,10 +33,10 @@ const ResultsCard = styled.div`
   background-color: ${props => props.theme.secondaryColour};
   }
 
-  &:hover, &:focus {
+  /* &:hover, &:focus {
     opacity: 0.7;
     transform: scale(0.97);
-  }
+  } */
 
   img{
   height: 225px;

@@ -37,6 +37,8 @@ const HeroContainer = styled(motion.div)`
 
     @media ${device.tablet}{
     text-align: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
     }
 
 h1{

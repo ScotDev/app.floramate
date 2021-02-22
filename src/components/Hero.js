@@ -11,7 +11,7 @@ const Hero = ({ hideNav }) => {
     console.log(hideNav)
 
     return (<>
-        <HeroContainer initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <HeroContainer initial={{ opacity: 0.2 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <Navbar hideNav={hideNav}></Navbar>
             {/* <HeroKnockout> */}
             <h1>floramate</h1>

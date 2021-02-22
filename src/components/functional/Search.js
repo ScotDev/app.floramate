@@ -16,7 +16,7 @@ export default function Search() {
 
     return (
         <>
-            <SearchSection initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <SearchSection initial={{ opacity: 0.2 }} animate={{ opacity: 1 }}>
                 <h2>Species</h2>
                 <form>
 
@@ -26,7 +26,7 @@ export default function Search() {
                 </form>
 
             </SearchSection>
-            <ResultsHeading initial={{ opacity: 0 }} animate={{ opacity: 1 }}>Results</ResultsHeading>
+            <ResultsHeading initial={{ opacity: 0.2 }} animate={{ opacity: 1 }}>Results</ResultsHeading>
 
             <Results speciesData={speciesData} />
 

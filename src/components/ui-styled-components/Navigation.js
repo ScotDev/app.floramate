@@ -3,24 +3,15 @@ import { device } from '../../config/Breakpoints';
 import { motion } from "framer-motion";
 
 const StyledNavbar = styled(motion.nav)`
-  /* overflow: hidden;
-  background-color: ${props => props.bgColor || props.theme.primaryColour};;
-  display: flex;
-  align-items:center;
-  padding: 0.25rem ${props => props.theme.mainContentPadding};
-  height: 75px; */
     position: fixed;
     top: 0;
     left: 0%;
     width: 100vw;
-    display: ${props => (props.hideNav ? "none" : "flex")};
+    display: flex;
     align-items: center;
     padding: 1rem 3.5rem;
     background-color: ${props => props.bgColor || "transparent"};
     height: 75px;
-
-    /* Idk if this even works */
-    opacity: ${props => props.hideNav ? 0 : 1};
 
   /* Temporary while mobile nav developed */
     @media ${device.tablet}{
@@ -28,7 +19,7 @@ const StyledNavbar = styled(motion.nav)`
     }
   `
 
-const NavbarBrand = styled.div`
+const NavbarBrand = styled(motion.div)`
   display: flex;
   padding: 0;
   margin: 0;
@@ -48,7 +39,7 @@ const NavbarBrand = styled.div`
   }
 `;
 
-const NavbarList = styled.ul`
+const NavbarList = styled(motion.ul)`
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -62,7 +53,7 @@ const NavbarList = styled.ul`
     }
 `
 
-const NavbarListItem = styled.li`
+const NavbarListItem = styled(motion.li)`
     padding-right: 1.2rem;
     text-align: center;
     color: #f7fffb;

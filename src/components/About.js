@@ -10,8 +10,8 @@ import Navbar from './Navbar';
 const About = () => {
     return (
         <>
-            <Navbar bgColor={"#2f3e46"}></Navbar>
-            <Content initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <Navbar bgColor={"#2f3e46"} ></Navbar>
+            <Content initial={{ opacity: 0.2 }} animate={{ opacity: 1 }}>
                 <ArticleContainer>
                     <Title color={"#2f3e46"} maxWidth={"50ch"}>About floramate</Title>
                     <Subtitle color={"#2f3e46"} maxWidth={"40ch"}>Helping you find wildlife-friendly plants for your area</Subtitle>
