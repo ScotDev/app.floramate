@@ -36,7 +36,7 @@ const childrenVariants = {
 
 export default function Home() {
     const [ref, inView] = useInView({
-        rootMargin: "-275px",
+        rootMargin: "0px",
         threshold: 0,
     })
 
