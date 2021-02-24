@@ -22,7 +22,7 @@ const HeroContainer = styled(motion.div)`
   padding-right: ${props => props.theme.mainContentPadding};
   background-image: url("https://images.unsplash.com/photo-1453053131046-5aea58348d50?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1678&q=80");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size:cover;
   background-attachment: fixed;
   min-height: 100vh;
@@ -46,14 +46,18 @@ h1 {
   font-size: 9rem;
   font-weight: 700;
   margin: 0;
-  padding: 0;
+  padding: 0 0 1.5rem 0;
   text-shadow: 0 6px 12px rgb(50 50 93 / 25%),
     0 3px 7px rgb(0 0 0 / 30%);
   width: 100%;
 
+  @media ${device.laptopL} {
+    font-size: 8rem;
+    padding: 2rem 0 1.75rem 0;
+  }
   @media ${device.laptop} {
     font-size: 6rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
   }
   @media ${device.tablet} {
     font-size: 5rem;
@@ -65,14 +69,18 @@ h2, h3{
   font-size: 3.2rem;
   font-weight: bold;
   margin: 0;
-  padding: 0 0 1em 0;
+  padding: 0 0 1rem 0;
   text-shadow: 0 6px 12px rgb(50 50 93 / 10%),
     0 3px 7px rgb(0 0 0 / 30%);
   max-width: 40ch;
 
+  @media ${device.laptopL} {
+    font-size: 3rem;
+    padding-bottom: 2.5rem;
+  }
   @media ${device.laptop} {
     font-size: ${props => props.theme.size.largeText};
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
   }
   @media ${device.desktopL} {
     max-width: 100%;
