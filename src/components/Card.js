@@ -10,33 +10,6 @@ import { IoWaterOutline } from "react-icons/io5";
 import { IoWaterSharp } from "react-icons/io5";
 import { RiPlantLine } from "react-icons/ri";
 
-// const variants = {
-//     hover: { scale: 0.97, opacity: 0.7, transition: { duration: 0.2 } }
-// }
-const parentVariants = {
-    visible: {
-        opacity: 1,
-        transition: {
-            delay: 0.85,
-            duration: 0.5,
-            when: "beforeChildren",
-            staggerChildren: 0.22,
-        }
-    },
-    hidden: {
-        opacity: 0
-    },
-    hover: { scale: 0.97, transition: { duration: 0.2 } }
-}
-
-// const childrenVariants = {
-//     visible: {s
-//         opacity: 1
-//     },
-//     hidden: { opacity: 0 },
-//     hover: { scale: 0.97, opacity: 0.7, transition: { duration: 0.2 } }
-// }
-
 
 export default function Card(props) {
     console.log(props)
@@ -46,7 +19,7 @@ export default function Card(props) {
 
     const items = data.slice(0, limit).map((item) => {
         return (
-            <ResultsCard key={item.id} whileHover="hover" whileTap="hover" whileFocus="hover" initial="hidden" animate="visible" variants={parentVariants}  >
+            <ResultsCard key={item.id} whileHover={{ type: 'spring', scale: 1.06, opacity: 0.75, transition: { duration: .1, bounce: 1, mass: 0.1, damping: 300, stiffness: 300, velocity: 5 } }}  >
                 <img loading="lazy" src={item.img_url} alt="" />
                 <h4>{item.common_name}</h4>
                 <div id="divider"></div>

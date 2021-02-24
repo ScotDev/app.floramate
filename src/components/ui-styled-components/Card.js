@@ -23,7 +23,7 @@ const ResultsCard = styled(motion.div)`
   overflow: hidden;
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
-  transition: opacity ease 0.2s;
+  transition: all ease 0.2s;
 
   &::before {
   content: "";
@@ -33,9 +33,10 @@ const ResultsCard = styled(motion.div)`
   background-color: ${props => props.theme.secondaryColour};
   }
 
-  &:hover, &:focus {
+  /* &:hover, &:focus {
     opacity: 0.7;
-  }
+    transform: translateY(-6px);
+  } */
 
   img{
   height: 225px;

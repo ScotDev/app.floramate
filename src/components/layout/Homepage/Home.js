@@ -12,41 +12,44 @@ import Results from '../../Results';
 
 const speciesData = require("../../../data/speciesData");
 
-const parentVariants = {
-    visible: {
-        opacity: 1,
-        transition: {
-            duration: 0.5,
-            when: "beforeChildren",
-            staggerChildren: 0.22,
-        }
-    },
-    hidden: {
-        opacity: 0
-    }
-}
+// const parentVariants = {
+//     visible: {
+//         opacity: 1,
+//         transition: {
+//             type: "spring",
+//             stiffness: 300,
+//             duration: 0.5,
+//             when: "beforeChildren",
+//             staggerChildren: 0.22,
+//         }
+//     },
+//     hidden: {
+//         opacity: 0
+//     }
+// }
 
-const childrenVariants = {
-    visible: {
-        opacity: 1
-    },
-    hidden: { opacity: 0 },
-    hover: { scale: 0.97, opacity: 0.7, transition: { duration: 0.2 } }
-}
+// const childrenVariants = {
+//     visible: {
+//         opacity: 1
+//     },
+//     hidden: { opacity: 0 },
+//     hover: { scale: 0.97, opacity: 0.7, transition: { duration: 0.2 } }
+// }
 
 export default function Home() {
+    // Tweak
     const [ref, inView] = useInView({
-        rootMargin: "0px",
+        rootMargin: "620px",
         threshold: 0,
     })
 
     return (
         <>
-            <Navbar hideNav={inView}></Navbar>
+            <Navbar scrolling={inView}></Navbar>
             <Hero></Hero>
-            <PageSection bgColor={"#2f3e46"} padding={"10vw"} initial="hidden" animate="visible" variants={parentVariants} >
-                <PageSectionTitle color={"#fff"} variants={childrenVariants}>Featured</PageSectionTitle>
-                <Results speciesData={speciesData} limit={3} parentVariants={parentVariants} childrenVariants={childrenVariants} />
+            <PageSection ref={ref} bgColor={"#2f3e46"} padding={"10vw"}>
+                <PageSectionTitle color={"#fff"}>Featured</PageSectionTitle>
+                <Results speciesData={speciesData} limit={3} />
             </PageSection>
 
             <PageSection ref={ref}>

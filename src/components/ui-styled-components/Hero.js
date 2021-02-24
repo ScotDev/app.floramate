@@ -15,17 +15,17 @@ const HeroContainer = styled(motion.div)`
   flex-direction: column;
   text-align: left;
   /* align-items: center; */
-  padding-top:4rem;
+  justify-content: center;
+  padding-top:0;
   padding-bottom: 2rem;
   padding-left: ${props => props.theme.mainContentPadding};
   padding-right: ${props => props.theme.mainContentPadding};
-
-
   background-image: url("https://images.unsplash.com/photo-1453053131046-5aea58348d50?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1678&q=80");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
   background-size:cover;
   background-attachment: fixed;
+  min-height: 100vh;
 
   box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
     0 3px 7px -3px rgb(0 0 0 / 30%);
@@ -41,7 +41,7 @@ const HeroContainer = styled(motion.div)`
     padding-right: 5vw;
     }
 
-h1{
+h1 {
   color: ${props => props.theme.primaryText};
   font-size: 9rem;
   font-weight: 700;

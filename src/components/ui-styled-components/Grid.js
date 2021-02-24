@@ -3,7 +3,7 @@ import { device } from '../../config/Breakpoints';
 import { motion } from "framer-motion";
 
 // Rename this - grid isn't a grid anymore
-const ResultsGrid = styled(motion.div)`
+const ResultsGrid = styled.div`
   display: flex;
   padding: 0 2rem;
   margin: 0;

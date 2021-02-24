@@ -12,9 +12,11 @@ const StyledNavbar = styled(motion.nav)`
     padding: 1rem 3.5rem;
     background-color: ${props => props.bgColor || "transparent"};
     height: 75px;
+    z-index: 1;
+    border-bottom: 4px solid ${props => props.borderBottom || "transparent"};;
 
   /* Temporary while mobile nav developed */
-    @media ${device.tablet}{
+    @media ${device.laptop}{
       display:none;
     }
   `
@@ -56,12 +58,9 @@ const NavbarList = styled(motion.ul)`
 const NavbarListItem = styled(motion.li)`
     padding-right: 1.2rem;
     text-align: center;
-    color: #f7fffb;
-    /* height:1.8rem; */
     
-
     a {
-    color: #f7fffb;
+    color: ${props => props.theme.primaryText};
     line-height: 1.6;
     padding: 0.15em 1em;
     font-size:${props => props.theme.size.regularText};
@@ -69,16 +68,17 @@ const NavbarListItem = styled(motion.li)`
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: ${props => props.theme.borderRadius};
-    transition: color 0.2s, background-color 0.2s;
+    transition: all 0.15s;
 
     &.active{
       background-color: ${props => props.theme.primaryText};
       color: ${props => props.theme.primaryColour};
     }
     &:hover, &:focus {
-      background-color: ${props => props.theme.primaryText};;
+      background-color: ${props => props.theme.primaryText};
       color: ${props => props.theme.primaryColour};
     }
+
     } 
 
 `

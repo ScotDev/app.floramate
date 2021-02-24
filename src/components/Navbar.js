@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, MobileNavbar, MobileNavMenu, MobileNavMenuItem } from './ui-styled-components/Navigation';
 import { RegularText } from './ui-styled-components/Text';
 
@@ -18,16 +17,15 @@ const navbarVariants = {
         }
     },
     hidden: {
-        opacity: 0, display: "none",
+        opacity: 0,
         transition: {
             // duration: 0.5,
             when: "afterChildren",
             staggerChildren: 0.09,
         }
     },
-    initial: {
-        opacity: 1
-        // display: "flex",
+    scroll: {
+        backgroundColor: "#2f3e46"
     }
 }
 
@@ -35,12 +33,15 @@ const childrenVariants = {
     visible: {
         opacity: 1
     },
-    hidden: { opacity: 0 }
+    hidden: { opacity: 0 },
+    scroll: {
+        opacity: 1
+    }
 }
 
-function Navbar({ bgColor, hideNav }) {
+function Navbar({ bgColor, scrolling }) {
     return (<>
-        <StyledNavbar bgColor={bgColor} initial="initial" animate={hideNav ? "hidden" : "visible"} variants={navbarVariants} >
+        <StyledNavbar bgColor={bgColor} borderBottom={scrolling && "#84a98c"} initial="visible" animate={scrolling ? "scroll" : "visible"} variants={navbarVariants} >
             <Link exact to="/">
                 <NavbarBrand variants={childrenVariants} initial="hidden"><img alt="brand name" src={BrandImage} /><h4>floramate</h4></NavbarBrand>
             </Link>
