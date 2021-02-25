@@ -45,9 +45,7 @@ const SecondaryBtn = styled(StyledBtn)`
 
 const InfoBtn = styled(StyledBtn)`
   color: ${props => props.theme.primaryText || "#f7fffb"};
-  /* background-color:  ${props => props.bgColor || "#fff"}; */
   background: rgba(255, 255, 255, 0.17);
-
   border: 2px solid ${props => props.theme.primaryText || "#f7fffb"};
   font-weight: bold;
 

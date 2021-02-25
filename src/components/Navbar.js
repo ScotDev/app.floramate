@@ -1,7 +1,5 @@
-import React from 'react';
-import { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, MobileNavbar, MobileNavMenu, MobileNavMenuItem } from './ui-styled-components/Navigation';
-import { RegularText } from './ui-styled-components/Text';
-
+import React, { useState } from 'react';
+import { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, MobileNavbar, MobileNavList, MobileNavItem, MobileNavLink, MobileNavToggle } from './ui-styled-components/Navigation';
 
 import BrandImage from "../assets/img/brand.svg";
 
@@ -39,7 +37,19 @@ const childrenVariants = {
     }
 }
 
+const mobileNavVariants = {
+    closed: { y: -300, opacity: 0 },
+    open: { y: 0, opacity: 1 }
+}
+const mobileToggleVariants = {
+    closed: { backgroundColor: "#5a6368" },
+    open: { backgroundColor: "transparent", boxShadow: "none" }
+}
+
 function Navbar({ bgColor, scrolling }) {
+
+    const [toggleOpen, setToggleOpen] = useState(false)
+
     return (<>
         <StyledNavbar bgColor={bgColor} borderBottom={scrolling && "#84a98c"} initial="visible" animate={scrolling ? "scroll" : "visible"} variants={navbarVariants} >
             <Link exact to="/">
@@ -51,7 +61,6 @@ function Navbar({ bgColor, scrolling }) {
                 </NavbarListItem>
                 <NavbarListItem variants={childrenVariants} initial="hidden">
                     <NavLink to="/species">Species</NavLink>
-
                 </NavbarListItem>
                 {/* <NavbarListItem>
                     <NavLink to="/advice">Advice</NavLink>
@@ -61,24 +70,28 @@ function Navbar({ bgColor, scrolling }) {
                 </NavbarListItem>
 
             </NavbarList>
-            {/* <NavbarList>
-                <NavbarListItem>
-                    <PrimaryBtn>Log in</PrimaryBtn>
-                </NavbarListItem>
-                <NavbarListItem>
-                    <SecondaryBtn>Sign up</SecondaryBtn>
-                </NavbarListItem>
-            </NavbarList> */}
         </StyledNavbar>
-        <MobileNavbar>
-            <input type="checkbox"></input>
+
+        {/* Set to invisible on open, replaced with x on dropdown, divide items by section, not individually*/}
+        <MobileNavToggle initial="closed" animate={toggleOpen ? "open" : "closed"} onClick={() => setToggleOpen(!toggleOpen)} variants={mobileToggleVariants}>
             <div></div>
             <div></div>
             <div></div>
+        </MobileNavToggle>
+        <MobileNavbar initial="closed" animate={toggleOpen ? "open" : "closed"} variants={mobileNavVariants}>
+            <MobileNavList>
+                <MobileNavItem>
+                    <NavLink exact to="/">Home</NavLink>
+                </MobileNavItem>
+                <MobileNavItem>
+                    <NavLink to="/species">Species</NavLink>
+                </MobileNavItem>
+                <MobileNavItem>
+                    <NavLink to="/about">About</NavLink>
+                </MobileNavItem>
+            </MobileNavList>
         </MobileNavbar>
-        <MobileNavMenu>
-            <MobileNavMenuItem><RegularText><NavLink to="/about">About</NavLink></RegularText></MobileNavMenuItem>
-        </MobileNavMenu>
+
     </>)
 }
 

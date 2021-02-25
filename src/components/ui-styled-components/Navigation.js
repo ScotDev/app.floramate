@@ -123,77 +123,111 @@ const FooterContentListItem = styled.li`
   }
       }
 
-`
+`;
 
-const MobileNavbar = styled.div`
-  padding: 0;
+const MobileNavbar = styled(motion.div)`
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: translateY(-300px);
+  height: 300px;
+  background-color: ${props => props.theme.primaryColour};
+  width: 100vw;
+  box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+    0 3px 7px -3px rgb(0 0 0 / 30%);
+
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
   margin: 0;
-  border: 1px solid green;
-  overflow: hidden;
-  -webkit-user-select: none;
-  user-select: none;
-  height:50px;
-  width:50px;
-      /* Just for development */
-      display:none;
+  border-bottom: 3px solid ${props => props.theme.secondaryColour};
+`;
 
-input{
-  z-index:1;
-  border: 1px solid red;
-}
-
-div {
-    display: block;
-    width: 33px;
-    height: 4px;
-    position: relative;
-    border-radius: 6px;
-    background: #fff;
-    margin: 4px 0;
-    z-index: 1;
-    transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-      opacity 0.55s ease;
-  }
-
-  div:first-of-type {
-    transform-origin: 0% 0%;
-  }
-  div:last-of-type {
-    transform-origin: 0% 100%;
-  }
-`
-
-const MobileNavMenu = styled.ul`
-    height: 400px;
-    width: 50%;
-    top:0;
-    right:0;
-    z-index:1;
-    margin:0;
-    padding:0;
+const MobileNavList = styled.ul`
+    list-style-type: none;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    position: absolute;
-    border: 1px solid yellow;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 
-    /* Just for development */
-    display:none;
-`
-const MobileNavMenuItem = styled.li`
-      text-align: center;
-      list-style-type:none;
-      padding:0.25rem;
-      
-  a {
-color: #f7fffb;
-  text-decoration:none;
+    /* border: 1px solid red; */
+`;
 
-  &:hover {
-    border-bottom: 2px solid #f7fffb;
+const MobileNavItem = styled.li`
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid ${props => props.theme.primaryText};
+    text-align: center;
+    width: 60%;
+
+    a {
+    /* border: 1px solid red; */
+
+    color: ${props => props.theme.primaryText};
+    line-height: 2;
+    padding: 0.15em 1em;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.15s;
+    }
+`;
+
+const MobileNavLink = styled.p`
+    /* color: ${props => props.theme.primaryText};
+    line-height: 1.6;
+    padding: 0.15em 1em;
+    font-size:${props => props.theme.size.regularText};
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: ${props => props.theme.borderRadius};
+    transition: all 0.15s; */
+`;
+
+
+const MobileNavToggle = styled(motion.div)`
+  top: 15px;
+  right: 15px;
+  position: absolute;
+  height: 55px;
+  color: ${props => props.theme.primaryText};
+  /* background: rgba(255, 255, 255, 0.5); */
+  /* background-color: ${props => props.theme.secondaryBlue}; */
+  /* border: 2px solid ${props => props.theme.primaryText}; */
+  /* border-bottom: 2px solid ${props => props.theme.primaryText}; */
+  width: 55px;
+  display: none;
+  z-index: 2;
+  border-radius: ${props => props.theme.borderRadius};
+  box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+    0 3px 7px -3px rgb(0 0 0 / 30%);
+  cursor: pointer;
+  padding: 7px 0;
+
+  div{
+      display: block;
+      width: 60%;
+      height: 3px;
+      position: relative;
+      border-radius: 50px;
+      background: ${props => props.theme.primaryText};
+      margin:0;
+      padding: 0;
+      /* z-index: 1; */
   }
-  }
-`
 
-export { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, StyledFooter, FooterContent, FooterContentList, FooterContentListItem, MobileNavbar, MobileNavMenu, MobileNavMenuItem };
+  @media ${device.laptop}{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+`;
+
+export { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, StyledFooter, FooterContent, FooterContentList, FooterContentListItem, MobileNavbar, MobileNavList, MobileNavItem, MobileNavLink, MobileNavToggle };
