@@ -140,7 +140,7 @@ const MobileNavbar = styled(motion.div)`
   flex-direction: column;
   padding: 1rem;
   margin: 0;
-  border-bottom: 3px solid ${props => props.theme.secondaryColour};
+  border-bottom: 4px solid ${props => props.theme.secondaryColour};
 `;
 
 const MobileNavList = styled.ul`
@@ -151,30 +151,36 @@ const MobileNavList = styled.ul`
     justify-content: space-around;
     width: 100%;
     height: 100%;
-    padding: 0;
+    padding: 1.2rem 0;
     margin: 0;
-
-    /* border: 1px solid red; */
 `;
 
-const MobileNavItem = styled.li`
+const MobileNavItem = styled(motion.li)`
     padding: 0;
     margin: 0;
     /* border-bottom: 1px solid ${props => props.theme.primaryText}; */
     text-align: center;
-    width: 60%;
 
     a {
-    /* border: 1px solid red; */
-
     color: ${props => props.theme.primaryText};
     line-height: 2;
-    padding: 0.15em 1em;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 1px;
+    font-weight: 600;
     transition: all 0.15s;
+    border-bottom:3px solid transparent;
+    transition: all 0.2s ease;
+ 
+    &.active{
+      color:${props => props.theme.secondaryColour};
+      border-bottom: 3px solid ${props => props.theme.secondaryColour};
+    }
+
+    &:hover, &:focus{
+      color:${props => props.theme.secondaryColour};
+      border-bottom: 3px solid ${props => props.theme.secondaryColour};
+    }
+
     }
 `;
 
@@ -184,10 +190,6 @@ const MobileNavToggle = styled(motion.div)`
   position: absolute;
   height: 55px;
   color: ${props => props.theme.primaryText};
-  /* background: rgba(255, 255, 255, 0.5); */
-  /* background-color: ${props => props.theme.secondaryBlue}; */
-  /* border: 2px solid ${props => props.theme.primaryText}; */
-  /* border-bottom: 2px solid ${props => props.theme.primaryText}; */
   width: 55px;
   display: none;
   z-index: 2;
@@ -206,7 +208,6 @@ const MobileNavToggle = styled(motion.div)`
       background: ${props => props.theme.primaryText};
       margin:0;
       padding: 0;
-      /* z-index: 1; */
   }
 
   @media ${device.laptop}{

@@ -100,13 +100,14 @@ function Navbar({ bgColor, scrolling }) {
         </MobileNavToggle>
         <MobileNavbar initial="closed" animate={toggleOpen ? "open" : "closed"} variants={mobileNavVariants}>
             <MobileNavList>
-                <MobileNavItem>
+
+                <MobileNavItem whileTap={{ scale: 1.3 }} whileHover={{ scale: 1.3 }}>
                     <NavLink exact to="/">Home</NavLink>
                 </MobileNavItem>
-                <MobileNavItem>
+                <MobileNavItem whileTap={{ scale: 1.3 }} whileHover={{ scale: 1.3 }}>
                     <NavLink to="/species">Species</NavLink>
                 </MobileNavItem>
-                <MobileNavItem>
+                <MobileNavItem whileTap={{ scale: 1.3 }} whileHover={{ scale: 1.3 }}>
                     <NavLink to="/about">About</NavLink>
                 </MobileNavItem>
             </MobileNavList>
