@@ -56,7 +56,7 @@ const NavbarList = styled(motion.ul)`
 `
 
 const NavbarListItem = styled(motion.li)`
-    padding-right: 1.2rem;
+    padding-right: 1.1rem;
     text-align: center;
     
     a {
