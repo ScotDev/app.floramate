@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, MobileNavbar, MobileNavList, MobileNavItem, MobileNavLink, MobileNavToggle } from './ui-styled-components/Navigation';
+import { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, MobileNavbar, MobileNavList, MobileNavItem, MobileNavToggle } from './ui-styled-components/Navigation';
 
 import BrandImage from "../assets/img/brand.svg";
 
 import { NavLink, Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const navbarVariants = {
     visible: {
@@ -46,6 +47,15 @@ const mobileToggleVariants = {
     open: { backgroundColor: "transparent", boxShadow: "none" }
 }
 
+const hamburgerVariants = {
+    topClosed: { x: 0, y: 0 },
+    topOpen: { x: 0, y: 10, rotate: 45, scale: 1.2 },
+    middleClosed: { opacity: 1 },
+    middleOpen: { opacity: 0 },
+    bottomClosed: { x: 0, y: 0 },
+    bottomOpen: { x: 0, y: -12, rotate: -45, scale: 1.2 }
+}
+
 function Navbar({ bgColor, scrolling }) {
 
     const [toggleOpen, setToggleOpen] = useState(false)
@@ -74,9 +84,19 @@ function Navbar({ bgColor, scrolling }) {
 
         {/* Set to invisible on open, replaced with x on dropdown, divide items by section, not individually*/}
         <MobileNavToggle initial="closed" animate={toggleOpen ? "open" : "closed"} onClick={() => setToggleOpen(!toggleOpen)} variants={mobileToggleVariants}>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div
+                initial="topClosed" animate={toggleOpen ? "topOpen" : "topClosed"}
+                variants={hamburgerVariants}></motion.div>
+
+            <motion.div
+                initial="middleClosed" animate={toggleOpen ? "middleOpen" : "middleClosed"}
+                transition={{ duration: 0.1 }}
+                variants={hamburgerVariants}>
+            </motion.div>
+            <motion.div
+                initial="bottomClosed" animate={toggleOpen ? "bottomOpen" : "bottomClosed"}
+                variants={hamburgerVariants}
+            ></motion.div>
         </MobileNavToggle>
         <MobileNavbar initial="closed" animate={toggleOpen ? "open" : "closed"} variants={mobileNavVariants}>
             <MobileNavList>

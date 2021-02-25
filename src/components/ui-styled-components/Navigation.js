@@ -160,7 +160,7 @@ const MobileNavList = styled.ul`
 const MobileNavItem = styled.li`
     padding: 0;
     margin: 0;
-    border-bottom: 1px solid ${props => props.theme.primaryText};
+    /* border-bottom: 1px solid ${props => props.theme.primaryText}; */
     text-align: center;
     width: 60%;
 
@@ -177,19 +177,6 @@ const MobileNavItem = styled.li`
     transition: all 0.15s;
     }
 `;
-
-const MobileNavLink = styled.p`
-    /* color: ${props => props.theme.primaryText};
-    line-height: 1.6;
-    padding: 0.15em 1em;
-    font-size:${props => props.theme.size.regularText};
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 1px;
-    border-radius: ${props => props.theme.borderRadius};
-    transition: all 0.15s; */
-`;
-
 
 const MobileNavToggle = styled(motion.div)`
   top: 15px;
@@ -230,4 +217,4 @@ const MobileNavToggle = styled(motion.div)`
     }
 `;
 
-export { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, StyledFooter, FooterContent, FooterContentList, FooterContentListItem, MobileNavbar, MobileNavList, MobileNavItem, MobileNavLink, MobileNavToggle };
+export { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, StyledFooter, FooterContent, FooterContentList, FooterContentListItem, MobileNavbar, MobileNavList, MobileNavItem, MobileNavToggle };
