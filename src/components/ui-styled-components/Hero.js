@@ -39,6 +39,10 @@ const HeroContainer = styled(motion.div)`
     text-align: center;
     padding-left: 5vw;
     padding-right: 5vw;
+
+    justify-content: flex-start;
+
+    padding-top: 4rem;
     }
 
 h1 {
