@@ -66,16 +66,13 @@ function Navbar({ bgColor, scrolling }) {
                 <NavbarBrand variants={childrenVariants} initial="hidden"><img alt="brand name" src={BrandImage} /><h4>floramate</h4></NavbarBrand>
             </Link>
             <NavbarList >
-                <NavbarListItem variants={childrenVariants} initial="hidden">
+                <NavbarListItem variants={childrenVariants} initial="hidden" whileFocus={{ scale: 1.1 }} whileHover={{ scale: 1.1 }}>
                     <NavLink exact to="/">Home</NavLink>
                 </NavbarListItem>
-                <NavbarListItem variants={childrenVariants} initial="hidden">
+                <NavbarListItem variants={childrenVariants} initial="hidden" whileFocus={{ scale: 1.1 }} whileHover={{ scale: 1.1 }}>
                     <NavLink to="/species">Species</NavLink>
                 </NavbarListItem>
-                {/* <NavbarListItem>
-                    <NavLink to="/advice">Advice</NavLink>
-                </NavbarListItem> */}
-                <NavbarListItem variants={childrenVariants} initial="hidden">
+                <NavbarListItem variants={childrenVariants} initial="hidden" whileFocus={{ scale: 1.1 }} whileHover={{ scale: 1.1 }}>
                     <NavLink to="/about">About</NavLink>
                 </NavbarListItem>
 
