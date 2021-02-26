@@ -48,7 +48,8 @@ const mobileNavVariants = {
 const mobileToggleVariants = {
     initial: {
         opacity: 0,
-        backgroundColor: "transparent"
+        backgroundColor: "transparent",
+        transition: { type: "tween", duration: 4 }
     },
     closed: {
         opacity: 1,

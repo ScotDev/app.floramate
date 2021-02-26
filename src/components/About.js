@@ -20,11 +20,17 @@ const parentVariants = {
 }
 
 const childrenVariants = {
-    visible: {
-        opacity: 1
+    hidden: {
+        opacity: 0,
+        y: 30
     },
-    hidden: { opacity: 0 },
-    hover: { scale: 0.97, opacity: 0.7, transition: { duration: 0.2 } }
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5
+        }
+    }
 }
 
 const About = () => {
