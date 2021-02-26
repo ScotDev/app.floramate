@@ -53,8 +53,6 @@ const PageSectionTitle = styled(motion.h3)`
 `
 
 const ArticleContainer = styled(motion.div)`
-  /* background-color: ${props => props.theme.primaryText}; */
-  background: linear-gradient(180deg,#ebf4fd,hsla(0,0%,100%,0) 10%,hsla(0,0%,100%,0) 80%,#ebf4fd);
   margin: 3rem 0;
   padding: 2rem 4rem;
   border-radius: ${props => props.theme.borderRadius};
@@ -80,7 +78,7 @@ const ArticleBody = styled(motion.article)`
     0 3px 7px -3px rgb(0 0 0 / 30%);
   border-radius: ${props => props.theme.borderRadius};
   margin: 2rem 0;
-  width: 70%;
+  width: 100%;
   padding: 1rem 3rem;
 
   @media ${device.laptop}{
@@ -92,42 +90,6 @@ const ArticleBody = styled(motion.article)`
     padding: 1rem;
   }
 `;
-
-const SkewedBg = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height:60%;
-  background: ${props => props.theme.primaryColour};
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: -1 !important;
-  transform: skewY(-4deg);
-  transform-origin: top left;
-
-  /* @media ${device.desktop}{
-    height:45%;
-  } */
-  @media ${device.laptop}{
-    height:50%;
-  }
-  @media ${device.tablet}{
-    height:45%;
-  }
-  @media ${device.mobileL}{
-    height:60%;
-  }
-  @media ${device.mobileM}{
-    height:80%;
-  }
-  @media ${device.mobileS}{
-    height:90%;
-  }
-`
 
 const CreditSection = styled.div`
 display:flex;
@@ -153,4 +115,4 @@ background-color:${props => props.theme.primaryColour || "#f7fffb"};
 
 
 
-export { Content, PageSection, PageSectionTitle, ArticleContainer, ArticleBody, SkewedBg, CreditSection };
+export { Content, PageSection, PageSectionTitle, ArticleContainer, ArticleBody, CreditSection };

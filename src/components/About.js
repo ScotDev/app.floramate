@@ -33,8 +33,8 @@ const About = () => {
             <Navbar bgColor={"#2f3e46"} ></Navbar>
             <Content>
                 <ArticleContainer initial="hidden" animate="visible" variants={parentVariants}>
-                    <Title color={"#2f3e46"} maxWidth={"50ch"} variants={childrenVariants}>About floramate</Title>
-                    <Subtitle color={"#2f3e46"} maxWidth={"40ch"} variants={childrenVariants}>Helping you find wildlife-friendly plants for your area</Subtitle>
+                    <Title maxWidth={"50ch"} color={"#2f3e46"} textShadow variants={childrenVariants}>About floramate</Title>
+                    <Subtitle maxWidth={"30ch"} color={"#2f3e46"} textShadow variants={childrenVariants}>Helping you find wildlife-friendly plants for your area</Subtitle>
 
                     <ArticleBody variants={childrenVariants}>
                         <RegularText color={"#2f3e46"} maxWidth={"65ch"} textAlign={"justify"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet volutpat consequat mauris. Dignissim sodales ut eu sem integer vitae justo eget. Pulvinar pellentesque habitant morbi tristique senectus et netus. Feugiat sed lectus vestibulum mattis ullamcorper velit. Suspendisse interdum consectetur libero id. Ipsum dolor sit amet consectetur adipiscing. Eget nunc lobortis mattis aliquam faucibus. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Pharetra et ultrices neque ornare aenean euismod elementum nisi.

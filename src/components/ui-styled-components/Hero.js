@@ -70,8 +70,8 @@ h1 {
 
 h2, h3{
   color: ${props => props.theme.primaryText};
-  font-size: 3.2rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 500;
   margin: 0;
   padding: 0 0 1rem 0;
   text-shadow: 0 6px 12px rgb(50 50 93 / 10%),
@@ -79,7 +79,6 @@ h2, h3{
   max-width: 40ch;
 
   @media ${device.laptopL} {
-    font-size: 3rem;
     padding-bottom: 2.5rem;
   }
   @media ${device.laptop} {

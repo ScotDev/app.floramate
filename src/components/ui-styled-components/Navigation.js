@@ -194,8 +194,9 @@ const MobileNavToggle = styled(motion.div)`
   display: none;
   z-index: 2;
   border-radius: ${props => props.theme.borderRadius};
-  box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
-    0 3px 7px -3px rgb(0 0 0 / 30%);
+  /* box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+    0 3px 7px -3px rgb(0 0 0 / 30%); */
+  /* background-color:rgba(0,0,0, 0.4); */
   cursor: pointer;
   padding: 7px 0;
 

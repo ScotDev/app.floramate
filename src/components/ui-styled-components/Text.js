@@ -7,6 +7,7 @@ const Title = styled(motion.h1)`
     color: ${props => props.color || props.theme.primaryText};
     margin-bottom: 0.5em;
     max-width: ${props => props.maxWidth};
+    text-shadow: ${props => props.textShadow ? "0 6px 12px rgb(50 50 93 / 25%), 0 3px 7px rgb(0 0 0 / 30%)" : "none"}
 `
 const Subtitle = styled(motion.h2)`
     font-size: ${props => props.theme.size.subtitle};
@@ -14,6 +15,7 @@ const Subtitle = styled(motion.h2)`
     margin-bottom: 0.5em;
     max-width: ${props => props.maxWidth};
     text-align: ${props => props.textAlign};
+    text-shadow: ${props => props.textShadow ? "0 6px 12px rgb(50 50 93 / 25%), 0 3px 7px rgb(0 0 0 / 30%)" : "none"}
 `
 const LargeText = styled(motion.h4)`
     font-size:${props => props.theme.size.largeText};

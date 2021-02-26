@@ -10,9 +10,10 @@ const navbarVariants = {
     visible: {
         opacity: 1,
         transition: {
+            delay: 0.75,
             duration: 0.5,
             when: "beforeChildren",
-            staggerChildren: 0.05,
+            staggerChildren: 0.07,
         }
     },
     hidden: {
@@ -32,7 +33,9 @@ const childrenVariants = {
     visible: {
         opacity: 1
     },
-    hidden: { opacity: 0 },
+    hidden: {
+        opacity: 0
+    },
     scroll: {
         opacity: 1
     }
@@ -43,8 +46,15 @@ const mobileNavVariants = {
     open: { y: 0, opacity: 1 }
 }
 const mobileToggleVariants = {
-    closed: { backgroundColor: "#5a6368" },
-    open: { backgroundColor: "transparent", boxShadow: "none" }
+    initial: {
+        opacity: 0,
+        backgroundColor: "transparent"
+    },
+    closed: {
+        opacity: 1,
+        backgroundColor: "rgba(0,0,0, 0.4)"
+    },
+    open: { opacity: 1, backgroundColor: "transparent" }
 }
 
 const hamburgerVariants = {
@@ -79,7 +89,7 @@ function Navbar({ bgColor, scrolling }) {
             </NavbarList>
         </StyledNavbar>
 
-        <MobileNavToggle initial="closed" animate={toggleOpen ? "open" : "closed"} onClick={() => setToggleOpen(!toggleOpen)} variants={mobileToggleVariants}>
+        <MobileNavToggle initial="initial" animate={toggleOpen ? "open" : "closed"} onClick={() => setToggleOpen(!toggleOpen)} variants={mobileToggleVariants}>
             <motion.div
                 initial="topClosed" animate={toggleOpen ? "topOpen" : "topClosed"}
                 variants={hamburgerVariants}></motion.div>
@@ -96,7 +106,6 @@ function Navbar({ bgColor, scrolling }) {
         </MobileNavToggle>
         <MobileNavbar initial="closed" animate={toggleOpen ? "open" : "closed"} variants={mobileNavVariants}>
             <MobileNavList>
-
                 <MobileNavItem whileTap={{ scale: 1.3 }} whileHover={{ scale: 1.3 }}>
                     <NavLink exact to="/">Home</NavLink>
                 </MobileNavItem>
