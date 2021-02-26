@@ -9,7 +9,7 @@ const StyledBtn = styled(motion.button)`
   margin-bottom: 0.5em;
   font-family: inherit;
   text-align: center;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
   font-size: ${props => props.fontSize || props.theme.size.regularText};
   box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
     0 3px 7px -3px rgb(0 0 0 / 30%);
@@ -20,20 +20,20 @@ const StyledBtn = styled(motion.button)`
 const PrimaryBtn = styled(StyledBtn)`
   color: ${props => props.theme.primaryColour || "#f7fffb"};
   background-color:  ${props => props.theme.primaryText || "#487161"};
-  border: 2px solid ${props => props.theme.primaryColour || "#f7fffb"};
+  border: 3px solid ${props => props.theme.primaryColour || "#f7fffb"};
   font-weight: bold;
 
   &:hover, &:focus {
     color:  ${props => props.theme.primaryText || "#487161"};
     background-color: ${props => props.theme.primaryColour || "#f7fffb"};
-    border: 2px solid  ${props => props.theme.primaryColour || "#487161"};
+    border: 3px solid  ${props => props.theme.primaryColour || "#487161"};
   }
   `;
 
 const SecondaryBtn = styled(StyledBtn)`
   color: ${props => props.theme.primaryText || "#f7fffb"};
   background-color: ${props => props.theme.secondaryColour || "#6e6448"};
-  border: 2px solid ${props => props.theme.secondaryColour || "#f7fffb"};
+  border: 3px solid ${props => props.theme.secondaryColour || "#f7fffb"};
   font-weight: bold;
 
 
@@ -46,13 +46,13 @@ const SecondaryBtn = styled(StyledBtn)`
 const InfoBtn = styled(StyledBtn)`
   color: ${props => props.theme.primaryText || "#f7fffb"};
   background: rgba(255, 255, 255, 0.17);
-  border: 2px solid ${props => props.theme.primaryText || "#f7fffb"};
+  border: 3px solid ${props => props.theme.primaryText || "#f7fffb"};
   font-weight: bold;
 
   &:hover, &:focus {
-    color:  ${props => props.theme.primaryText || "#487161"};
-    border: 2px solid ${props => props.theme.secondaryBlue || "#f7fffb"};
-    background-color: ${props => props.theme.secondaryBlue || "#f7fffb"};
+    color:  ${props => props.theme.secondaryBlue || "#487161"};
+    border: 3px solid ${props => props.theme.secondaryBlue || "#f7fffb"};
+    background-color: ${props => props.theme.primaryText || "#f7fffb"};
   }
 `
 

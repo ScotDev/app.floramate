@@ -79,7 +79,6 @@ function Navbar({ bgColor, scrolling }) {
             </NavbarList>
         </StyledNavbar>
 
-        {/* Set to invisible on open, replaced with x on dropdown, divide items by section, not individually*/}
         <MobileNavToggle initial="closed" animate={toggleOpen ? "open" : "closed"} onClick={() => setToggleOpen(!toggleOpen)} variants={mobileToggleVariants}>
             <motion.div
                 initial="topClosed" animate={toggleOpen ? "topOpen" : "topClosed"}

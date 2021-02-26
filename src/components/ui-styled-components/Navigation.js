@@ -71,12 +71,12 @@ const NavbarListItem = styled(motion.li)`
     transition: all 0.15s;
 
     &.active{
-      background-color: ${props => props.theme.primaryText};
-      color: ${props => props.theme.primaryColour};
+      background-color: ${props => props.theme.secondaryColour};
+      color: ${props => props.theme.primaryText};
     }
     &:hover, &:focus {
-      background-color: ${props => props.theme.primaryText};
-      color: ${props => props.theme.primaryColour};
+      background-color: ${props => props.theme.secondaryColour};
+      color: ${props => props.theme.primaryText};
     }
 
     } 

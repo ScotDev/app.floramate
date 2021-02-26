@@ -4,10 +4,6 @@ import { SecondaryBtn, InfoBtn, BtnGroup } from './ui-styled-components/Button';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 
-const btnVariants = {
-    hover: { scale: 0.95, transition: { duration: 0.15 } }
-}
-
 const containerVariants = {
     hidden: {
         opacity: 0,
@@ -30,8 +26,6 @@ const childrenVariants = {
     }
 }
 
-
-
 const Hero = () => {
 
     return (<>
@@ -42,10 +36,10 @@ const Hero = () => {
 
             <BtnGroup variants={childrenVariants} initial="hidden">
                 <Link to="/species">
-                    <SecondaryBtn fontSize={"1.5rem"} whileHover="hover" whileFocus="hover" variants={btnVariants}>Browse</SecondaryBtn>
+                    <SecondaryBtn fontSize={"1.5rem"} >Browse</SecondaryBtn>
                 </Link>
                 <Link to="/about">
-                    <InfoBtn fontSize={"1.5rem"} whileHover="hover" whileFocus="hover" variants={btnVariants}>About</InfoBtn>
+                    <InfoBtn fontSize={"1.5rem"}>About</InfoBtn>
                 </Link>
             </BtnGroup>
 

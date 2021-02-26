@@ -8,9 +8,10 @@ const Content = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   padding: 2rem 0;
-  /* height: 100vh; */
-  /* max-width: 90vw; */
-  /* margin: 0 auto; */
+
+  @media ${device.tablet}{
+    padding: 0;
+  }
 `
 const PageSection = styled(motion.div)`
   padding-left: ${props => props.padding || props.theme.mainContentPadding};
