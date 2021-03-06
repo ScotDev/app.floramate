@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from "react-query";
 
 import { ThemeProvider } from 'styled-components';
 
@@ -36,19 +37,23 @@ const theme = {
   borderRadius: "8px"
 };
 
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <div className="App">
-          <Route exact path='/' component={Home}></Route>
-          <Route path='/species' component={Species}></Route>
-          <Route path='/advice' component={Advice}></Route>
-          <Route path='/about' component={About}></Route>
-          {/* <Footer></Footer> */}
-        </div>
-      </ThemeProvider>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <div className="App">
+            <Route exact path='/' component={Home}></Route>
+            <Route path='/species' component={Species}></Route>
+            <Route path='/advice' component={Advice}></Route>
+            <Route path='/about' component={About}></Route>
+            {/* <Footer></Footer> */}
+          </div>
+        </ThemeProvider>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 

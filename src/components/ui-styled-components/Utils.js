@@ -109,10 +109,33 @@ background-color:${props => props.theme.primaryColour || "#f7fffb"};
       border-bottom: 2px solid ${props => props.theme.primaryText};
     }
   }
-
-
 `
 
 
+const ErrorCard = styled(motion.div)`
+display: flex;
+  flex-direction:column;
+  /* justify-content: center;
+  align-items: center; */
+  background-color: #fff;
+  color: ${props => props.theme.primaryColour};
+  min-height: 375px;
+  height: auto;
+  /* min-width: 270px; */
+  /* width: 300px; */
+  padding: 1rem;
+  overflow: hidden;
+  margin: 1rem;
+  /* max-width: 300px; */
+  /* margin: 0.9rem; */
+  border-radius: 8px;
+  /*  Taken from Stripe */
+  box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+    0 3px 7px -3px rgb(0 0 0 / 30%);
+  overflow: hidden;
+  cursor: pointer;
 
-export { Content, PageSection, PageSectionTitle, ArticleContainer, ArticleBody, CreditSection };
+`;
+
+
+export { Content, PageSection, PageSectionTitle, ArticleContainer, ArticleBody, CreditSection, ErrorCard };

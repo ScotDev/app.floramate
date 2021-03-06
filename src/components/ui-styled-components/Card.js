@@ -98,19 +98,16 @@ const InnerCardGrid = styled.div`
     overflow: hidden;
     font-weight: 500;
     align-items: center;
-    /* justify-content: flex-start; */
 
   svg{
     color: ${props => props.theme.secondaryColour};
-    font-size: 1.8rem;
-    /* align-self: center; */
+    font-size: 1.5rem;
     margin-right: 0.25rem;
   }
   
   p{
     color: ${props => props.theme.secondaryBlue};
     font-size: 1.1rem;
-    /* margin: 0.5rem 0 0.95rem 0.5rem; */
     font-weight: 500;
     margin: 0;
 

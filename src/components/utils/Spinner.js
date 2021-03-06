@@ -1,9 +1,12 @@
-import React from 'react';
+import React from 'react'
+import { spinnerContainer } from '../ui-styled-components/Spinner';
+
+import SpinnerSVG from '../../assets/img/loading.svg';
 
 export default function Spinner() {
     return (
-        <div className="fulfilling-square-spinner">
-            <div className="spinner-inner"></div>
-        </div>
+        <spinnerContainer>
+            <img src={SpinnerSVG} alt="" />
+        </spinnerContainer>
     )
 }
