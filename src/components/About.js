@@ -9,7 +9,7 @@ import Spinner from '../components/utils/Spinner';
 let responseCode;
 
 const fetchData = async () => {
-    // const res = await fetch("http://192.168.167.192:1337/about");
+    const res = await fetch("http://192.168.167.192:1337/about");
     console.log(res.status)
     if (res.status === 404) {
         responseCode = res.status

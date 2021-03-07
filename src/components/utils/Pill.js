@@ -1,16 +1,20 @@
 import React from "react";
+import { PillsContainer, PillItem } from "../ui-styled-components/Pill";
 
-export default function Pill(props) {
-    const data = props.data;
+export default function Pill({ status, native }) {
 
-    // console.log(data);
+    // Process data with underscores (maybe regex, or simple if)
 
-    const items = data.map((item) => {
-        return (
-            <div key={item.id} className="pill">
-                <p className={`${item.color}`}>{item.text}</p>
-            </div>
-        );
-    });
-    return <div className="pill-container">{items}</div>;
+    return (
+        <PillsContainer>
+            {status &&
+                <PillItem native>
+                    {status}
+                </PillItem>}
+
+            <PillItem bgColor={"#000"}>
+                {native}
+            </PillItem>
+        </PillsContainer>
+    )
 }

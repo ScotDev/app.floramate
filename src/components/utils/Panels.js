@@ -1,52 +1,70 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+
+import { PanelsContainer, PanelItem } from '../ui-styled-components/Panels';
+
+const variants = {
+    firstItemInitial: {
+        flexGrow: 3.5
+    },
+    closed: {
+        flexGrow: 0.5,
+        transition: {
+            delay: 1,
+            duration: 1,
+            type: "tween",
+            ease: "linear"
+        }
+    },
+    hover: {
+        flexGrow: 3.5,
+        transition: {
+            delay: 0,
+            duration: 1,
+            type: "tween",
+            ease: "linear"
+        }
+    }
+}
 
 export default function ExpandingCard(props) {
-    const cardData = props.cardData.cardData;
+    const data = props.data;
 
-    const [panels, setPanels] = useState(null);
+    const [isActive, setisActive] = useState(true)
 
-    const removeActiveClass = () => {
-        panels.forEach((panel) => {
-            panel.classList.remove("active");
-        });
-    };
+    return <PanelsContainer>
+        <PanelItem initial="firstItemInitial" animate={isActive ? "hover" : "closed"} whileHover="hover" variants={variants}
+            style={{ backgroundImage: `url(${data.panel_img_1})` }}>
+            <h3>Test</h3>
+        </PanelItem>
 
-    useEffect(() => {
-        if (document) {
-            setPanels(document.querySelectorAll(".panel"));
-        }
-    }, []);
+        <PanelItem initial="closed" whileHover="hover" variants={variants} style={{ backgroundImage: `url(${data.panel_img_2})` }}
 
-    useEffect(() => {
-        if (panels) {
-            // Expands first card on page load
-            panels[0].classList.add("active");
+            onMouseEnter={() => { setisActive(false) }}
+            onMouseLeave={() => { setisActive(true) }}
+        >
+        </PanelItem>
 
-            panels.forEach((panel) => {
-                panel.addEventListener("mouseenter", (e) => {
-                    removeActiveClass();
-                    panel.classList.add("active");
-                });
+        <PanelItem initial="closed" whileHover="hover" variants={variants} style={{ backgroundImage: `url(${data.panel_img_3})` }}
+            onMouseEnter={() => { setisActive(false) }}
+            onMouseLeave={() => { setisActive(true) }}
+        >
 
-                panel.addEventListener("mouseleave", (e) => {
-                    removeActiveClass();
-                    panels[0].classList.add("active");
-                });
-            });
-        }
-    }, [panels]);
+        </PanelItem>
 
-    const cards = cardData.map((item) => {
-        return (
-            <div
-                key={item.id}
-                className={`panel`}
-                style={{ backgroundImage: `url(${item.img_url})` }}
-            >
-                <h3>{item.text}</h3>
-            </div>
-        );
-    });
+        <PanelItem initial="closed" whileHover="hover" variants={variants} style={{ backgroundImage: `url(${data.panel_img_4})` }}
+            onMouseEnter={() => { setisActive(false) }}
+            onMouseLeave={() => { setisActive(true) }}
+        >
 
-    return <div className="panels-container">{cards}</div>;
+        </PanelItem>
+
+        <PanelItem initial="closed" whileHover="hover" variants={variants} style={{ backgroundImage: `url(${data.panel_img_5})` }}
+            onMouseEnter={() => { setisActive(false) }}
+            onMouseLeave={() => { setisActive(true) }}
+
+        >
+
+        </PanelItem>
+
+    </PanelsContainer>;
 }

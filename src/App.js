@@ -10,8 +10,10 @@ import About from './components/About';
 import Species from './components/Species';
 import Advice from './components/Advice';
 // import Navbar from './components/Navbar';
+import PlantProfile from './components/PlantProfile';
 
 import './styles.min.css';
+
 
 const theme = {
   primaryColour: "#2f3e46",
@@ -46,6 +48,7 @@ function App() {
           <div className="App">
             <Switch>
               <Route exact path='/' component={Home}></Route>
+              <Route path='/species/:id' component={PlantProfile}></Route>
               <Route path='/species' component={Species}></Route>
               <Route path='/advice' component={Advice}></Route>
               <Route path='/about' component={About}></Route>

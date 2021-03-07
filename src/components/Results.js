@@ -8,7 +8,7 @@ import Spinner from '../components/utils/Spinner';
 // CARD SHOULD BE A DUMB COMPONENT AND LOGIC ELEVATED TO THIS COMPONENT
 
 const fetchData = async () => {
-    // const res = await fetch("http://192.168.167.192:1337/profiles");
+    const res = await fetch("http://192.168.167.192:1337/profiles");
     return res.json();
 }
 
