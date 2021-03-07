@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from "react-query";
 
 import { ThemeProvider } from 'styled-components';
@@ -10,7 +10,6 @@ import About from './components/About';
 import Species from './components/Species';
 import Advice from './components/Advice';
 // import Navbar from './components/Navbar';
-// import Footer from './components/Footer';
 
 import './styles.min.css';
 
@@ -45,11 +44,12 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <div className="App">
-            <Route exact path='/' component={Home}></Route>
-            <Route path='/species' component={Species}></Route>
-            <Route path='/advice' component={Advice}></Route>
-            <Route path='/about' component={About}></Route>
-            {/* <Footer></Footer> */}
+            <Switch>
+              <Route exact path='/' component={Home}></Route>
+              <Route path='/species' component={Species}></Route>
+              <Route path='/advice' component={Advice}></Route>
+              <Route path='/about' component={About}></Route>
+            </Switch>
           </div>
         </ThemeProvider>
       </BrowserRouter>
