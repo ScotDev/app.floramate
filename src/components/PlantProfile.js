@@ -12,13 +12,15 @@ import Panels from "./utils/Panels";
 import TextBlock from "./utils/TextBlock";
 import Pill from "./utils/Pill";
 
+const APIurl = process.env.REACT_APP_API_URL
+
 
 export default function PlantProfile() {
     const { id } = useParams();
 
 
     const fetchData = async () => {
-        const res = await fetch("http://192.168.167.192:1337/profiles/" + id);
+        const res = await fetch(`${APIurl}/profiles/${id}`);
         return res.json();
     }
 

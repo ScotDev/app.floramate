@@ -5,10 +5,12 @@ import { ResultsGrid } from './ui-styled-components/Grid';
 import Spinner from '../components/utils/Spinner';
 
 
+const APIurl = process.env.REACT_APP_API_URL
+
 // CARD SHOULD BE A DUMB COMPONENT AND LOGIC ELEVATED TO THIS COMPONENT
 
 const fetchData = async () => {
-    const res = await fetch("http://192.168.167.192:1337/profiles");
+    const res = await fetch(`${APIurl}/profiles`);
     return res.json();
 }
 
@@ -31,7 +33,7 @@ export default function Results(props) {
     return (
         <>
             <ResultsGrid>
-                <Card speciesData={data} limit={limit} />
+                {data ? <Card speciesData={data} limit={limit} /> : <Spinner />}
             </ResultsGrid>
         </>
     )

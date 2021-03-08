@@ -4,7 +4,6 @@ import { PageSection, PageSectionTitle } from '../../ui-styled-components/Utils'
 
 import Hero from '../../Hero';
 import Navbar from '../../Navbar';
-// import SpeciesProfile from '../../Species'
 import Info from './Info'
 import Results from '../../Results';
 
@@ -28,9 +27,6 @@ export default function Home() {
             <PageSection ref={ref}>
                 <Info></Info>
             </PageSection>
-
-            {/* <Route path="/:post_id" component={SpeciesProfile}></Route> */}
-
         </>
     )
 }

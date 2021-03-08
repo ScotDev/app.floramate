@@ -28,7 +28,7 @@ const ProfileSubtitle = styled.h2`
  `;
 
 const ProfileGrid = styled.div`
-
+    margin-top: 1rem;
     padding: 1rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -103,6 +103,10 @@ const InnerCardGrid = styled.div`
     color: ${props => props.theme.secondaryColour};
     font-size: 1.5rem;
     margin-right: 0.25rem;
+
+    @media ${device.tablet}{
+    font-size: 1.25rem;
+    }
   }
   
   p{
