@@ -14,11 +14,11 @@ import Water from "./utils/Water";
 
 export default function Card(props) {
     const data = props.speciesData;
-    const limit = props.limit;
+    // const limit = props.limit;
 
 
-    const items = data.slice(0, limit).map((item) => {
-        // const items = data.map((item) => {
+    // const items = data.slice(0, limit).map((item) => {
+    const items = data.map((item) => {
         return (
             <Link to={`/species/${item.id}`}>
                 <ResultsCard key={item.id} whileHover={{ type: 'spring', scale: 1.06, opacity: 0.75, transition: { duration: .1, bounce: 1, mass: 0.1, damping: 300, stiffness: 300, velocity: 5 } }}  >

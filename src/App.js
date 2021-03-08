@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from 'react-query/devtools';
 
 import { ThemeProvider } from 'styled-components';
 
@@ -14,34 +15,13 @@ import PlantProfile from './components/PlantProfile';
 
 import './styles.min.css';
 
+import { theme } from './config/Theme';
 
-const theme = {
-  primaryColour: "#2f3e46",
-  primaryAccent: "#6e6448",
-  primaryText: "#f7fffb",
-  secondaryColour: "#84a98c",
-  secondaryAccent: "#f7fffb",
-  secondaryBlue: "#5a6368",
-  primaryBg: "#f6f9fc",
-  black: "#000",
-  size: {
-    title: "4rem",
-    subtitle: "2.6rem",
-    largeText: "2rem",
-    regularText: "1.1rem",
-    smallText: "0.9rem",
-  },
-  // boxShadow: "6px 6px 25px 6px rgba(0,0,0, 0.7)",
-  // boxShadow: "0 6px 12px -2px rgb(50 50 93 / 25%),
-  // 0 3px 7px - 3px rgb(0 0 0 / 30 %)",
-  mainContentPadding: "25vw",
-  borderRadius: "8px"
-};
 
 const queryClient = new QueryClient();
 
 function App() {
-  return (
+  return (<>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
@@ -54,10 +34,13 @@ function App() {
               <Route path='/about' component={About}></Route>
             </Switch>
           </div>
+
         </ThemeProvider>
       </BrowserRouter>
+      <ReactQueryDevtools initialIsOpen={true} />
     </QueryClientProvider>
-  );
+
+  </>);
 }
 
 export default App;

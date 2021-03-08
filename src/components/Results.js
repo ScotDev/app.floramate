@@ -6,17 +6,23 @@ import Spinner from '../components/utils/Spinner';
 
 
 const APIurl = process.env.REACT_APP_API_URL
+// const APIurl = "http://localhost:1337"
+
 
 // CARD SHOULD BE A DUMB COMPONENT AND LOGIC ELEVATED TO THIS COMPONENT
 
 const fetchData = async () => {
-    const res = await fetch(`${APIurl}/profiles`);
+    const res = await fetch(`${APIurl}/profiles?_limit=3`);
     return res.json();
 }
 
 
 export default function Results(props) {
-    const { data, status } = useQuery('species', fetchData);
+    const { data, status } = useQuery('species', fetchData,
+        {
+            staleTime: 60 * 1000,
+            refetchOnWindowFocus: false
+        });
 
     if (status === "loading") {
         return <Spinner />

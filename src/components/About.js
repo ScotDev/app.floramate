@@ -6,10 +6,13 @@ import Navbar from './Navbar';
 import Error from './Error';
 import Spinner from '../components/utils/Spinner';
 
+
+const APIurl = process.env.REACT_APP_API_URL
+
 let responseCode;
 
 const fetchData = async () => {
-    const res = await fetch("http://192.168.167.192:1337/about");
+    const res = await fetch(`${APIurl}/about`);
     console.log(res.status)
     if (res.status === 404) {
         responseCode = res.status
