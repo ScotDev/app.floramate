@@ -8,9 +8,6 @@ import { SearchSection, SearchBox, SearchBtn, ResultsHeading } from '../ui-style
 
 
 
-const speciesData = require("../../data/speciesData");
-
-
 export default function Search() {
 
 
@@ -28,7 +25,7 @@ export default function Search() {
             </SearchSection>
             <ResultsHeading initial={{ opacity: 0.2 }} animate={{ opacity: 1 }}>Results</ResultsHeading>
 
-            <Results speciesData={speciesData} />
+            <Results />
 
 
         </>
