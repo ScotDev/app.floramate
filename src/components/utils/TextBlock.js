@@ -32,8 +32,8 @@ export default function TextBlock(props) {
                 <p>{data.cultivation}</p>
             </TextBlockItem>
             <TextBlockItem>
-                <h3>Propogation</h3>
-                <p>{data.propogation}</p>
+                <h3>Propagation</h3>
+                <p>{data.propagation}</p>
             </TextBlockItem>
 
             <TextBlockItem>
