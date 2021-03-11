@@ -12,8 +12,7 @@ import Panels from "./utils/Panels";
 import TextBlock from "./utils/TextBlock";
 import Pill from "./utils/Pill";
 
-// const APIurl = process.env.REACT_APP_API_URL
-const APIurl = "https://floramate-cms.herokuapp.com"
+const APIurl = process.env.REACT_APP_API_URL
 
 export default function PlantProfile() {
     const { id } = useParams();
