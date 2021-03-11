@@ -1,41 +1,37 @@
 import React from 'react';
-import { useQuery } from 'react-query';
 import Card from './Card';
 import { ResultsGrid } from './ui-styled-components/Grid';
 import Spinner from '../components/utils/Spinner';
+
+import useAPI from '../hooks/useApi';
 
 
 const APIurl = process.env.REACT_APP_API_URL
 
 
-const fetchData = async () => {
-    const res = await fetch(`${APIurl}/profiles?_limit=10`);
-    return res.json();
-}
-
-
 export default function Results() {
-    const { data, status } = useQuery('species', fetchData,
-        // {
-        //     staleTime: 60 * 1000,
-        //     refetchOnWindowFocus: false
-        // }
-    );
 
-    if (status === "loading") {
+    const getData = useAPI(`${APIurl}/profiles?_limit=10`)
+
+    const { data, isLoading } = getData;
+
+    if (isLoading) {
         return <Spinner />
     }
 
-
     console.log("Data :", data)
-    console.log("status :", status)
 
+    let items;
 
-    const items = data.map((item, index) => {
-        return (
-            <Card key={index} data={item} />
-        )
-    })
+    if (data) {
+        items = data.map((item, index) => {
+            return (
+                <Card key={index} data={item} />
+            )
+        })
+
+    }
+
 
     return (
         <>

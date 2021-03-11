@@ -1,5 +1,4 @@
 import React from 'react';
-import { useQuery } from 'react-query';
 import { useParams } from 'react-router';
 
 import Navbar from './Navbar';
@@ -12,23 +11,28 @@ import Panels from "./utils/Panels";
 import TextBlock from "./utils/TextBlock";
 import Pill from "./utils/Pill";
 
-const APIurl = process.env.REACT_APP_API_URL
+import useAPI from '../hooks/useApi';
 
-export default function PlantProfile() {
-    const { id } = useParams();
+// const APIurl = process.env.REACT_APP_API_URL
+const APIurl = "https://floramate-cms.herokuapp.com";
 
-    const fetchData = async () => {
-        const res = await fetch(`${APIurl}/profiles/${id}`);
-        return res.json();
+export default function PlantProfile(props) {
 
+    const id = props.match.params.id
+
+    const getData = useAPI(`${APIurl}/profiles/${id}`)
+
+
+    if (getData.isLoading) {
+        return <Spinner />
     }
-    const { data, status } = useQuery('species', fetchData);
-    // console.log("Profile data here :", data)
+
+    const data = getData.data;
 
     return (
         <>
             <Navbar bgColor={"#2f3e46"} padding={"10vw"} />
-            <ProfileContent>
+            {data && <ProfileContent>
                 <ProfileTitle>{data.common_name}</ProfileTitle>
                 <ProfileSubtitle>{data.latin_name}</ProfileSubtitle>
                 <Pill status={data.status} native={data.native} />
@@ -36,7 +40,7 @@ export default function PlantProfile() {
                     <Panels data={data} />
                     <TextBlock data={data} />
                 </ProfileGrid>
-            </ProfileContent>
+            </ProfileContent>}
         </>
     )
 }
