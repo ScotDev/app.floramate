@@ -1,5 +1,4 @@
 import React from 'react';
-import { useParams } from 'react-router';
 
 import Navbar from './Navbar';
 import { ProfileContent, ProfileTitle, ProfileSubtitle, ProfileGrid } from './ui-styled-components/Profile.js';
@@ -13,8 +12,7 @@ import Pill from "./utils/Pill";
 
 import useAPI from '../hooks/useApi';
 
-// const APIurl = process.env.REACT_APP_API_URL
-const APIurl = "https://floramate-cms.herokuapp.com";
+const APIurl = process.env.REACT_APP_API_URL
 
 export default function PlantProfile(props) {
 

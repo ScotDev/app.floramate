@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtools } from 'react-query/devtools';
 
 import { ThemeProvider } from 'styled-components';
 
@@ -17,29 +15,22 @@ import './styles.min.css';
 
 import { theme } from './config/Theme';
 
-
-const queryClient = new QueryClient();
-
 function App() {
   return (<>
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <ThemeProvider theme={theme}>
-          <div className="App">
-            <Switch>
-              <Route exact path='/' component={Home}></Route>
-              <Route path='/species/:id' component={PlantProfile}></Route>
-              <Route path='/species' component={Species}></Route>
-              <Route path='/advice' component={Advice}></Route>
-              <Route path='/about' component={About}></Route>
-            </Switch>
-          </div>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <Switch>
+            <Route exact path='/' component={Home}></Route>
+            <Route path='/species/:id' component={PlantProfile}></Route>
+            <Route path='/species' component={Species}></Route>
+            <Route path='/advice' component={Advice}></Route>
+            <Route path='/about' component={About}></Route>
+          </Switch>
+        </div>
 
-        </ThemeProvider>
-      </BrowserRouter>
-      <ReactQueryDevtools initialIsOpen={true} />
-    </QueryClientProvider>
-
+      </ThemeProvider>
+    </BrowserRouter>
   </>);
 }
 

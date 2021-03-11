@@ -37,7 +37,6 @@ const childrenVariants = {
     }
 }
 
-
 const About = () => {
     const getData = useAPI(`${APIurl}/about`)
 
@@ -51,8 +50,6 @@ const About = () => {
             </>
         )
     }
-
-
 
 
     return (
