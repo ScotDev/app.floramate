@@ -6,6 +6,7 @@ import Hero from '../../Hero';
 import Navbar from '../../Navbar';
 import Info from './Info'
 import Results from '../../Results';
+import Featured from './Featured';
 
 export default function Home() {
     const [ref, inView] = useInView({
@@ -20,7 +21,8 @@ export default function Home() {
             <Hero ></Hero>
             <PageSection bgColor={"#2f3e46"} padding={"10vw"}>
                 <PageSectionTitle color={"#fff"}>Featured</PageSectionTitle>
-                <Results limit={3} />
+                {/* <Results limit={3} /> */}
+                <Featured />
 
             </PageSection>
 

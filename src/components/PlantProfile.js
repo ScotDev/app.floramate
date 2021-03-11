@@ -12,7 +12,8 @@ import Panels from "./utils/Panels";
 import TextBlock from "./utils/TextBlock";
 import Pill from "./utils/Pill";
 
-const APIurl = process.env.REACT_APP_API_URL
+// const APIurl = process.env.REACT_APP_API_URL
+const APIurl = "https://floramate-cms.herokuapp.com"
 
 export default function PlantProfile() {
     const { id } = useParams();
@@ -23,7 +24,7 @@ export default function PlantProfile() {
 
     }
     const { data, status } = useQuery('species', fetchData);
-    console.log("Profile data here :", data)
+    // console.log("Profile data here :", data)
 
     return (
         <>

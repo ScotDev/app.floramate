@@ -1,20 +1,21 @@
 import React from 'react';
 import { useQuery } from 'react-query';
-import Card from './Card';
-import { ResultsGrid } from './ui-styled-components/Grid';
-import Spinner from '../components/utils/Spinner';
+import { Link } from 'react-router-dom';
 
+import Spinner from '../../utils/Spinner';
+
+import Card from '../../Card';
+import { ResultsGrid } from '../../ui-styled-components/Grid';
 
 const APIurl = process.env.REACT_APP_API_URL
 
-
 const fetchData = async () => {
-    const res = await fetch(`${APIurl}/profiles?limit=10`);
+    const res = await fetch(`${APIurl}/profiles?_limit=3`);
     return res.json();
 }
 
+export default function Featured() {
 
-export default function Results() {
     const { data, status } = useQuery('species', fetchData,
         // {
         //     staleTime: 60 * 1000,
@@ -27,10 +28,6 @@ export default function Results() {
     }
 
 
-    console.log("Data :", data)
-    console.log("status :", status)
-
-
     const items = data.map((item, index) => {
         return (
             <Card key={index} data={item} />
@@ -38,10 +35,8 @@ export default function Results() {
     })
 
     return (
-        <>
-            <ResultsGrid>
-                {items}
-            </ResultsGrid>
-        </>
+        <ResultsGrid>
+            {data ? items : <Spinner />}
+        </ResultsGrid>
     )
 }
