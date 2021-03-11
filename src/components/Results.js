@@ -9,7 +9,7 @@ const APIurl = process.env.REACT_APP_API_URL
 
 
 const fetchData = async () => {
-    const res = await fetch(`${APIurl}/profiles`);
+    const res = await fetch(`${APIurl}/profiles?_limit=10`);
     return res.json();
 }
 
