@@ -8,7 +8,6 @@ import useAPI from '../hooks/useApi';
 
 const APIurl = process.env.REACT_APP_API_URL
 
-
 const parentVariants = {
     visible: {
         opacity: 1,
@@ -42,20 +41,20 @@ const About = () => {
 
     const { data, isLoading } = getData;
 
-    if (isLoading) {
-        return (
-            <>
-                <Navbar bgColor={"#2f3e46"} ></Navbar>
-                <Spinner />
-            </>
-        )
-    }
+    // if (isLoading) {
+    //     return (
+    //         <>
+    //             <Navbar bgColor={"#2f3e46"} ></Navbar>
+    //             <Spinner />
+    //         </>
+    //     )
+    // }
 
 
     return (
         <>
             <Navbar bgColor={"#2f3e46"} ></Navbar>
-
+            {isLoading && <Spinner />}
             {data && <Content>
                 <ArticleContainer initial="hidden" animate="visible" variants={parentVariants}>
                     <Title maxWidth={"50ch"} color={"#2f3e46"} textShadow variants={childrenVariants}>{data.page_title}</Title>

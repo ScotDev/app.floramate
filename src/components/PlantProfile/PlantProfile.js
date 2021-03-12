@@ -1,16 +1,17 @@
 import React from 'react';
 
-import Navbar from './Navbar';
-import { ProfileContent, ProfileTitle, ProfileSubtitle, ProfileGrid } from './ui-styled-components/Profile.js';
-import { Title, Subtitle } from './ui-styled-components/Text';
-import Spinner from './utils/Spinner'
+import Navbar from '../Navbar';
+import { ProfileContent, ProfileTitle, ProfileSubtitle, ProfileGrid, ProfileImageContainer } from './ProfileUIElements.js';
 
+import Spinner from '../utils/Spinner';
 
-import Panels from "./utils/Panels";
-import TextBlock from "./utils/TextBlock";
-import Pill from "./utils/Pill";
+import PlantProfileImage from './PlantProfileImage';
 
-import useAPI from '../hooks/useApi';
+// import Panels from "../Panels";
+import TextBlock from "../utils/TextBlock";
+import Pill from "../utils/Pill";
+
+import useAPI from '../../hooks/useApi';
 
 const APIurl = process.env.REACT_APP_API_URL
 
@@ -19,7 +20,6 @@ export default function PlantProfile(props) {
     const id = props.match.params.id
 
     const getData = useAPI(`${APIurl}/profiles/${id}`)
-
 
     if (getData.isLoading) {
         return <Spinner />
@@ -35,7 +35,11 @@ export default function PlantProfile(props) {
                 <ProfileSubtitle>{data.latin_name}</ProfileSubtitle>
                 <Pill status={data.status} native={data.native} />
                 <ProfileGrid>
-                    <Panels data={data} />
+                    <ProfileImageContainer>
+                        <PlantProfileImage alt={`${data.common_name} profile`}
+                            //  thumb={data.image_url} 
+                            src={data.image_url} />
+                    </ProfileImageContainer>
                     <TextBlock data={data} />
                 </ProfileGrid>
             </ProfileContent>}

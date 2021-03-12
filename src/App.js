@@ -9,7 +9,7 @@ import About from './components/About';
 import Species from './components/Species';
 import Advice from './components/Advice';
 // import Navbar from './components/Navbar';
-import PlantProfile from './components/PlantProfile';
+import PlantProfile from './components/PlantProfile/PlantProfile';
 
 import './styles.min.css';
 

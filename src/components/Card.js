@@ -15,8 +15,6 @@ import Water from "./utils/Water";
 export default function Card(props) {
     const data = props.data;
 
-    console.log("ID here :", data.id)
-
     return (
         <Link to={`/species/${data.id}`}>
             <ResultsCard whileHover={{ type: 'spring', scale: 1.06, opacity: 0.75, transition: { duration: .1, bounce: 1, mass: 0.1, damping: 300, stiffness: 300, velocity: 5 } }}  >
