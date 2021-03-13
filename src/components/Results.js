@@ -8,7 +8,6 @@ import { FilterBar, FilterSelect } from './ui-styled-components/Search';
 
 
 const APIurl = process.env.REACT_APP_API_URL
-// const APIurl = "https://floramate-cms.herokuapp.com"
 
 
 export default function Results(props) {

@@ -85,13 +85,14 @@ const FilterBar = styled.form`
   width: 50%;
   border-radius: ${props => props.theme.borderRadius};
   margin: 1rem auto;
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
   box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
       0 3px 7px -3px rgb(0 0 0 / 30%);
   background-color: ${props => props.theme.secondaryBlue};
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   
 
   fieldset {
@@ -104,17 +105,25 @@ const FilterBar = styled.form`
   justify-content: space-between;
   box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
       0 3px 7px -3px rgb(0 0 0 / 30%);
-  /* background-color:${props => props.theme.primaryText}; */
-  background-color: transparent;
+  background-color:${props => props.theme.primaryText};
+    margin: 0.5rem;
 
     label {
-    color: ${props => props.theme.primaryText};
+    color: ${props => props.theme.secondaryBlue};
     font-weight: 500;
     font-size: ${props => props.theme.size.regularText};
     padding-bottom: 0.5rem;
     }
 
   }
+
+  @media ${device.laptopL}{
+    width: 70%;
+    }
+
+  @media ${device.laptop}{
+    width: 90%;
+    }
 
 `;
 
