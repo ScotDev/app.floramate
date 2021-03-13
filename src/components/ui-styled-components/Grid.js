@@ -6,27 +6,19 @@ import { motion } from "framer-motion";
 const ResultsGrid = styled.div`
   display: flex;
   padding: 0 2rem;
-  margin: 2rem 0 0 0;
+  margin: 2rem auto 0 auto;
   flex-wrap: wrap;
-  justify-content: space-between;
-  
+  align-items: center;
+  justify-content: center;
   & > * {
-    flex: 1 1 10%;
-    min-width: 270px;
-    max-width: 335px;
+    flex: 1 1 100%;
+    min-width: 300px;
+    max-width: 340px;
 
     /* @media ${device.laptopL}{
     flex: 1 1 20%;
     } */
 
-    /* @media ${device.laptop}{
-    flex: 1 1 30%;
-    } */
-
-    @media ${device.tablet}{
-    flex: 1 1 100%;
-    max-width: 100%;
-    } 
   }
 
 /* Dev only */

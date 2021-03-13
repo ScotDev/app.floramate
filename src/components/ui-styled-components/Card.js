@@ -11,13 +11,10 @@ const ResultsCard = styled(motion.div)`
   color: ${props => props.theme.primaryColour};
   min-height: 375px;
   height: fit-content;
-  /* min-width: 270px; */
-  /* width: 300px; */
   overflow: hidden;
   /* max-width: 300px; */
   margin: 0.9rem;
   border-radius: 8px;
-  /*  Taken from Stripe */
   box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
     0 3px 7px -3px rgb(0 0 0 / 30%);
   overflow: hidden;
@@ -102,7 +99,7 @@ const InnerCardGrid = styled.div`
   svg{
     color: ${props => props.theme.secondaryColour};
     font-size: 1.5rem;
-    margin-right: 0.25rem;
+    margin-right: 0.1rem;
 
     @media ${device.tablet}{
     font-size: 1.25rem;
