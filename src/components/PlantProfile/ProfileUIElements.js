@@ -42,6 +42,7 @@ const ProfileSubtitle = styled.h2`
   font-weight: bold;
   color: ${props => props.theme.secondaryBlue};
   margin: 1rem 0 0 0;
+  font-style: italic;
  `;
 
 const ProfileGrid = styled.div`
