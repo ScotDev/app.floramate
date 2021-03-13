@@ -1,16 +1,17 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Results from '../Results';
 
 import { SearchSection, SearchBox, SearchBtn, ResultsHeading } from '../ui-styled-components/Search';
 
 export default function Search() {
-    // const searchRef = useRef(null)
+
     const [query, setQuery] = useState("")
 
     const handleChange = e => {
         e.preventDefault();
         setQuery(e.target.value)
     }
+
     const handleSubmit = e => {
         e.preventDefault();
         setQuery(e.target.value)
@@ -28,11 +29,10 @@ export default function Search() {
                 </form>
 
             </SearchSection>
-            <ResultsHeading initial={{ opacity: 0.2 }} animate={{ opacity: 1 }}>Results</ResultsHeading>
+
+            {query && (<ResultsHeading initial={{ opacity: 0.2 }} animate={{ opacity: 1 }}>Results</ResultsHeading>)}
 
             <Results query={query} />
-
-
         </>
     )
 }

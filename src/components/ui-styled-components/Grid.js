@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const ResultsGrid = styled.div`
   display: flex;
   padding: 0 2rem;
-  margin: 0;
+  margin: 2rem 0 0 0;
   flex-wrap: wrap;
   justify-content: space-between;
   
@@ -28,20 +28,12 @@ const ResultsGrid = styled.div`
     max-width: 100%;
     } 
   }
-  /* display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
-  gap: 2rem;*/
 
+/* Dev only */
 
- /* @media ${device.laptop}{
-  padding: 2rem;
- }  */
-
- /* @media ${device.laptopL}{
-    padding: 3rem;
-    } */
-
-
+img#spinner{
+  margin: 0 auto;
+}
 
 `
 

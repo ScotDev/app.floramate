@@ -24,25 +24,6 @@ const SearchSection = styled(motion.div)`
     }
 `
 
-// const SearchForm = styled.form`
-//     border-radius: 6px;
-//     -webkit-border-radius: 6px;
-//     -moz-border-radius: 6px;
-//     -ms-border-radius: 6px;
-//     -o-border-radius: 6px;
-//     /* border: 2px solid ${props => props.theme.primaryAccent || "#6e6448"}; */
-//     width: 40%;
-//     box-shadow: ${props => props.theme.boxShadow};
-//     background-color: ${props => props.theme.secondaryColour};
-//     padding: 1rem 1rem 2rem 1rem;
-
-//     @media ${device.tablet}{
-//     width:100%;
-//     padding: 0.5rem 1rem 1rem 1rem;
-
-// }
-// `
-
 const StyledSearchInput = styled.input`
   padding: 10px 15px;
   font-size: 1.1rem;
@@ -62,15 +43,6 @@ const SearchBox = styled(StyledSearchInput)`
     ::placeholder{
     font-weight:700;
     }
-
-    /* :focus{ */
-/* box-shadow:0 0 0 2px ${props => props.theme.black} */
-    /* } */
-
-    /* @media ${device.tablet}{
-    width:100%;
-    margin-bottom: 0.75rem;
-    } */
 `
 
 const SearchBtn = styled(StyledSearchInput)`
@@ -106,6 +78,56 @@ const ResultsHeading = styled(motion.h3)`
     background-color: ${props => props.theme.secondaryColour};
     border-radius: ${props => props.theme.borderRadius}
   }
+`;
+
+
+const FilterBar = styled.form`
+  width: 50%;
+  border-radius: ${props => props.theme.borderRadius};
+  margin: 1rem auto;
+  padding: 1rem 4rem;
+  box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+      0 3px 7px -3px rgb(0 0 0 / 30%);
+  background-color: ${props => props.theme.secondaryBlue};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+
+  fieldset {
+  /* border: 1px solid ${props => props.theme.primaryText}; */
+  border:none;
+  border-radius: ${props => props.theme.borderRadius};
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+      0 3px 7px -3px rgb(0 0 0 / 30%);
+  /* background-color:${props => props.theme.primaryText}; */
+  background-color: transparent;
+
+    label {
+    color: ${props => props.theme.primaryText};
+    font-weight: 500;
+    font-size: ${props => props.theme.size.regularText};
+    padding-bottom: 0.5rem;
+    }
+
+  }
+
+`;
+
+const FilterSelect = styled.select`
+  box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+      0 3px 7px -3px rgb(0 0 0 / 30%);
+  border-radius: ${props => props.theme.borderRadius};
+  padding: 0.2rem 0.75rem;
+  font-family: inherit;
+  font-size: ${props => props.theme.size.regularText};
+  color: ${props => props.theme.primaryText};
+  background-color: ${props => props.theme.secondaryBlue};
+
 `
 
-export { SearchSection, SearchBox, SearchBtn, ResultsHeading };
+export { SearchSection, SearchBox, SearchBtn, ResultsHeading, FilterBar, FilterSelect };

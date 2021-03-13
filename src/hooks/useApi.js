@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useAPI = (endpointURL) => {
-    const [data, setdata] = useState(null);
+    const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -11,7 +11,7 @@ const useAPI = (endpointURL) => {
             try {
                 const res = await fetch(endpointURL);
                 const formattedRes = await res.json();
-                setdata(formattedRes);
+                setData(formattedRes);
                 setIsLoading(false);
             } catch (err) {
                 setError(err);
