@@ -93,7 +93,10 @@ const ProfileImageContainer = styled.div`
     height: 100%;
     width: 80%; 
     object-fit: cover;
-    object-position: center;   
+    object-position: center;
+
+    box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+    0 3px 7px -3px rgb(0 0 0 / 30%);
 
     @media ${device.laptop}{
     width: 100%;

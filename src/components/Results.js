@@ -113,6 +113,7 @@ export default function Results(props) {
                 <fieldset>
                     <label htmlFor="sun_requirements">Sun requirements</label>
                     <FilterSelect name="sun_requirements">
+                        <option selected value="">Any</option>
                         <option value="Shade">Shade</option>
                         <option value="Half-shade">Half-shade</option>
                         <option value="Full-sun">Full-sun</option>
@@ -121,6 +122,7 @@ export default function Results(props) {
                 <fieldset>
                     <label htmlFor="water_requirements">Water requirements</label>
                     <FilterSelect name="water_requirements">
+                        <option selected value="">Any</option>
                         <option value="Wet">Wet</option>
                         <option value="Medium">Medium</option>
                         <option value="Dry">Dry</option>
