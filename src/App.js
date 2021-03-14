@@ -21,14 +21,14 @@ function App() {
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <div className="App">
-          {/* <Switch> */}
-          <Route path='/' exact component={Home}></Route>
-          <Route path='/species' exact component={Species}></Route>
-          <Route path='/species/:id' component={PlantProfile}></Route>
-          <Route path='/advice' exact component={Advice}></Route>
-          <Route path='/about' exact component={About}></Route>
-          <Route path='/' component={Error}></Route>
-          {/* </Switch> */}
+          <Switch>
+            <Route path='/' exact component={Home}></Route>
+            <Route path='/species' exact component={Species}></Route>
+            {/* <Route path='/species/:id' component={PlantProfile}></Route> */}
+            <Route path='/advice' exact component={Advice}></Route>
+            <Route path='/about' exact component={About}></Route>
+            <Route path='/' component={Error}></Route>
+          </Switch>
         </div>
 
       </ThemeProvider>
