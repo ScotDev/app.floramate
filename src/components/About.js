@@ -2,7 +2,7 @@ import React from 'react';
 import { Content, ArticleContainer, ArticleBody } from './ui-styled-components/Utils';
 import { Title, RegularText, Subtitle } from './ui-styled-components/Text';
 import Navbar from './Navbar';
-import Error from './Error';
+import Error from './404';
 import Spinner from '../components/utils/Spinner';
 import useAPI from '../hooks/useApi';
 
