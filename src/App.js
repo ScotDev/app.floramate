@@ -22,12 +22,13 @@ function App() {
       <ThemeProvider theme={theme}>
         <div className="App">
           <Switch>
-            <Route path='/' exact component={Home}></Route>
-            <Route path='/species/:id' component={PlantProfile}></Route>
+
             <Route path='/species' component={Species}></Route>
+            <Route path='/species/:id' component={PlantProfile}></Route>
             <Route path='/advice' component={Advice}></Route>
             <Route path='/about' component={About}></Route>
             <Route path='*' component={Error}></Route>
+            <Route path='/' exact component={Home}></Route>
           </Switch>
         </div>
 
