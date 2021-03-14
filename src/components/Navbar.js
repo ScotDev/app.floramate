@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyledNavbar, NavbarBrand, NavbarList, NavbarListItem, MobileNavbar, MobileNavList, MobileNavItem, MobileNavToggle } from './ui-styled-components/Navigation';
 
-import BrandImage from "../assets/img/brand.svg";
+import BrandImage from "../assets/img/brand.png";
 
 import { NavLink, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
