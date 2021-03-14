@@ -4,6 +4,7 @@ import { Title, RegularText, Subtitle } from './ui-styled-components/Text';
 import Navbar from './Navbar';
 import Spinner from '../components/utils/Spinner';
 import useAPI from '../hooks/useApi';
+import { theme } from '../config/Theme';
 
 const APIurl = process.env.REACT_APP_API_URL
 
@@ -37,18 +38,9 @@ const childrenVariants = {
 
 const About = () => {
     const getData = useAPI(`${APIurl}/about`)
+    console.log(theme)
 
     const { data, isLoading } = getData;
-
-    // if (isLoading) {
-    //     return (
-    //         <>
-    //             <Navbar bgColor={"#2f3e46"} ></Navbar>
-    //             <Spinner />
-    //         </>
-    //     )
-    // }
-
 
     return (
         <>
@@ -56,11 +48,11 @@ const About = () => {
             {isLoading && <Spinner />}
             {data && <Content>
                 <ArticleContainer initial="hidden" animate="visible" variants={parentVariants}>
-                    <Title maxWidth={"50ch"} color={"#2f3e46"} textShadow variants={childrenVariants}>{data.page_title}</Title>
-                    <Subtitle maxWidth={"30ch"} color={"#2f3e46"} textShadow variants={childrenVariants}>{data.page_subtitle}</Subtitle>
+                    <Title maxWidth={"50ch"} color={theme.secondaryBlue} textShadow variants={childrenVariants}>{data.page_title}</Title>
+                    <Subtitle maxWidth={"30ch"} color={theme.secondaryBlue} textShadow variants={childrenVariants}>{data.page_subtitle}</Subtitle>
 
                     <ArticleBody variants={childrenVariants}>
-                        <RegularText color={"#2f3e46"} maxWidth={"65ch"} textAlign={"justify"}>{data.page_text_content}</RegularText>
+                        <RegularText color={theme.secondaryBlue} maxWidth={"65ch"} textAlign={"justify"}>{data.page_text_content}</RegularText>
                     </ArticleBody>
                 </ArticleContainer>
             </Content>}

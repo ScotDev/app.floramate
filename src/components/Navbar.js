@@ -68,6 +68,7 @@ const hamburgerVariants = {
 }
 
 function Navbar({ bgColor, scrolling }) {
+    console.log(bgColor, scrolling)
 
     const [toggleOpen, setToggleOpen] = useState(false)
 

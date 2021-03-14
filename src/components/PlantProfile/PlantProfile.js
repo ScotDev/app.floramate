@@ -7,7 +7,6 @@ import Spinner from '../utils/Spinner';
 
 import PlantProfileImage from './PlantProfileImage';
 
-// import Panels from "../Panels";
 import TextBlock from "../utils/TextBlock";
 import Pill from "../utils/Pill";
 
