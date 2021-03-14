@@ -8,7 +8,6 @@ import Home from './components//layout/Homepage/Home';
 import About from './components/About';
 import Species from './components/Species';
 import Advice from './components/Advice';
-// import Navbar from './components/Navbar';
 import PlantProfile from './components/PlantProfile/PlantProfile';
 
 import './styles.min.css';
@@ -27,8 +26,7 @@ function App() {
             <Route path='/species/:id' component={PlantProfile}></Route>
             <Route path='/advice' component={Advice}></Route>
             <Route path='/about' component={About}></Route>
-            <Route path='*' component={Error}></Route>
-
+            <Route path='/' component={Error}></Route>
           </Switch>
         </div>
 
