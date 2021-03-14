@@ -15,7 +15,8 @@ import './styles.min.css';
 import { theme } from './config/Theme';
 import Error from './components/404';
 
-function App() {
+function App(props) {
+  console.log(props)
   return (<>
     <BrowserRouter>
       <ThemeProvider theme={theme}>
