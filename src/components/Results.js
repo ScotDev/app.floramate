@@ -13,7 +13,7 @@ const APIurl = process.env.REACT_APP_API_URL
 export default function Results(props) {
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
-    const [limit, setLimit] = useState(10)
+    const [limit, setLimit] = useState(20)
     const [plantType, setPlantType] = useState("")
     const [difficulty, setDifficulty] = useState("")
     const [data, setData] = useState(null);
@@ -131,9 +131,9 @@ export default function Results(props) {
                 <fieldset>
                     <label htmlFor="limit_results">No. results</label>
                     <FilterSelect name="limit_results" onChange={handleLimitChange}>
-                        <option value="4">4</option>
                         <option value="8">8</option>
-                        <option selected value="10">10</option>
+                        <option value="10">20</option>
+                        <option selected value="20">20</option>
                     </FilterSelect>
                 </fieldset>
             </FilterBar>
