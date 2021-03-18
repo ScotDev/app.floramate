@@ -80,17 +80,22 @@ const ResultsHeading = styled(motion.h3)`
   }
 `;
 
+const FilterBarWrapper = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+`;
 
 const FilterBar = styled.form`
   width: 50%;
   border-radius: ${props => props.theme.borderRadius};
-  margin: 1rem auto;
-  padding: 1rem 3rem;
+  margin: 1rem auto 0.5rem auto;
+  padding: 0.5rem 2rem;
   box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
       0 3px 7px -3px rgb(0 0 0 / 30%);
   background-color: ${props => props.theme.secondaryBlue};
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   
@@ -117,6 +122,8 @@ const FilterBar = styled.form`
 
   }
 
+  
+
   @media ${device.laptopL}{
     width: 70%;
     }
@@ -125,18 +132,61 @@ const FilterBar = styled.form`
     width: 90%;
     }
 
+    @media ${device.tablet}{
+    display: ${props => props.display ? "flex" : "none"};
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:center;
+    }
 `;
 
+const IconWrapper = styled.div`
+border: 0;
+margin: 1rem auto 0.5rem auto;
+display: none;
+justify-content: flex-end;
+align-items: center;
+padding: 0;
+
+@media ${device.tablet}{
+    display: flex;
+    }
+
+svg {
+    display: block;
+    color: white;
+    font-size: 2rem;
+
+    cursor: pointer;
+    background-color: ${props => props.theme.secondaryBlue};
+    padding: 0.3rem;
+    height: 47.375px;
+    width: 47.375px;
+    border-radius: ${props => props.theme.borderRadius};
+
+  }
+`;
+
+
 const FilterSelect = styled.select`
-  box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
-      0 3px 7px -3px rgb(0 0 0 / 30%);
-  border-radius: ${props => props.theme.borderRadius};
-  padding: 0.2rem 0.75rem;
+  /* box-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+      0 3px 7px -3px rgb(0 0 0 / 30%); */
+  /* border-radius: ${props => props.theme.borderRadius}; */
+  border: none;
+  padding: 0.2rem 0rem;
   font-family: inherit;
   font-size: ${props => props.theme.size.regularText};
   color: ${props => props.theme.primaryText};
   background-color: ${props => props.theme.secondaryBlue};
+  /* background-color: transparent; */
+  cursor:pointer;
 
+  @media ${device.tablet}{
+    padding: 0.5rem 0rem;
+    /* width: 150px; */
+    }
 `
 
-export { SearchSection, SearchBox, SearchBtn, ResultsHeading, FilterBar, FilterSelect };
+
+
+export { SearchSection, SearchBox, SearchBtn, ResultsHeading, FilterBar, FilterBarWrapper, IconWrapper, FilterSelect };

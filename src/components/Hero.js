@@ -37,15 +37,15 @@ const Hero = () => {
         <HeroContainer initial="hidden" animate="visible" variants={containerVariants}>
 
             <motion.h1 variants={childrenVariants} initial="hidden">floramate</motion.h1>
-            <motion.h2 variants={childrenVariants} initial="hidden"> Helping you find wildlife-friendly plants for your area</motion.h2>
+            <motion.h2 variants={childrenVariants} initial="hidden">Helping you find wildlife-friendly plants for your area</motion.h2>
 
             <BtnGroup variants={childrenVariants} initial="hidden">
                 <Link to="/species">
-                    <SecondaryBtn fontSize={"1.5rem"} >Browse</SecondaryBtn>
+                    <SecondaryBtn fontSize={"1.6rem"} >Browse</SecondaryBtn>
                 </Link>
-                <Link to="/about">
+                {/* <Link to="/about">
                     <InfoBtn fontSize={"1.5rem"}>About</InfoBtn>
-                </Link>
+                </Link> */}
             </BtnGroup>
 
         </HeroContainer>
